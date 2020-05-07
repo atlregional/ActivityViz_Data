@@ -2941,8 +2941,1498 @@
           }
         ]
       }
-    }
     },
+    "OnboardSurvey": {
+      "title": "- 2019 Regional Transit On-Board Survey",
+      "ScenarioFocus": "transit.json",
+      "visualizations": {
+        "GroupedCharts": [
+          {
+            "name": "Participant Age",
+            "config": "OnboardSurvey",
+            "file": "age.csv",
+            "info": "Age of respondent",
+            "datafilecolumns": {
+              "GROUP": "Participant Response",
+              "AGE": "<br>1=Under 6<\/br><br>2=6-15<\/br><br>3=16-17<\/br><br>4=18-24<\/br><br>5=25-34<\/br><br>6=35-44<\/br><br>7=45-54<\/br><br>8=55-64<\/br><br>9=65 and older<\/br>",
+              "Count": "Count of participants",
+              "CHART_TYPE": "Which grouped chart they belong too"
+            },
+            "explanation": [
+              {
+                "header": "Summary",
+                "body": [
+                  {
+                    "type": "unorderedList",
+                    "content": [
+                      "Age distribution of the respondents",
+                      "Around 30% of respondents are in the 25-34 age group"
+                    ]
+                  }
+                ]
+              },
+              {
+                "header": "Instructions",
+                "body": [
+                  {
+                    "type": "unorderedList",
+                    "content": ["Hover mouse over bars to see detail.", "Select \"Show Data\" to see tabulation.", "Select/deselect bubbles to add/remove person types."]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Household Size",
+            "config": "OnboardSurvey",
+            "file": "hhsize.csv",
+            "info": "Including respondent, the number of members in respondent's household",
+            "datafilecolumns": {
+              "GROUP": "Participant Response",
+              "HH_SIZE": "Size of participating household",
+              "Count": "Count of participants",
+              "CHART_TYPE": "Which grouped chart they belong too"
+            },
+            "explanation": [
+              {
+                "header": "Summary",
+                "body": [
+                  {
+                    "type": "unorderedList",
+                    "content": [
+                      "Household size distribution of the respondents",
+                      "Around 24% of respondents belong to household of size 2"
+                    ]
+                  }
+                ]
+              },
+              {
+                "header": "Instructions",
+                "body": [
+                  {
+                    "type": "unorderedList",
+                    "content": ["Hover mouse over bars to see detail.", "Select \"Show Data\" to see tabulation.", "Select/deselect bubbles to add/remove person types."]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Employed in Household",
+            "config": "OnboardSurvey",
+            "file": "employed_hh.csv",
+            "info": "How many people age 15 and older in the household are employed?",
+            "datafilecolumns": {
+              "GROUP": "Participant Response",
+              "EMPLOYED_IN_HH": "<br>0=None (0)<\/br><br>1=One (1)<\/br><br>2=Two (2)<\/br><br>3=Three (3)<\/br><br>4=Four (4)<\/br><br>5=Five (5)<\/br><br>6=Six (6)<\/br><br>7=Seven (7)<\/br><br>8=Eight (8)<\/br><br>9=Nine (9)<\/br><br>10=Ten or more (10+)<\/br>",
+              "CHART_TYPE": "Which grouped chart they belong too"
+            },
+            "explanation": [
+              {
+                "header": "Summary",
+                "body": [
+                  {
+                    "type": "unorderedList",
+                    "content": [
+                      "How many people age 15 and older in the household are employed?",
+                      "Most of the respondents (40%) had two people working in the household"
+                    ]
+                  }
+                ]
+              },
+              {
+                "header": "Instructions",
+                "body": [
+                  {
+                    "type": "unorderedList",
+                    "content": ["Hover mouse over bars to see detail.", "Select \"Show Data\" to see tabulation.", "Select/deselect bubbles to add/remove person types."]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Household Income",
+            "config": "OnboardSurvey",
+            "file": "income.csv",
+            "info": "Total annual household income",
+            "datafilecolumns": {
+              "GROUP": "Participant Response",
+              "INCOME": "<br>1=Below $5,000<\/br><br>2=$5,000 - $9,999<\/br><br>3=$10,000 - $19,999<\/br><br>4=$20,000 - $29,999<\/br><br>5=$30,000 - $39,999<\/br><br>6=$40,000 - $49,999<\/br><br>7=$50,000 - $59,999<\/br><br>8=$60,000 - $74,999<\/br><br>9=$75,000 - $99,999<\/br><br>10=$100,000 - $119,999<\/br><br>11=More than $120,000<\/br><br>99=REFUSED<\/br>",
+              "Count": "Count of participants",
+              "CHART_TYPE": "Which grouped chart they belong too"
+            },
+            "explanation": [
+              {
+                "header": "Summary",
+                "body": [
+                  {
+                    "type": "unorderedList",
+                    "content": [
+                      "Household Income Distribution of the respondents",
+                      "At least 9% of respondents were below federal poverty line"
+                    ]
+                  }
+                ]
+              },
+              {
+                "header": "Instructions",
+                "body": [
+                  {
+                    "type": "unorderedList",
+                    "content": ["Hover mouse over bars to see detail.", "Select \"Show Data\" to see tabulation.", "Select/deselect bubbles to add/remove person types."]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Participant Gender",
+            "config": "OnboardSurvey",
+            "file": "gender.csv",
+            "info": "Respondent's gender",
+            "datafilecolumns": {
+              "GROUP": "Participant Response",
+              "GENDER_INFO": "<br>1=Male<\/br><br>2=Female<\/br><br>99=Other<\/br>",
+              "Count": "Count of participants",
+              "CHART_TYPE": "Which grouped chart they belong too"
+            },
+            "explanation": [
+              {
+                "header": "Summary",
+                "body": [
+                  {
+                    "type": "unorderedList",
+                    "content": [
+                      "Gender distribution of the respondents"
+                    ]
+                  }
+                ]
+              },
+              {
+                "header": "Instructions",
+                "body": [
+                  {
+                    "type": "unorderedList",
+                    "content": ["Hover mouse over bars to see detail.", "Select \"Show Data\" to see tabulation.", "Select/deselect bubbles to add/remove person types."]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Participant Race",
+            "config": "OnboardSurvey",
+            "file": "race.csv",
+            "info": "Respondent's race",
+            "datafilecolumns": {
+              "GROUP": "Participant Response",
+              "RACE": "Race category",
+              "Count": "Count of participants",
+              "CHART_TYPE": "Which grouped chart they belong too"
+            },
+            "explanation": [
+              {
+                "header": "Summary",
+                "body": [
+                  {
+                    "type": "unorderedList",
+                    "content": [
+                      "Race distribution of the respondents",
+                      "African American respondents formed the majority in the survey"
+                    ]
+                  }
+                ]
+              },
+              {
+                "header": "Instructions",
+                "body": [
+                  {
+                    "type": "unorderedList",
+                    "content": ["Hover mouse over bars to see detail.", "Select \"Show Data\" to see tabulation.", "Select/deselect bubbles to add/remove person types."]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Number of Household Vehicles",
+            "config": "OnboardSurvey",
+            "file": "num_veh.csv",
+            "info": "Number of vehicles in respondent's household",
+            "datafilecolumns": {
+              "GROUP": "Participant Response",
+              "COUNT_VH_HH": "<br>0=None (0)<\/br><br>1=One (1)<\/br><br>2=Two (2)<\/br><br>3=Three (3)<\/br><br>4=Four (4)<\/br><br>5=Five (5)<\/br><br>6=Six (6)<\/br><br>7=Seven (7)<\/br><br>8=Eight (8)<\/br><br>9=Nine (9)<\/br><br>10=Ten or more (10+)<\/br>",
+              "Count": "Count of participants",
+              "CHART_TYPE": "Which grouped chart they belong too"
+            },
+            "explanation": [
+              {
+                "header": "Summary",
+                "body": [
+                  {
+                    "type": "unorderedList",
+                    "content": [
+                      "Number of vehicles in respondent's household"
+                    ]
+                  }
+                ]
+              },
+              {
+                "header": "Instructions",
+                "body": [
+                  {
+                    "type": "unorderedList",
+                    "content": ["Hover mouse over bars to see detail.", "Select \"Show Data\" to see tabulation.", "Select/deselect bubbles to add/remove person types."]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Vehicle Used",
+            "config": "OnboardSurvey",
+            "file": "used_veh.csv",
+            "info": "If respondent could have used one of their household vehicles for their trip",
+            "datafilecolumns": {
+              "GROUP": "Participant Response",
+              "USED_VEH_TRIP": "<br>NO=No<\/br><br>YES=Yes<\/br>",
+              "Count": "Count of participants",
+              "CHART_TYPE": "Which grouped chart they belong too"
+            },
+            "explanation": [
+              {
+                "header": "Summary",
+                "body": [
+                  {
+                    "type": "unorderedList",
+                    "content": [
+                      "If respondent could have used one of their household vehicles for their trip"
+                    ]
+                  }
+                ]
+              },
+              {
+                "header": "Instructions",
+                "body": [
+                  {
+                    "type": "unorderedList",
+                    "content": ["Hover mouse over bars to see detail.", "Select \"Show Data\" to see tabulation.", "Select/deselect bubbles to add/remove person types."]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Has Drivers License",
+            "config": "OnboardSurvey",
+            "file": "have_dl.csv",
+            "info": "If respondent indicated they have a valid driver's license",
+            "datafilecolumns": {
+              "GROUP": "Participant Response",
+              "HAVE_DL": "<br>1=Yes<\/br><br>2=No<\/br>",
+              "Count": "Count of participants",
+              "CHART_TYPE": "Which grouped chart they belong too"
+            },
+            "explanation": [
+              {
+                "header": "Summary",
+                "body": [
+                  {
+                    "type": "unorderedList",
+                    "content": [
+                      "If respondent indicated they have a valid driver's license"
+                    ]
+                  }
+                ]
+              },
+              {
+                "header": "Instructions",
+                "body": [
+                  {
+                    "type": "unorderedList",
+                    "content": ["Hover mouse over bars to see detail.", "Select \"Show Data\" to see tabulation.", "Select/deselect bubbles to add/remove person types."]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Number of Transfers between OD",
+            "config": "OnboardSurvey",
+            "file": "transfers_od.csv",
+            "info": "How many transfers respondent took from their origin to their destination",
+            "datafilecolumns": {
+              "GROUP": "Participant Response",
+              "TRANSFERS": "First number is the number of transfer from their origin and second number is the number of transfers to their destination",
+              "Count": "Count of participants",
+              "CHART_TYPE": "Which grouped chart they belong too"
+            },
+            "explanation": [
+              {
+                "header": "Summary",
+                "body": [
+                  {
+                    "type": "unorderedList",
+                    "content": [
+                      "Distribution of number of transfers the respondent took from their origin to their destination"
+                    ]
+                  }
+                ]
+              },
+              {
+                "header": "Instructions",
+                "body": [
+                  {
+                    "type": "unorderedList",
+                    "content": ["Hover mouse over bars to see detail.", "Select \"Show Data\" to see tabulation.", "Select/deselect bubbles to add/remove person types."]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Origin Mode",
+            "config": "OnboardSurvey",
+            "file": "origin_transport.csv",
+            "info": "Access mode respondent used from their origin",
+            "datafilecolumns": {
+              "GROUP": "Participant Response",
+              "ORIGIN_TRANSPORT": "<br>1=Walk<\/br><br>2=Wheelchair / Mobility Aid<\/br><br>3=Personal Bike<\/br><br>4=Bike share (Jump, Relay, etc.)<\/br><br>5=Was dropped off by someone going someplace else<\/br><br>6=Drove alone and parked<\/br><br>7=Drove or rode with others and parked<\/br><br>8=Uber, Lyft, etc.<\/br><br>9=Car share (e.g. Zipcar, etc.)<\/br><br>10=Taxi<\/br><br>11=E-scooter (e.g. Lime, Bird, etc.)<\/br><br>12=Shuttle<\/br><br>13=School Bus / Other Bus<\/br><br>14=Skateboard<\/br>",
+              "Count": "Count of participants",
+              "CHART_TYPE": "Which grouped chart they belong too"
+            },
+            "explanation": [
+              {
+                "header": "Summary",
+                "body": [
+                  {
+                    "type": "unorderedList",
+                    "content": [
+                      "Access mode respondent used from their origin"
+                    ]
+                  }
+                ]
+              },
+              {
+                "header": "Instructions",
+                "body": [
+                  {
+                    "type": "unorderedList",
+                    "content": ["Hover mouse over bars to see detail.", "Select \"Show Data\" to see tabulation.", "Select/deselect bubbles to add/remove person types."]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Origin Placetype",
+            "config": "OnboardSurvey",
+            "file": "origin_place_type.csv",
+            "info": "Type of place respondent is coming from now",
+            "datafilecolumns": {
+              "GROUP": "Participant Response",
+              "ORIGIN_PLACE_TYPE": "<br>1=Your usual WORKPLACE<\/br><br>2=Your HOME<\/br><br>3=Your Hotel or Lodging<\/br><br>4=Another Home<\/br><br>5=Store / Retail Place<\/br><br>6=Restaurant<\/br><br>7=School (K-12) / Day Care (student only)<\/br><br>8=College or University (student only)<\/br><br>9=Airport (airline passenger only)<\/br><br>10=Hospital / Doctor<\/br><br>11=Bank, or other office / Errands<\/br><br>12=Recreation Place<\/br><br>13=Place of Worship<\/br><br>14=Personal Business<\/br>",
+              "Count": "Count of participants",
+              "CHART_TYPE": "Which grouped chart they belong too"
+            },
+            "explanation": [
+              {
+                "header": "Summary",
+                "body": [
+                  {
+                    "type": "unorderedList",
+                    "content": [
+                      "Type of place respondent is coming from now"
+                    ]
+                  }
+                ]
+              },
+              {
+                "header": "Instructions",
+                "body": [
+                  {
+                    "type": "unorderedList",
+                    "content": ["Hover mouse over bars to see detail.", "Select \"Show Data\" to see tabulation.", "Select/deselect bubbles to add/remove person types."]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Resident or Visitor",
+            "config": "OnboardSurvey",
+            "file": "res_vis.csv",
+            "info": "If respondent indicated they were a resident or visitor to the area",
+            "datafilecolumns": {
+              "GROUP": "Participant Response",
+              "RESIDENT_OR_VISITOR": "<br>1=Resident<\/br><br>2=Visitor<\/br>",
+              "Count": "Count of participants",
+              "CHART_TYPE": "Which grouped chart they belong too"
+            },
+            "explanation": [
+              {
+                "header": "Summary",
+                "body": [
+                  {
+                    "type": "unorderedList",
+                    "content": [
+                      "If respondent indicated they were a resident or visitor to the area"
+                    ]
+                  }
+                ]
+              },
+              {
+                "header": "Instructions",
+                "body": [
+                  {
+                    "type": "unorderedList",
+                    "content": ["Hover mouse over bars to see detail.", "Select \"Show Data\" to see tabulation.", "Select/deselect bubbles to add/remove person types."]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Opposite Direction Trip",
+            "config": "OnboardSurvey",
+            "file": "trip_oppo.csv",
+            "info": "If respondent took the same trip in the opposite direction",
+            "datafilecolumns": {
+              "GROUP": "Participant Response",
+              "TRIP_IN_OPPO_DIR": "<br>1=Yes - and I will/did use bus / rail<\/br><br>2=No<\/br><br>3=Yes - I will/did make a return trip but will/did NOT use the bus / rail<\/br>",
+              "Count": "Count of participants",
+              "CHART_TYPE": "Which grouped chart they belong too"
+            },
+            "explanation": [
+              {
+                "header": "Summary",
+                "body": [
+                  {
+                    "type": "unorderedList",
+                    "content": [
+                      "If respondent took the same trip in the opposite direction"
+                    ]
+                  }
+                ]
+              },
+              {
+                "header": "Instructions",
+                "body": [
+                  {
+                    "type": "unorderedList",
+                    "content": ["Hover mouse over bars to see detail.", "Select \"Show Data\" to see tabulation.", "Select/deselect bubbles to add/remove person types."]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Opposite Direction Trip Time",
+            "config": "OnboardSurvey",
+            "file": "trip_oppo_time.csv",
+            "info": "At what time did respondent board their return trip bus/rail",
+            "datafilecolumns": {
+              "GROUP": "Participant Response",
+              "OPPO_DIR_TRIP_TIME": "<br>AM1=Before 5:00 am<\/br><br>AM2=5:00 am - 6:00 am<\/br><br>AM3=6:00 am - 7:00 am<\/br><br>AM4=7:00 am - 8:00 am<\/br><br>AM5=8:00 am - 9:00 am<\/br><br>MID1=9:00 am - 10:00 am<\/br><br>MID2=10:00 am - 11:00 am<\/br><br>MID3=11:00 am - 12:00 noon<\/br><br>MID4=12:00 noon - 1:00 pm<\/br><br>MID5=1:00 pm - 2:00 pm<\/br><br>MID6=2:00 pm - 3:00 pm<\/br><br>PM1=3:00 pm - 4:00 pm<\/br><br>PM2=4:00 pm - 5:00 pm<\/br><br>PM3=5:00 pm - 6:00 pm<\/br><br>PM4=6:00 pm - 7:00 pm<\/br><br>PM5=7:00 pm - 8:00 pm<\/br><br>PM6=8:00 pm - 9:00 pm<\/br><br>PM7=9:00 pm - 10:00 pm<\/br><br>PM8=10:00 pm - 11:00 pm<\/br><br>PM9=11:00 pm and later<\/br>",
+              "Count": "Count of participants",
+              "CHART_TYPE": "Which grouped chart they belong too"
+            },
+            "explanation": [
+              {
+                "header": "Summary",
+                "body": [
+                  {
+                    "type": "unorderedList",
+                    "content": [
+                      "The time at which the respondent board their return trip bus/rail"
+                    ]
+                  }
+                ]
+              },
+              {
+                "header": "Instructions",
+                "body": [
+                  {
+                    "type": "unorderedList",
+                    "content": ["Hover mouse over bars to see detail.", "Select \"Show Data\" to see tabulation.", "Select/deselect bubbles to add/remove person types."]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Employment Status",
+            "config": "OnboardSurvey",
+            "file": "emp_status.csv",
+            "info": "Respondent's employment status",
+            "datafilecolumns": {
+              "GROUP": "Participant Response",
+              "EMPLOYMENT_STATUS": "<br>1=Employed full-time<\/br><br>2=Not currently employed, but seeking work<\/br><br>3=Retired<\/br><br>4=Employed part-time<\/br><br>5=Not currently employed, and not seeking work<\/br><br>6=Homemaker<\/br>",
+              "Count": "Count of participants",
+              "CHART_TYPE": "Which grouped chart they belong too"
+            },
+            "explanation": [
+              {
+                "header": "Summary",
+                "body": [
+                  {
+                    "type": "unorderedList",
+                    "content": [
+                      "Distribution of respondent's employment status"
+                    ]
+                  }
+                ]
+              },
+              {
+                "header": "Instructions",
+                "body": [
+                  {
+                    "type": "unorderedList",
+                    "content": ["Hover mouse over bars to see detail.", "Select \"Show Data\" to see tabulation.", "Select/deselect bubbles to add/remove person types."]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Student Status",
+            "config": "OnboardSurvey",
+            "file": "student_status.csv",
+            "info": "Respondent's student status",
+            "datafilecolumns": {
+              "GROUP": "Participant Response",
+              "STUDENT_STATUS": "<br>1=Not a student<\/br><br>2=Yes - Full time College / University<\/br><br>3=Yes - Part time College / University<\/br><br>4=Yes - K - 12th grade<\/br><br>5=Yes - Other type of student<\/br>",
+              "Count": "Count of participants",
+              "CHART_TYPE": "Which grouped chart they belong too"
+            },
+            "explanation": [
+              {
+                "header": "Summary",
+                "body": [
+                  {
+                    "type": "unorderedList",
+                    "content": [
+                      "Distribution of respondent's student status"
+                    ]
+                  }
+                ]
+              },
+              {
+                "header": "Instructions",
+                "body": [
+                  {
+                    "type": "unorderedList",
+                    "content": ["Hover mouse over bars to see detail.", "Select \"Show Data\" to see tabulation.", "Select/deselect bubbles to add/remove person types."]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Home Language Other",
+            "config": "OnboardSurvey",
+            "file": "home_lang_other.csv",
+            "info": "Does respondent speak a language other than English spoken in home",
+            "datafilecolumns": {
+              "GROUP": "Participant Response",
+              "HOME_LANG_OTHER": "<br>1=Yes<\/br><br>2=No<\/br>",
+              "Count": "Count of participants",
+              "CHART_TYPE": "Which grouped chart they belong too"
+            },
+            "explanation": [
+              {
+                "header": "Summary",
+                "body": [
+                  {
+                    "type": "unorderedList",
+                    "content": [
+                      "If a respondent speak a language other than English spoken in home"
+                    ]
+                  }
+                ]
+              },
+              {
+                "header": "Instructions",
+                "body": [
+                  {
+                    "type": "unorderedList",
+                    "content": ["Hover mouse over bars to see detail.", "Select \"Show Data\" to see tabulation.", "Select/deselect bubbles to add/remove person types."]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Home Other Language",
+            "config": "OnboardSurvey",
+            "file": "home_other_lang.csv",
+            "info": "Language respondent speaks at home other than English",
+            "datafilecolumns": {
+              "GROUP": "Participant Response",
+              "HOME_OTHER_LANG": "Language respondent speaks at home other than English",
+              "Count": "Count of participants",
+              "CHART_TYPE": "Which grouped chart they belong too"
+            },
+            "explanation": [
+              {
+                "header": "Summary",
+                "body": [
+                  {
+                    "type": "unorderedList",
+                    "content": [
+                      "Distribution of languages spoken in home other than English"
+                    ]
+                  }
+                ]
+              },
+              {
+                "header": "Instructions",
+                "body": [
+                  {
+                    "type": "unorderedList",
+                    "content": ["Hover mouse over bars to see detail.", "Select \"Show Data\" to see tabulation.", "Select/deselect bubbles to add/remove person types."]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": "English Ability",
+            "config": "OnboardSurvey",
+            "file": "eng_ability.csv",
+            "info": "How well did respondent speaks English",
+            "datafilecolumns": {
+              "GROUP": "Participant Response",
+              "ENGLISH_ABILITY": "<br>A1=Very well<\/br><br>A2=Well<\/br><br>A3=Not at all<\/br><br>A4=Less than well<\/br><br>A99=Unknown<\/br>",
+              "Count": "Count of participants",
+              "CHART_TYPE": "Which grouped chart they belong too"
+            },
+            "explanation": [
+              {
+                "header": "Summary",
+                "body": [
+                  {
+                    "type": "unorderedList",
+                    "content": [
+                      "How well did respondent speaks English"
+                    ]
+                  }
+                ]
+              },
+              {
+                "header": "Instructions",
+                "body": [
+                  {
+                    "type": "unorderedList",
+                    "content": ["Hover mouse over bars to see detail.", "Select \"Show Data\" to see tabulation.", "Select/deselect bubbles to add/remove person types."]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Survey Language",
+            "config": "OnboardSurvey",
+            "file": "survey_lang.csv",
+            "info": "What language the survey was conducted in",
+            "datafilecolumns": {
+              "GROUP": "Participant Response",
+              "SURVEY_LANGUAGE": "Language the survey was conducted in",
+              "Count": "Count of participants",
+              "CHART_TYPE": "Which grouped chart they belong too"
+            },
+            "explanation": [
+              {
+                "header": "Summary",
+                "body": [
+                  {
+                    "type": "unorderedList",
+                    "content": [
+                      "Distribution of the language the survey was conducted in"
+                    ]
+                  }
+                ]
+              },
+              {
+                "header": "Instructions",
+                "body": [
+                  {
+                    "type": "unorderedList",
+                    "content": ["Hover mouse over bars to see detail.", "Select \"Show Data\" to see tabulation.", "Select/deselect bubbles to add/remove person types."]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Fare Method",
+            "config": "Frequency",
+            "file": "fare_method.csv",
+            "info": "Which fare method the respondent used for the trip",
+            "datafilecolumns": {
+              "FARE": "The fare method used for the trip",
+              "RESPONSE": "<br>Yes<\/br><br>No<\/br>",
+              "Count": "Count of participants",
+              "CHART_TYPE": "Which grouped chart they belong too"
+            },
+            "explanation": [
+              {
+                "header": "Summary",
+                "body": [
+                  {
+                    "type": "unorderedList",
+                    "content": [
+                      "Distribution of the fare method the respondent used for the trip"
+                    ]
+                  }
+                ]
+              },
+              {
+                "header": "Instructions",
+                "body": [
+                  {
+                    "type": "unorderedList",
+                    "content": ["Hover mouse over bars to see detail.", "Select \"Show Data\" to see tabulation.", "Select/deselect bubbles to add/remove person types."]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Use Service",
+            "config": "Frequency",
+            "file": "use_service.csv",
+            "info": "What kind of services were used for the trip",
+            "datafilecolumns": {
+              "SERVICE": "Services used for the trip",
+              "RESPONSE": "<br>Yes<\/br><br>No<\/br>",
+              "Count": "Count of participants",
+              "CHART_TYPE": "Which grouped chart they belong too"
+            },
+            "explanation": [
+              {
+                "header": "Summary",
+                "body": [
+                  {
+                    "type": "unorderedList",
+                    "content": [
+                      "Distribution of the type of services the respondent used for the trip"
+                    ]
+                  }
+                ]
+              },
+              {
+                "header": "Instructions",
+                "body": [
+                  {
+                    "type": "unorderedList",
+                    "content": ["Hover mouse over bars to see detail.", "Select \"Show Data\" to see tabulation.", "Select/deselect bubbles to add/remove person types."]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Type of Fare",
+            "config": "OnboardSurvey",
+            "file": "type_fare.csv",
+            "info": "What type of fare respondent used",
+            "datafilecolumns": {
+              "GROUP": "Participant Response",
+              "TYPE_OF_FARE": "<br>1=Regular Fare<\/br><br>2=Senior (65 and older)<\/br><br>3=Disabled/Medicare Discount<\/br><br>4=Regular (47in-64yo)<\/br><br>5=Youth (Under 18)<\/br><br>6=Medicare Card Holder<\/br><br>7=Child (Age 4-6)<\/br><br>8=Senior (60 and Older)<\/br><br>99=Other<\/br>",
+              "Count": "Count of participants",
+              "CHART_TYPE": "Which grouped chart they belong too"
+            },
+            "explanation": [
+              {
+                "header": "Summary",
+                "body": [
+                  {
+                    "type": "unorderedList",
+                    "content": [
+                      "Distribution of the type of fare used by the respondent for the trip"
+                    ]
+                  }
+                ]
+              },
+              {
+                "header": "Instructions",
+                "body": [
+                  {
+                    "type": "unorderedList",
+                    "content": ["Hover mouse over bars to see detail.", "Select \"Show Data\" to see tabulation.", "Select/deselect bubbles to add/remove person types."]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Used Breeze Card",
+            "config": "OnboardSurvey",
+            "file": "used_breeze_card.csv",
+            "info": "If respondent indicated they used a Breeze Card",
+            "datafilecolumns": {
+              "GROUP": "Participant Response",
+              "USED_BREEZE_CARD": "<br>1=Yes plastic card<\/br><br>2=Yes paper ticket<\/br><br>3=No<\/br>",
+              "Count": "Count of participants",
+              "CHART_TYPE": "Which grouped chart they belong too"
+            },
+            "explanation": [
+              {
+                "header": "Summary",
+                "body": [
+                  {
+                    "type": "unorderedList",
+                    "content": [
+                      "If respondent indicated they used a Breeze Card"
+                    ]
+                  }
+                ]
+              },
+              {
+                "header": "Instructions",
+                "body": [
+                  {
+                    "type": "unorderedList",
+                    "content": ["Hover mouse over bars to see detail.", "Select \"Show Data\" to see tabulation.", "Select/deselect bubbles to add/remove person types."]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": "How No Bus",
+            "config": "OnboardSurvey",
+            "file": "how_no_bus.csv",
+            "info": "How respondent would make trip if bus/rail were not available",
+            "datafilecolumns": {
+              "GROUP": "Participant Response",
+              "HOW_NO_BUS": "<br>1=Walk<\/br><br>2=Drive alone<\/br><br>3=Driven by someone else<\/br><br>4=Carpool / Vanpool<\/br><br>5=Uber, Lyft, etc<\/br><br>6=Would not make trip<\/br><br>7=Taxi<\/br><br>8=Bike share<\/br><br>9=Personal bike<\/br><br>99=Other<\/br>",
+              "Count": "Count of participants",
+              "CHART_TYPE": "Which grouped chart they belong too"
+            },
+            "explanation": [
+              {
+                "header": "Summary",
+                "body": [
+                  {
+                    "type": "unorderedList",
+                    "content": [
+                      "Distribution of the modes the respondent would have used if bus/rail were not available"
+                    ]
+                  }
+                ]
+              },
+              {
+                "header": "Instructions",
+                "body": [
+                  {
+                    "type": "unorderedList",
+                    "content": ["Hover mouse over bars to see detail.", "Select \"Show Data\" to see tabulation.", "Select/deselect bubbles to add/remove person types."]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Transit Use Frequency",
+            "config": "OnboardSurvey",
+            "file": "transit_use_freq.csv",
+            "info": "On average, how many days a week respondent uses public transit",
+            "datafilecolumns": {
+              "GROUP": "Participant Response",
+              "TRANSIT_USE_FREQ": "<br>1=5 or more days a week<\/br><br>2=2 to 4 days a week<\/br><br>3=About once a week<\/br><br>4=2 to 3 times a month<\/br><br>5=About once a month<\/br><br>6=Several times a year<\/br><br>7=Once a year<\/br><br>8=First time<\/br>",
+              "Count": "Count of participants",
+              "CHART_TYPE": "Which grouped chart they belong too"
+            },
+            "explanation": [
+              {
+                "header": "Summary",
+                "body": [
+                  {
+                    "type": "unorderedList",
+                    "content": [
+                      "Distribution of the average number of days a week the respondent uses public transit"
+                    ]
+                  }
+                ]
+              },
+              {
+                "header": "Instructions",
+                "body": [
+                  {
+                    "type": "unorderedList",
+                    "content": ["Hover mouse over bars to see detail.", "Select \"Show Data\" to see tabulation.", "Select/deselect bubbles to add/remove person types."]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Household Members on Trip",
+            "config": "OnboardSurvey",
+            "file": "hhpl.csv",
+            "info": "Including respondent, how many household members are making the trip with respondent",
+            "datafilecolumns": {
+              "GROUP": "Participant Response",
+              "HHPPL_TRAVEL_WITHYOU": "<br>1=One (1)<\/br><br>2=Two (2)<\/br><br>3=Three (3)<\/br><br>4=Four (4)<\/br><br>5=Five (5)<\/br><br>6=Six (6)<\/br><br>7=Seven (7)<\/br><br>8=Eight (8)<\/br><br>9=Nine (9)<\/br><br>10=Ten or more (10+)<\/br>",
+              "Count": "Count of participants",
+              "CHART_TYPE": "Which grouped chart they belong too"
+            },
+            "explanation": [
+              {
+                "header": "Summary",
+                "body": [
+                  {
+                    "type": "unorderedList",
+                    "content": [
+                      "Distribution of the number of household members, including respondent, that were making the trip with respondent"
+                    ]
+                  }
+                ]
+              },
+              {
+                "header": "Instructions",
+                "body": [
+                  {
+                    "type": "unorderedList",
+                    "content": ["Hover mouse over bars to see detail.", "Select \"Show Data\" to see tabulation.", "Select/deselect bubbles to add/remove person types."]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Did You Go To Work",
+            "config": "OnboardSurvey",
+            "file": "did_y_work.csv",
+            "info": "If respondent went to work or will go to work before returning home",
+            "datafilecolumns": {
+              "GROUP": "Participant Response",
+              "DID_YOU_GO_2_WORK": "<br>1=No<\/br><br>2=Yes since left home<\/br><br>3=Yes before returning home<\/br>",
+              "Count": "Count of participants",
+              "CHART_TYPE": "Which grouped chart they belong too"
+            },
+            "explanation": [
+              {
+                "header": "Summary",
+                "body": [
+                  {
+                    "type": "unorderedList",
+                    "content": [
+                      "If respondent went to work or will go to work before returning home"
+                    ]
+                  }
+                ]
+              },
+              {
+                "header": "Instructions",
+                "body": [
+                  {
+                    "type": "unorderedList",
+                    "content": ["Hover mouse over bars to see detail.", "Select \"Show Data\" to see tabulation.", "Select/deselect bubbles to add/remove person types."]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Did You Go To School",
+            "config": "OnboardSurvey",
+            "file": "did_y_school.csv",
+            "info": "If respondent went to school or will go to school before returning home",
+            "datafilecolumns": {
+              "GROUP": "Participant Response",
+              "DID_YOU_GO_TO_SCHOOL": "<br>1=No<\/br><br>2=Yes since left home<\/br><br>3=Yes before returning home<\/br>",
+              "Count": "Count of participants",
+              "CHART_TYPE": "Which grouped chart they belong too"
+            },
+            "explanation": [
+              {
+                "header": "Summary",
+                "body": [
+                  {
+                    "type": "unorderedList",
+                    "content": [
+                      "If respondent went to school or will go to school before returning home"
+                    ]
+                  }
+                ]
+              },
+              {
+                "header": "Instructions",
+                "body": [
+                  {
+                    "type": "unorderedList",
+                    "content": ["Hover mouse over bars to see detail.", "Select \"Show Data\" to see tabulation.", "Select/deselect bubbles to add/remove person types."]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "TourSummary": {
+      "title": "- 2019 Regional One Day Tour Diary Survey",
+      "ScenarioFocus": "transit.json",
+      "visualizations": {
+        "GroupedCharts": [
+          {
+            "name": "Overall",
+            "config": "TourSummary",
+            "file": "overall.csv",
+            "info": "Overall counts of people by number tours and stops",
+            "explanation": [
+              {
+                "header": "Summary",
+                "body": [
+                  {
+                    "type": "unorderedList",
+                    "content": [
+                      "Distribution of people by number of tours and stops",
+                      "Count represent number of people",
+                      "A tour is defined if it started and ended at home"
+                    ]
+                  }
+                ]
+              },
+              {
+                "header": "Instructions",
+                "body": [
+                  {
+                    "type": "unorderedList",
+                    "content": ["Hover mouse over bars to see detail.", "Select \"Show Data\" to see tabulation.", "Select/deselect bubbles to add/remove person types."]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Home Based Tours",
+            "config": "OnboardSurvey",
+            "file": "home_based.csv",
+            "info": "Home based tours",
+            "explanation": [
+              {
+                "header": "Summary",
+                "body": [
+                  {
+                    "type": "unorderedList",
+                    "content": [
+                      "Distribution of people by number of tours that started and ended at home"
+                    ]
+                  }
+                ]
+              },
+              {
+                "header": "Instructions",
+                "body": [
+                  {
+                    "type": "unorderedList",
+                    "content": ["Hover mouse over bars to see detail.", "Select \"Show Data\" to see tabulation.", "Select/deselect bubbles to add/remove person types."]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Stops on Tours",
+            "config": "TourSummary",
+            "file": "stops.csv",
+            "info": "Number of stops by tours",
+            "explanation": [
+              {
+                "header": "Summary",
+                "body": [
+                  {
+                    "type": "unorderedList",
+                    "content": [
+                      "Distribution of people by number of tours and stops"
+                    ]
+                  }
+                ]
+              },
+              {
+                "header": "Instructions",
+                "body": [
+                  {
+                    "type": "unorderedList",
+                    "content": ["Hover mouse over bars to see detail.", "Select \"Show Data\" to see tabulation.", "Select/deselect bubbles to add/remove person types."]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Drive To-From Transit",
+            "config": "TourSummary",
+            "file": "drive_transit.csv",
+            "info": "Tours that have drive followed by transit or transit followed by drive mode",
+            "explanation": [
+              {
+                "header": "Summary",
+                "body": [
+                  {
+                    "type": "unorderedList",
+                    "content": [
+                      "Distribution of people that either drove and took transit or took transit and drove on their tour"
+                    ]
+                  }
+                ]
+              },
+              {
+                "header": "Instructions",
+                "body": [
+                  {
+                    "type": "unorderedList",
+                    "content": ["Hover mouse over bars to see detail.", "Select \"Show Data\" to see tabulation.", "Select/deselect bubbles to add/remove person types."]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Walk or Transit Only",
+            "config": "TourSummary",
+            "file": "walk_transit.csv",
+            "info": "Tours that only have walk, transit, or both",
+            "explanation": [
+              {
+                "header": "Summary",
+                "body": [
+                  {
+                    "type": "unorderedList",
+                    "content": [
+                      "Distribution of people that completed their tour with just transit or just walk, or both."
+                    ]
+                  }
+                ]
+              },
+              {
+                "header": "Instructions",
+                "body": [
+                  {
+                    "type": "unorderedList",
+                    "content": ["Hover mouse over bars to see detail.", "Select \"Show Data\" to see tabulation.", "Select/deselect bubbles to add/remove person types."]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Not Transit",
+            "config": "TourSummary",
+            "file": "non_transit.csv",
+            "info": "Tours that do not have a transit mode",
+            "explanation": [
+              {
+                "header": "Summary",
+                "body": [
+                  {
+                    "type": "unorderedList",
+                    "content": [
+                      "Distribution of people that did not take any transit on their tour"
+                    ]
+                  }
+                ]
+              },
+              {
+                "header": "Instructions",
+                "body": [
+                  {
+                    "type": "unorderedList",
+                    "content": ["Hover mouse over bars to see detail.", "Select \"Show Data\" to see tabulation.", "Select/deselect bubbles to add/remove person types."]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Has Work",
+            "config": "TourSummary",
+            "file": "has_work.csv",
+            "info": "Tours that include work as an activity",
+            "explanation": [
+              {
+                "header": "Summary",
+                "body": [
+                  {
+                    "type": "unorderedList",
+                    "content": [
+                      "Distribution of people that had work as a part of their tour"
+                    ]
+                  }
+                ]
+              },
+              {
+                "header": "Instructions",
+                "body": [
+                  {
+                    "type": "unorderedList",
+                    "content": ["Hover mouse over bars to see detail.", "Select \"Show Data\" to see tabulation.", "Select/deselect bubbles to add/remove person types."]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Has School",
+            "config": "TourSummary",
+            "file": "has_school.csv",
+            "info": "Tours that include school as an activity",
+            "explanation": [
+              {
+                "header": "Summary",
+                "body": [
+                  {
+                    "type": "unorderedList",
+                    "content": [
+                      "Distribution of people that had school as a part of their tour"
+                    ]
+                  }
+                ]
+              },
+              {
+                "header": "Instructions",
+                "body": [
+                  {
+                    "type": "unorderedList",
+                    "content": ["Hover mouse over bars to see detail.", "Select \"Show Data\" to see tabulation.", "Select/deselect bubbles to add/remove person types."]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Has Work and School",
+            "config": "TourSummary",
+            "file": "has_work_school.csv",
+            "info": "Tours that include work and school as an activity",
+            "explanation": [
+              {
+                "header": "Summary",
+                "body": [
+                  {
+                    "type": "unorderedList",
+                    "content": [
+                      "Distribution of people that had both work and school as a part of their tour"
+                    ]
+                  }
+                ]
+              },
+              {
+                "header": "Instructions",
+                "body": [
+                  {
+                    "type": "unorderedList",
+                    "content": ["Hover mouse over bars to see detail.", "Select \"Show Data\" to see tabulation.", "Select/deselect bubbles to add/remove person types."]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Has no work or school",
+            "config": "TourSummary",
+            "file": "has_neither.csv",
+            "info": "Tours that do not include work or school as an activity",
+            "explanation": [
+              {
+                "header": "Summary",
+                "body": [
+                  {
+                    "type": "unorderedList",
+                    "content": [
+                      "Distribution of people that did not attend work or school as a part of their tour"
+                    ]
+                  }
+                ]
+              },
+              {
+                "header": "Instructions",
+                "body": [
+                  {
+                    "type": "unorderedList",
+                    "content": ["Hover mouse over bars to see detail.", "Select \"Show Data\" to see tabulation.", "Select/deselect bubbles to add/remove person types."]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Age",
+            "config": "TourSummaryFrequency",
+            "file": "age.csv",
+            "info": "Tours by age group",
+            "explanation": [
+              {
+                "header": "Summary",
+                "body": [
+                  {
+                    "type": "unorderedList",
+                    "content": [
+                      "Distribution of people by age group, number of tours, and stops"
+                    ]
+                  }
+                ]
+              },
+              {
+                "header": "Instructions",
+                "body": [
+                  {
+                    "type": "unorderedList",
+                    "content": ["Hover mouse over bars to see detail.", "Select \"Show Data\" to see tabulation.", "Select/deselect bubbles to add/remove person types."]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Gender",
+            "config": "TourSummaryFrequency",
+            "file": "gender.csv",
+            "info": "Tours by gender",
+            "explanation": [
+              {
+                "header": "Summary",
+                "body": [
+                  {
+                    "type": "unorderedList",
+                    "content": [
+                      "Distribution of people by gender, number of tours, and stops"
+                    ]
+                  }
+                ]
+              },
+              {
+                "header": "Instructions",
+                "body": [
+                  {
+                    "type": "unorderedList",
+                    "content": ["Hover mouse over bars to see detail.", "Select \"Show Data\" to see tabulation.", "Select/deselect bubbles to add/remove person types."]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Household Income",
+            "config": "TourSummaryFrequency",
+            "file": "income.csv",
+            "info": "Tours by household income",
+            "explanation": [
+              {
+                "header": "Summary",
+                "body": [
+                  {
+                    "type": "unorderedList",
+                    "content": [
+                      "Distribution of people by their household income, number of tours, and stops"
+                    ]
+                  }
+                ]
+              },
+              {
+                "header": "Instructions",
+                "body": [
+                  {
+                    "type": "unorderedList",
+                    "content": ["Hover mouse over bars to see detail.", "Select \"Show Data\" to see tabulation.", "Select/deselect bubbles to add/remove person types."]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Household Size",
+            "config": "TourSummaryFrequency",
+            "file": "hh_size.csv",
+            "info": "Tours by household size",
+            "explanation": [
+              {
+                "header": "Summary",
+                "body": [
+                  {
+                    "type": "unorderedList",
+                    "content": [
+                      "Distribution of people by their household size, number of tours, and stops"
+                    ]
+                  }
+                ]
+              },
+              {
+                "header": "Instructions",
+                "body": [
+                  {
+                    "type": "unorderedList",
+                    "content": ["Hover mouse over bars to see detail.", "Select \"Show Data\" to see tabulation.", "Select/deselect bubbles to add/remove person types."]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Household Vehicles",
+            "config": "TourSummaryFrequency",
+            "file": "hh_veh.csv",
+            "info": "Tours by household vehicles",
+            "explanation": [
+              {
+                "header": "Summary",
+                "body": [
+                  {
+                    "type": "unorderedList",
+                    "content": [
+                      "Distribution of people by the number of household vehicles, number of tours, and stops"
+                    ]
+                  }
+                ]
+              },
+              {
+                "header": "Instructions",
+                "body": [
+                  {
+                    "type": "unorderedList",
+                    "content": ["Hover mouse over bars to see detail.", "Select \"Show Data\" to see tabulation.", "Select/deselect bubbles to add/remove person types."]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Household Vehicles Availability",
+            "config": "TourSummaryFrequency",
+            "file": "can_use_hhveh.csv",
+            "info": "Tours by available household vehilces",
+            "explanation": [
+              {
+                "header": "Summary",
+                "body": [
+                  {
+                    "type": "unorderedList",
+                    "content": [
+                      "If the household vehicle was available for the tour"
+                    ]
+                  }
+                ]
+              },
+              {
+                "header": "Instructions",
+                "body": [
+                  {
+                    "type": "unorderedList",
+                    "content": ["Hover mouse over bars to see detail.", "Select \"Show Data\" to see tabulation.", "Select/deselect bubbles to add/remove person types."]
+                  }
+                ]
+              }
+            ]
+          }
+          ]
+      }
+    }
+  },
   "RadarCharts": {
     "Default": {
       "NumberColsRadar": 4,
@@ -2989,6 +4479,14 @@
       "ShowAsPercentByDefault": false,
       "ShowAsVerticalByDefault": false,
       "StackAllChartsByDefault": false,
+      "ChartWidthOverride": []
+    },
+    "TourSummaryFrequency": {
+      "NumberColsGrouped": 1,
+      "SwapLegendByDefault": false,
+      "ShowAsPercentByDefault": true,
+      "ShowAsVerticalByDefault": false,
+      "StackAllChartsByDefault": true,
       "ChartWidthOverride": []
     }
   },

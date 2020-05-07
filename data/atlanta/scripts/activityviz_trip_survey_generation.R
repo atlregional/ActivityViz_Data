@@ -290,7 +290,7 @@ summary_ls = list()
 
 # Home based Tours
 home_based_dt = tour_dt[,.(COUNT=.N,CHART="SURVEYED BY NUMBER OF TOURS"),.(NTOURS = ntours)]
-home_based_dt[,GROUP:= "PARTICIPANTS"]
+home_based_dt[,GROUP:= "PERSONS"]
 setorder(home_based_dt, NTOURS)
 setcolorder(home_based_dt, "GROUP")
 summary_ls[["home_based_dt"]] = home_based_dt
