@@ -13,7 +13,7 @@
   "SideBarImage":"example.png",
   "scenarios":{
     "DaySim": {
-      "title": "- Model Run",
+      "title": "Model Run",
       "visualizations": {
         "BarMap": [{"name":"Trip Mode","config":"Default", "file":"BarChartAndMapData.csv", "info":"Trips by mode by county", "explanation":[{
             "header": "Summary",
@@ -139,7 +139,7 @@
       }
     },
     "Survey": {
-      "title": "- Survey Data",
+      "title": "Survey Data",
       "visualizations": {
         "BarMap": [{"name":"Trip Mode","config":"Default", "file":"BarChartAndMapData.csv", "info":"Trips by mode by county", "explanation":[{
             "header": "Summary",

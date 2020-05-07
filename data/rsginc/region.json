@@ -16,7 +16,7 @@
   "SideBarImage":"example.png",
   "scenarios": {
     "INRIX": {
-      "title": "- Washington DC INRIX Trip Data Processing",
+      "title": "Washington DC INRIX Trip Data Processing",
       "visualizations": {
         "BarMap": [
           {"name": "Daily Truck Trips","file": "BarChartAndMapData.csv","config": "Default", "info":"Truck trips by zone and county", "explanation":[{

@@ -6,21 +6,21 @@
   "NavbarTitle": "COVID-19 Travel Metrics",
   "LinkURL": "https://www.rsginc.com",
   "CenterMap": [40.656852, -74.028204],
-  "FrontPageTitle": "COVID-19 Travel Metrics",
+  "FrontPageTitle": "Vanishing Travel",
+  "FrontPageSubtitle": "New York City Metro Area Before and During the COVID-19 Outbreak",
+  "HeroImageLayout": true,
+  "HeroImage": "charles-forerunner-small.jpg",
   "FrontPageGraphic": "RSG_400px.jpg",
-  "SideBarTextLeft": "<b>ActivityViz</b> was initially funded by the <a href='https://atlantaregional.org/'>Atlanta Regional Commission</a> with additional support from <a href='https://www.oregonmetro.gov/'>Oregon Metro</a> and others.",
-  "SideBarTextRight": "<b>ActivityViz</b> is an interactive travel and activity data visualization tool.  It is built with JavaScript technologies and works with various types of travel and activity data - household travel surveys, trip-based model outputs, activity-based model outputs, disaggregate passive data, freight models, on-board surveys, etc.  The dashboard features several interactive and customizable visualizations for exploring data, such as 3D maps of trips in time and space, time use by person type and activity, radar charts for performance measure analysis, sunburst diagrams for visualizing mode shares, animated bubble maps, chord diagrams for OD data, point-of-interest maps for transit stop data, truck flow data, etc.  </b>ActivityViz</b> is published using <a href='https://pages.github.com/'>GitHub pages</a> which eliminates most of the administrative backend in traditional systems.",
-  "SideBarImage": "example.png",
   "scenarios": {
     "ny-metro": {
-      "title": "New York Metro Region",
+      "title": "New York Metro Region Dashboard",
       "visualizations": {
         "TimeUse": [
           {
             "name": "Location During the Day",
             "title": "Location During the Day",
             "config": "Default",
-            "file": "ny_covid_timeuse.csv",
+            "file": "time_use_04242020.csv",
             "info": "Displays activity estimates based on SafeGraph location data. The vertical axis displays the sum or percent of activity and the horizontal axis displays the period of the day.",
             "explanation": [
               {
@@ -55,8 +55,9 @@
         "GroupedCharts": [
           {
             "name": "Stay-at-Home by Week",
+            "title": "Stay-at-Home by Week",
             "config": "Default",
-            "file": "ny_covid_barcharts.csv",
+            "file": "time_series_04242020.csv",
             "info": "The percent of time people spent at home, at work, or somewhere else, by week",
             "explanation": [
               {
@@ -65,7 +66,7 @@
                   {
                     "type": "unorderedList",
                     "content": [
-                      "Proportion of New York Metropolitan area residents at home, work, and other locations between 9am-6pm during weekdays and weekends average by week, from the first week of February 2020 to the last week of March."
+                      "Proportion of New York Metropolitan area residents at home, work, and other locations between 9am-6pm during weekdays and weekends average by week, starting the first week of February 2020."
                     ]
                   }
                 ]
@@ -87,7 +88,7 @@
         "BarMap": [
           {
             "name": "Devices at Home by County",
-            "file": "ny_covid_map.csv",
+            "file": "map_04242020.csv",
             "config": "Default",
             "aggregationMethod": "average",
             "barGroupSortMethod": "firstBar",

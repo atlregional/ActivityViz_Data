@@ -172,13 +172,13 @@ trip_end_dt = trip_dt[,.(TYPE = "TRIP END",
 trip_period_dt = rbindlist(list(trip_start_dt, trip_end_dt), use.names = TRUE)
 rm(trip_start_dt, trip_end_dt)
 
-trip_period_dt[,TIME_PERIOD:=ifelse(HOUR > 12, paste0(HOUR - 12," PM"),
+trip_period_dt[,`TIME PERIOD`:=ifelse(HOUR > 12, paste0(HOUR - 12," PM"),
                             ifelse(HOUR == 12, "12 PM",
                                    ifelse(HOUR == 0, "12 AM", paste0(HOUR, " AM"))))]
 # setorder(trip_period_dt, TYPE, HOUR)
 trip_period_dt = trip_period_dt[order(match(TYPE, c("TRIP START", "TRIP END")), HOUR)]
 trip_period_dt[,HOUR:=NULL]
-setcolorder(trip_period_dt, c("TYPE", "TIME_PERIOD"))
+setcolorder(trip_period_dt, c("TYPE", "TIME PERIOD"))
 trip_period_dt[,CHART:="TYPICAL TRAVEL"]
 
 

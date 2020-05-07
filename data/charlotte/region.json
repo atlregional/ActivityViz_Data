@@ -16,7 +16,7 @@
   "SideBarImage":"example.png",
   "scenarios": {
     "PassiveData": {
-      "title": "- 2018 Passive Data",
+      "title": "2018 Passive Data",
       "visualizations": {
         "Chord": [
           {"name": "Truck OD Flows","file":"ExpandedATRI.csv","config":"Default", "info":"Truck OD flows by district", "explanation":[{

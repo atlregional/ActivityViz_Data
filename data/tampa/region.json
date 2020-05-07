@@ -8,13 +8,13 @@
   "CenterMap": [27.947896, -82.457335],
   "FrontPageTitle": "Tampa Bay Regional Travel Surveys",
   "FrontPageGraphic": "RSG_400px.jpg",
-  "SideBarTextLeft": "<br>The Tampa Bay Regional Travel Surveys (TBRTS) program is a comprehensive data collection program designed to support regional and local transportation modeling and transportation planning decisions. This visualization tool is provided regional stakeholders to explore and understand the regional Household Travel Survey and passive data Origin-Destination Tables – two components of the TBRTS.</br><br>The 2018-2019 Tampa Bay Regional Household Travel Survey collected data on daily travel throughout the five-county Tampa Bay region. Over 4,500 households and 9,000 people in Citrus, Hernando, Hillsborough, Pasco and Pinellas counties participated. Two-thirds of households were randomly invited through a mailed invitation (probability sample) and one-third through email, advertising, and community outreach efforts. Data were collected between October 2018 and April 2019, when both year-round and seasonal residents are in the region. Participants provided basic demographic details, answered questions about typical travel, and provided a one-day (online / telephone participants) or five-day (smartphone app participants) diary of all household travel.</br><br>The Origin-Destination Tables are derived from passively collected GPS and wifi-beacon location data known as Location Based Services (LBS). Raw LBS data consists of millions of device (typically smartphone) locations and timestamps without demographic or other details of the device owners. The raw data is processed by first cleaning, filtering, and analyzing the location data to identify trips, then crossing with other regional data sources such as surveys and traffic counts to estimate detailed regional travel patterns.</br><br>All data is shown as expanded and weighted to match a typical weekday of travel in 2018.</br><br>To learn more about the survey and its results please contact the <a href='https://www.fdot.gov/info/moredot/districts/dist7.shtm'>Florida Department of Transportation, District 7</a>.</br><br><b>ActivityViz</b> was initially funded by the <a href='https://atlantaregional.org/'>Atlanta Regional Commission</a> with additional support from <a href='https://www.oregonmetro.gov/'>Oregon Metro</a> and others.</br>",
-  "SideBarTextRight": "<br>The survey was conducted by the <a href='https://www.fdot.gov/'>Florida Department of Transportation District Seven</a> with support from the region’s four metropolitan planning organizations (MPOs): <a href='https://www.hernandocounty.us/departments/departments-f-m/metropolitan-planning-organization'>Hernando-Citrus MPO</a>, <a href='http://www.planhillsborough.org/metropolitan-planning-organization-mpo/'>Hillsborough MPO</a>, <a href='https://www.pascocountyfl.net/323/MPOTransportation-Planning'>Pasco County MPO</a> and <a href='https://forwardpinellas.org/'>Forward Pinellas</a>.</br><br><img src='https://raw.githubusercontent.com/RSGInc/ActivityViz_Data/master/data/tampa/img/sponsor_by_logo.png' width='100%' alt='Sponsor by'></br><br> </br><br> </br>",
+  "SideBarTextLeft": "<br>The Tampa Bay Regional Travel Surveys (TBRTS) program is a comprehensive data collection program designed to support regional and local transportation modeling and transportation planning decisions. This visualization tool is provided regional stakeholders to explore and understand the regional Household Travel Survey and passive data Origin-Destination Tables – two components of the TBRTS.</br><br>The 2018-2019 Tampa Bay Regional Household Travel Survey collected data on daily travel throughout the five-county Tampa Bay region. Over 4,500 households and 9,000 people in Citrus, Hernando, Hillsborough, Pasco and Pinellas counties participated. Two-thirds of households were randomly invited through a mailed invitation (probability sample) and one-third through email, advertising, and community outreach efforts. Data were collected between October 2018 and April 2019, when both year-round and seasonal residents are in the region. Participants provided basic demographic details, answered questions about typical travel, and provided a one-day (online / telephone participants) or five-day (smartphone app participants) diary of all household travel.</br><br>The Origin-Destination Tables are derived from passively collected GPS and wifi-beacon location data known as Location Based Services (LBS). Raw LBS data consists of millions of device (typically smartphone) locations and timestamps without demographic or other details of the device owners. The raw data is processed by first cleaning, filtering, and analyzing the location data to identify trips, then crossing with other regional data sources such as surveys and traffic counts to estimate detailed regional travel patterns.</br><br>All data is shown as expanded and weighted to match a typical weekday of travel in 2018.</br><br>To learn more about the survey and its results please contact the <a href='https://www.fdot.gov/info/moredot/districts/dist7.shtm' target='_blank'>Florida Department of Transportation, District 7</a>.</br><br><b>ActivityViz</b> was initially funded by the <a href='https://atlantaregional.org/' target='_blank'>Atlanta Regional Commission</a> with additional support from <a href='https://www.oregonmetro.gov/' target='_blank'>Oregon Metro</a> and others.</br>",
+  "SideBarTextRight": "<br>The survey was conducted by the <a href='https://www.fdot.gov/' target='_blank'>Florida Department of Transportation District Seven</a> with support from the region’s four metropolitan planning organizations (MPOs): <a href='https://www.hernandocounty.us/departments/departments-f-m/metropolitan-planning-organization' target='_blank'>Hernando-Citrus MPO</a>, <a href='http://www.planhillsborough.org/metropolitan-planning-organization-mpo/' target='_blank'>Hillsborough MPO</a>, <a href='https://www.pascocountyfl.net/323/MPOTransportation-Planning' target='_blank'>Pasco County MPO</a> and <a href='https://forwardpinellas.org/' target='_blank'>Forward Pinellas</a>.</br><br><img src='https://raw.githubusercontent.com/RSGInc/ActivityViz_Data/master/data/tampa/img/sponsor_by_logo.png' width='100%' alt='Sponsor by'></br><br> </br><br> </br>",
   "SideBarLogo":"",
   "SideBarImage":"tampa.png",
   "scenarios":{
     "Executive_Summary": {
-      "title": "- Executive Summary: Surveys & O-D Data",
+      "title": "Executive Summary: Surveys & O-D Data",
       "visualizations": {
         "GroupedCharts": [
           {"name":"Typical Travel", "config":"Travel", "file":"trips_period.csv", "info":"This information shows the time of day people travel during a typical weekday.", 
@@ -37,14 +37,14 @@
               "Select \"Show Data\" (lower left) to  view data in a table format."]
             }]
           }] },
-          {"name":"Trip Destination Activity", "config":"Destination", "file":"trips_destination.csv", "info":"This information explains where people ended their trips.", 
+          {"name":"Trip Destination Activity", "config":"Destination", "file":"trips_destination.csv", "info":"This information explains the reported planned activity at the trip destination.", 
           "title":"Planned activity at trip destination", 
           "explanation":[{
             "header": "Summary",
             "body":[{
               "type": "unorderedList",
               "content": ["<b>Survey question:</b>  \"Why did you stop at ___?\" <br><b>Survey logic:</b> Asked for each trip taken.</br>",
-              "<b>Observation:</b> 45% of all trips end at home or work."]
+              "<b>Observation:</b> 47% of all trips reported an activity of Activity of Home or Work Related."]
             }]
           },
           {
@@ -82,7 +82,7 @@
             "body":[{
               "type": "unorderedList",
               "content": ["<b>Survey question:</b> \"How often do you use a bicycle?\"",
-              "<b>Observation:</b> 35-54 year-olds report the most frequent bike usage."]
+              "<b>Observation:</b> Almost 20% of 35-54 year olds report riding a bike one or more times per month."]
             }]
           },
           {
@@ -114,23 +114,6 @@
           }]}
            ],
         "Sunburst": [
-            {"name":"Gender", "config":"Pie", "file":"gender_distribution.csv", "info":"Showing the gender of the people in the survey region.", 
-            "title":"Gender of persons in survey region", 
-            "explanation":[{
-            "header": "Summary",
-            "body":[{
-              "type": "unorderedList",
-              "content": ["<b>Observation:</b> Slightly more women than men live in the region.."]
-            }]
-          },
-          {
-            "header": "Instructions",
-            "body":[{
-              "type": "unorderedList",
-              "content": ["Hover mouse over graph to see detail.",
-              "Select \"Show Data\" (lower left) to see tabulation."]
-            }]
-          }]},
             {"name":"Work Trip Mode", "config":"Default", "file":"work_mode.csv", "info":"This shows how people traveled to work.", 
             "title":"Typical mode of travel to work",
             "explanation":[{
@@ -177,7 +160,7 @@
       }
     },
     "Travel_Survey": {
-      "title": "- Household Travel Survey",
+      "title": "Household Travel Survey",
       "visualizations": {
         "BarMap": [
           {"name":"Trip Mode by County","config":"Default", "file":"trip_mode_zone.csv", "info":"Categorized by county, this shows what modes people are using to travel.", 
@@ -245,26 +228,6 @@
             }]
           }]}
           ],
-        "GroupedCharts": [
-          {"name":"Day Pattern","config":"Frequency","file":"day_pattern.csv","info":"Daily patterns, categorized by the type of person, showing where people spend their time.",
-          "title":"Typical weekday activity pattern by person type",
-          "explanation":[{
-            "header": "Summary",
-            "body":[{
-              "type": "unorderedList",
-              "content": ["Day patterns by person type (e.g., employment status, student status, age)"]
-            }]
-          },
-          {
-            "header": "Instructions",
-            "body":[{
-              "type": "unorderedList",
-              "content": ["Hover mouse over chart bars to see individual values.",
-              "Select \"Show Data\" (lower left) to see tabulation.",
-              "Click on the category bubbles in the legend to toggle them on and off."]
-            }]
-          }]}
-            ],
         "TimeUse": [
             {"name":"Time Use","config":"Default","file":"time_use.csv","info":"Daily activity categorized by the type of person.", 
             "title":"Activity by time of day",
@@ -304,7 +267,7 @@
               "type": "unorderedList",
               "content": ["Hover mouse over graph to see detail and to display activity zone flows on the map.",
               "Select \"Show Data\" to see tabulation.",
-              "For the left graph: The color of connections between Districts depicts net travel (e.g., there were more trips from Hillsborough-Other to Tampa than there were in the opposite direction)."]
+              "For the left graph: Connections are colored based on activity zone with net outflow of trips."]
             }]
           }]},
             {"name":"Hillsborough OD Flows","config":"Hillsborough","file":"trip_od_hillsborough.csv","info":"This graph show the origin and destination points of Hillsborough County trips from survey data.", 
@@ -322,7 +285,7 @@
               "type": "unorderedList",
               "content": ["Hover mouse over graph to see detail and to display District flows on the map.",
               "Select \"Show Data\" to see tabulation.",
-              "For the left graph: The color of connections between Districts depicts net travel."]
+              "For the left graph: Connections are colored based on activity zone with net outflow of trips."]
             }]
           }]},
             {"name":"Pinellas OD Flows","config":"Pinellas","file":"trip_od_pinellas.csv","info":"This graph show the origin and destination points of Pinellas County from survey data.", 
@@ -340,7 +303,7 @@
               "type": "unorderedList",
               "content": ["Hover mouse over graph to see detail and to display District flows on the map.",
               "Select \"Show Data\" to see tabulation.",
-              "For the left graph: The color of connections between Districts depicts net travel."]
+              "For the left graph: Connections are colored based on activity zone with net outflow of trips."]
             }]
           }]},
             {"name":"Pasco OD Flows","config":"Pasco","file":"trip_od_pasco.csv","info":"This graph show the origin and destination points of Pasco County from survey data.",
@@ -358,7 +321,7 @@
               "type": "unorderedList",
               "content": ["Hover mouse over graph to see detail and to display District flows on the map.",
               "Select \"Show Data\" to see tabulation.",
-              "For the left graph: The color of connections between Districts depicts net travel."]
+              "For the left graph: Connections are colored based on activity zone with net outflow of trips."]
             }]
           }]},
             {"name":"Hernando and Citrus OD Flows","config":"Hernando","file":"trip_od_hernando_citrus.csv","info":"This graph show the origin and destination points of Hernando and Citrus Counties from survey data.",
@@ -376,14 +339,14 @@
               "type": "unorderedList",
               "content": ["Hover mouse over graph to see detail and to display District flows on the map.",
               "Select \"Show Data\" to see tabulation.",
-              "For the left graph: The color of connections between Districts depicts net travel."]
+              "For the left graph: Connections are colored based on activity zone with net outflow of trips."]
             }]
           }]}
             ]
       }
     },
     "Passive_Data": {
-      "title": "- Origin-Destination Tables",
+      "title": "Origin-Destination Tables",
       "visualizations": {
         "Chord": [
             {"name":"Overall OD Flows","config":"Overall","file":"trip_daily_pod_overall.csv","info":"This graph show the origin and destination points by activity zone from passive data.",
@@ -401,7 +364,7 @@
               "type": "unorderedList",
               "content": ["Hover mouse over graph to see detail and to display District flows on the map.",
               "Select \"Show Data\" to see tabulation.",
-              "For the left graph: The color of connections between Districts depicts net travel (e.g., there were more trips from Tampa to Hillsborough-Other than there were in the opposite direction)."]
+              "For the left graph: Connections are colored based on activity zone with net outflow of trips."]
             }]
           }]},
             {"name":"Hillsborough OD Flows","config":"Hillsborough","file":"trip_daily_pod_hillsborough.csv","info":"This graph show the origin and destination points of Hillsborough County from passive data.",
@@ -419,7 +382,7 @@
               "type": "unorderedList",
               "content": ["Hover mouse over graph to see detail and to display District flows on the map.",
               "Select \"Show Data\" to see tabulation.",
-              "For the left graph: The color of connections between Districts depicts net travel."]
+              "For the left graph: Connections are colored based on activity zone with net outflow of trips."]
             }]
           }]},
             {"name":"Pinellas OD Flows","config":"Pinellas","file":"trip_daily_pod_pinellas.csv","info":"This graph show the origin and destination points of Pinellas County from passive data.",
@@ -437,7 +400,7 @@
               "type": "unorderedList",
               "content": ["Hover mouse over graph to see detail and to display District flows on the map.",
               "Select \"Show Data\" to see tabulation.",
-              "For the left graph: The color of connections between Districts depicts net travel."]
+              "For the left graph: Connections are colored based on activity zone with net outflow of trips."]
             }]
           }]},
             {"name":"Pasco OD Flows","config":"Pasco","file":"trip_daily_pod_pasco.csv","info":"This graph show the origin and destination points of Pasco County from passive data.",
@@ -455,7 +418,7 @@
               "type": "unorderedList",
               "content": ["Hover mouse over graph to see detail and to display District flows on the map.",
               "Select \"Show Data\" to see tabulation.",
-              "For the left graph: The color of connections between Districts depicts net travel."]
+              "For the left graph: Connections are colored based on activity zone with net outflow of trips."]
             }]
           }]},
             {"name":"Hernando and Citrus OD Flows","config":"Hernando","file":"trip_daily_pod_hernando_citrus.csv","info":"This graph show the origin and destination points of Hernando and Citrus Counties from passive data.",
@@ -473,7 +436,7 @@
               "type": "unorderedList",
               "content": ["Hover mouse over graph to see detail and to display District flows on the map.",
               "Select \"Show Data\" to see tabulation.",
-              "For the left graph: The color of connections between Districts depicts net travel."]
+              "For the left graph: Connections are colored based on activity zone with net outflow of trips."]
             }]
           }]},
             {"name":"Overall OD Flows by Residency","config":"SideBySide","file":"trip_res_vis_pod_overall.csv","info":"These graphs show the origin and destination points by activity zones for residents and visitors from passive data.",
@@ -491,7 +454,7 @@
               "type": "unorderedList",
               "content": ["Hover mouse over graph to see detail.",
               "Select \"Show Data\" to see tabulation.",
-              "The color of connections between Districts depicts net travel."]
+              "Connections are colored based on activity zone with net outflow of trips."]
             }]
           }]},
             {"name":"Hillsborough OD Flows by Residency","config":"SideBySide","file":"trip_res_vis_pod_hillsborough.csv","info":"These graphs show the origin and destination points of Hillsborough County for residents and visitors from passive data.",
@@ -510,7 +473,7 @@
               "type": "unorderedList",
               "content": ["Hover mouse over graph to see detail.",
               "Select \"Show Data\" to see tabulation.",
-              "The color of connections between Districts depicts net travel."]
+              "Connections are colored based on activity zone with net outflow of trips."]
             }]
           }]},
             {"name":"Pinellas OD Flows by Residency","config":"SideBySide","file":"trip_res_vis_pod_pinellas.csv","info":"These graphs show the origin and destination points of Pinellas County for residents and visitors from passive data.",
@@ -528,7 +491,7 @@
               "type": "unorderedList",
               "content": ["Hover mouse over graph to see detail.",
               "Select \"Show Data\" to see tabulation.",
-              "The color of connections between Districts depicts net travel."]
+              "Connections are colored based on activity zone with net outflow of trips."]
             }]
           }]},
             {"name":"Pasco OD Flows by Residency","config":"SideBySide","file":"trip_res_vis_pod_pasco.csv","info":"These graphs show the origin and destination points of Pasco County for residents and visitors from passive data.",
@@ -546,7 +509,7 @@
               "type": "unorderedList",
               "content": ["Hover mouse over graph to see detail.",
               "Select \"Show Data\" to see tabulation.",
-              "The color of connections between Districts depicts net travel."]
+              "Connections are colored based on activity zone with net outflow of trips."]
             }]
           }]},
             {"name":"Hernando and Citrus OD Flows by Residency","config":"SideBySide","file":"trip_res_vis_pod_hernando_citrus.csv","info":"These graphs show the origin and destination points of Hernando and Citrus Counties for residents and visitors from passive data.",
@@ -564,7 +527,7 @@
               "type": "unorderedList",
               "content": ["Hover mouse over graph to see detail.",
               "Select \"Show Data\" to see tabulation.",
-              "The color of connections between Districts depicts net travel."]
+              "Connections are colored based on activity zone with net outflow of trips."]
             }]
           }]}
             ]
@@ -598,6 +561,7 @@
     "ParticipantAge": {
       "NumberColsGrouped": 0,
       "RotateLabels": 90,
+      "RotateXLabels": 0,
       "SwapLegendByDefault": "N/A",
       "ShowAsPercentByDefault": true,
       "ShowAsVerticalByDefault": true,
@@ -664,6 +628,13 @@
     "Default":{
       "ZoneFile":"tampa2020.json",
       "CycleMapTools": false 
+    }
+  },
+  "TimeUse":{
+    "Default":{
+      "DisplayPercentagesByDefault": true,
+      "DisplayCountsByDefault": false,
+      "HideCountsPercentagesToggle": true
     }
   }
 }

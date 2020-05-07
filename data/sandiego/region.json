@@ -13,7 +13,7 @@
   "SideBarImage":"example.png",
   "scenarios": {
     "BS2012": {
-      "title": "- Base year 2012 (default)",
+      "title": "Base year 2012 (default)",
       "visualizations": {
         "BarMap": [{"name": "Trip Mode","config": "Default","file": "BarChartAndMapData.csv", "info":"Trips by mode by city", "explanation":[{
             "header": "Summary",
@@ -123,7 +123,7 @@
       }
     },
     "BS2015": {
-      "title": "- Base year 2015 (127)",
+      "title": "Base year 2015 (127)",
       "visualizations": {
         "BarMap": [{"name": "Trip Mode","config": "Default","file": "BarChartAndMapData.csv", "info":"Trips by mode by city", "explanation":[{
             "header": "Summary",
@@ -233,7 +233,7 @@
       }
     },
     "2020RC": {
-      "title": "- Revenue-Constrained Year 2020",
+      "title": "Revenue-Constrained Year 2020",
       "visualizations": {
         "BarMap": [{"name": "Trip Mode","config": "Default","file": "BarChartAndMapData.csv", "info":"Trips by mode by city", "explanation":[{
             "header": "Summary",
@@ -343,7 +343,7 @@
       }
     },
     "2035RC": {
-      "title": "- Revenue-Constrained Year 2035",
+      "title": "Revenue-Constrained Year 2035",
       "visualizations": {
         "BarMap": [{"name": "Trip Mode","config": "Default","file": "BarChartAndMapData.csv", "info":"Trips by mode by city", "explanation":[{
             "header": "Summary",
@@ -453,7 +453,7 @@
       }
     },
     "2050RC": {
-      "title": "- Revenue-Constrained Year 2050",
+      "title": "Revenue-Constrained Year 2050",
       "visualizations": {
         "BarMap": [{"name": "Trip Mode","config": "Default","file": "BarChartAndMapData.csv", "info":"Trips by mode by city", "explanation":[{
             "header": "Summary",

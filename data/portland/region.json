@@ -18,7 +18,7 @@
     "SideBarImage":"example.png",
     "scenarios": {
         "I205": {
-            "title": "- I205",
+            "title": "I205",
             "CenterMap": [45.367157,-122.692046],
             "ScenarioFocus": "I205.json",
             "visualizations": {
@@ -99,7 +99,7 @@
             }
         },
         "DivisionBRT": {
-            "title": "- DivisionBRT",
+            "title": "DivisionBRT",
             "CenterMap": [45.512794,-122.679565],
             "ScenarioFocus": "DivisionBRT.json",
             "visualizations": {
@@ -181,7 +181,7 @@
         },
         "Scenarios": {
             "name": "Scenarios",
-            "title": "- I205 versus Division BRT",
+            "title": "I205 versus Division BRT",
             "CenterMap": [45.512794,-122.679565],
             "visualizations": {
                 "Scatter": [{"name":"BC Ratio","config":"Default","file":"Scatter.csv","info":"Scenario benefit / cost", "explanation":[{
@@ -223,7 +223,7 @@
         },
         "Freight": {
             "name": "Freight",
-            "title": "- Freight Flows",
+            "title": "Freight Flows",
             "CenterMap": [45.512794,-122.679565],
             "visualizations": {
                 "POIMap": [{"name":"Freight Flows","config":"Default","file":"PointofInterest.csv","info":"Freight model flows", "explanation":[{
@@ -250,7 +250,7 @@
         },
         "Concept-B": {
             "name": "Concept-B",
-            "title": "- Concept B",
+            "title": "Concept B",
             "CenterMap": [45.512794,-122.679565],
             "ScenarioFocus": "concept-b.json",
             "visualizations": {
@@ -334,7 +334,7 @@
         },
         "Concept-E": {
             "name": "Concept-E",
-            "title": "- Concept E",
+            "title": "Concept E",
             "CenterMap": [45.512794,-122.679565],
             "ScenarioFocus": "concept-e.json",
             "visualizations": {

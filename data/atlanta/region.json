@@ -16,7 +16,7 @@
   "SideBarImage": "example.png",
   "scenarios": {
     "BASE2010": {
-      "title": "- Base year 2010",
+      "title": "Base year 2010",
       "label": "Travel Model for Base Year 2010",
       "ScenarioFocus": "transit.json",
       "visualizations": {
@@ -362,7 +362,7 @@
       }
     },
     "NB2040": {
-      "title": "- No-Build 2040",
+      "title": "No-Build 2040",
       "ScenarioFocus": "transit.json",
       "visualizations": {
         "BarMap": [
@@ -660,7 +660,7 @@
       }
     },
     "RP2015": {
-      "title": "- Regional Plan 2015",
+      "title": "Regional Plan 2015",
       "ScenarioFocus": "transit.json",
       "visualizations": {
         "BarMap": [
@@ -1005,7 +1005,7 @@
       }
     },
     "RP2017": {
-      "title": "- Regional Plan 2017",
+      "title": "Regional Plan 2017",
       "ScenarioFocus": "transit.json",
       "visualizations": {
         "BarMap": [
@@ -1350,7 +1350,7 @@
       }
     },
     "RP2020": {
-      "title": "- Regional Plan 2020",
+      "title": "Regional Plan 2020",
       "ScenarioFocus": "transit.json",
       "visualizations": {
         "BarMap": [
@@ -1695,7 +1695,7 @@
       }
     },
     "RP2024": {
-      "title": "- Regional Plan 2024",
+      "title": "Regional Plan 2024",
       "ScenarioFocus": "transit.json",
       "visualizations": {
         "BarMap": [
@@ -2040,7 +2040,7 @@
       }
     },
     "RP2030": {
-      "title": "- Regional Plan 2030",
+      "title": "Regional Plan 2030",
       "ScenarioFocus": "transit.json",
       "visualizations": {
         "BarMap": [
@@ -2049,6 +2049,7 @@
             "config": "Default",
             "file": "BarChartAndMapData.csv",
             "info": "Trip mode by zone and county",
+            "title": "BarChart Map Title",
             "explanation": [
               {
                 "header": "Summary",
@@ -2131,6 +2132,7 @@
             "config": "Default",
             "file": "BarChartData.csv",
             "info": "Day patterns by person groupings",
+            "title": "day patterns",
             "explanation": [
               {
                 "header": "Summary",
@@ -2345,6 +2347,7 @@
             "config": "Default",
             "file": "DesireLines.csv",
             "info": "Trips by purpose and mode between super districts.",
+            "title":"Chord diagram test",
             "explanation": [
               {
                 "header": "Summary",
@@ -2385,7 +2388,7 @@
       }
     },
     "RP2040": {
-      "title": "- Regional Plan 2040",
+      "title": "Regional Plan 2040",
       "ScenarioFocus": "transit.json",
       "visualizations": {
         "BarMap": [
@@ -2730,7 +2733,7 @@
       }
     },
     "RP-NB": {
-      "title": "- Regional Plan 2040 minus No-Build 2040",
+      "title": "Regional Plan 2040 minus No-Build 2040",
       "ScenarioFocus": "transit.json",
       "visualizations": {
         "BarMap": [
