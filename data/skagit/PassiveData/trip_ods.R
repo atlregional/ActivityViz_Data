@@ -39,3 +39,5 @@ trips_od_from_to$TO[is.na(trips_od_from_to$TO)] = "External"
 write.dbf(zone_names, zone_filename_with_names) # includes names so when mapshaper creates geojson it has a names attribute
 write.csv(trips_od_from_to, trips_od_filename, row.names=F, quote=F)
 write.csv(counties, counties_filename, row.names=F, quote=F)
+
+#manually set external to external to 0 for now
