@@ -31,8 +31,8 @@
             "body":[{
               "type": "unorderedList",
               "content": ["Hover mouse over graph to see detail.",
-              "The connections between districts depict bi-directional flows.",
-              "Turn on desire lines in the map layers to see district-to-district trip flow lines or zones to see origin-destination",
+              "The connections between zones depict bi-directional flows.",
+              "Toggle desire lines or zones in the map layers",
               "Select \"Show Data\" to see tabulation."]
             }]
           }]}
