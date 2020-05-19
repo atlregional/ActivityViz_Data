@@ -19,7 +19,7 @@
       "title": "2018 Passive Data",
       "visualizations": {
         "Chord": [
-          {"name": "OD Flows","file":"odflows.csv","config":"Default", "info":"OD flows by zone", "explanation":[{
+          {"name": "OD Flows","file":"trips_od.csv","config":"Default", "info":"OD flows by zone", "explanation":[{
             "header": "Summary",
             "body":[{
               "type": "unorderedList",
