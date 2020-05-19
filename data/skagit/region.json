@@ -16,7 +16,7 @@
   "SideBarImage":"example.png",
   "scenarios": {
     "PassiveData": {
-      "title": "2018 Passive Data",
+      "title": "Draft Fall 2019 Passive Data",
       "visualizations": {
         "Chord": [
           {"name": "OD Flows","file":"trips_od.csv","config":"Default", "info":"OD flows by zone", "explanation":[{
