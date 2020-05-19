@@ -2,7 +2,7 @@
   "Title": "Skagit COG - Passive Data Visualization",
   "CountyFile": "tract_aggregate_zones_wgs84.json",  
   "Icon": "RSG.ico",
-  "Logo": "charlotte.PNG",
+  "Logo": "RSG_400px.jpg",
   "NavbarTitle": "Skagit COG ActivityViz",
   "LinkURL": "https://www.scog.net/",
   "CenterMap": [
