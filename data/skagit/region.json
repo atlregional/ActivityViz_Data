@@ -1,0 +1,54 @@
+{
+  "Title": "Skagit Council of Governments - Passive Data Visualization",
+  "CountyFile": "tract_aggregate_zones_wgs84.json",  
+  "Icon": "RSG.ico",
+  "Logo": "RSG_400px.jpg",
+  "NavbarTitle": "Skagit Council of Governments Passive Data Visualization",
+  "LinkURL": "https://www.scog.net/",
+  "CenterMap": [
+    48.4201,
+    122.3375
+  ],
+  "FrontPageTitle": "Skagit Council of Governments",
+  "FrontPageGraphic": "scog_logo_color_white_with_drop_shadow.png",
+  "SideBarTextLeft": "<b>ActivityViz</b> was initially funded by the <a href='https://atlantaregional.org/'>Atlanta Regional Commission</a> with additional support from <a href='https://www.oregonmetro.gov/'>Oregon Metro</a> and others.",
+  "SideBarTextRight": "<b>ActivityViz</b> is an interactive travel and activity data visualization tool.  It is built with JavaScript technologies and works with various types of travel and activity data - household travel surveys, trip-based model outputs, activity-based model outputs, disaggregate passive data, freight models, on-board surveys, etc.  The dashboard features several interactive and customizable visualizations for exploring data, such as 3D maps of trips in time and space, time use by person type and activity, radar charts for performance measure analysis, sunburst diagrams for visualizing mode shares, animated bubble maps, chord diagrams for OD data, point-of-interest maps for transit stop data, truck flow data, etc.  </b>ActivityViz</b> is published using <a href='https://pages.github.com/'>GitHub pages</a> which eliminates most of the administrative backend in traditional systems.",
+  "SideBarImage":"example.png",
+  "scenarios": {
+    "PassiveData": {
+      "title": "Draft Fall 2019 Passive Data",
+      "visualizations": {
+        "Chord": [
+          {"name": "OD Flows","file":"trips_od.csv","config":"Default", "info":"OD flows by zone", "explanation":[{
+            "header": "Summary",
+            "body":[{
+              "type": "unorderedList",
+              "content": ["Origins and destinations of trips by zone."]
+            }]
+          },
+          {
+            "header": "Instructions",
+            "body":[{
+              "type": "unorderedList",
+              "content": ["Hover mouse over graph to see detail.",
+              "The connections between zones depict bi-directional flows.",
+              "Toggle desire lines or zones in the map layers",
+              "Select \"Show Data\" to see tabulation."]
+            }]
+          }]}
+        ]
+      }
+    }
+  },
+  "Chord": {
+    "Default": {
+      "ZoneFilterFile": "counties.csv",
+      "LabelSize": "14",
+      "LegendText": "Flows",
+      "ZoneFile": "tract_aggregate_zones_wgs84.json",
+      "ExcludeSameOD": false,
+      "SideBySide": false,
+      "DesireLinesOn": true
+    }
+  }
+}
