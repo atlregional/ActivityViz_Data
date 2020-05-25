@@ -23,9 +23,10 @@
         "BarMap": [
           {
             "name": "Trip Mode",
+            "title": "Trip Mode by County",
             "config": "Default",
             "file": "BarChartAndMapData.csv",
-            "info": "Trip mode by zone and county",
+            "info": "Frequency of Trips by Mode by County",
             "explanation": [
               {
                 "header": "Summary",
@@ -66,6 +67,7 @@
         "3DMap": [
           {
             "name": "Daytime Population",
+            "title": "Population not at Home by Time of Day",
             "config": "Default",
             "file": "3DAnimatedMapData.csv",
             "info": "People that are not in their home zone by time-of-day",
@@ -105,6 +107,7 @@
         "GroupedCharts": [
           {
             "name": "Day Patterns",
+            "title": "Person Group by Day Pattern",
             "config": "Default",
             "file": "BarChartData.csv",
             "info": "Day patterns by person groupings",
@@ -147,6 +150,7 @@
         "TimeUse": [
           {
             "name": "Time Use",
+            "title": "Activity by Time of Day",
             "config": "Default",
             "file": "TimeUseData.csv",
             "info": "Displays person out-of-home travel purpose by time of day. The vertical axis displays the sum or percent of activity and the horizontal axis displays the period of the day.",
@@ -189,6 +193,7 @@
         "Sunburst": [
           {
             "name": "Nested Mode Share",
+            "title": "Trip Mode Share",
             "config": "Default",
             "file": "TreeMapData.csv",
             "info": "Nested Trip Mode Share.  Click a ring area to drill-down into the nest.  Click the center to go back up the nest.",
@@ -231,6 +236,7 @@
         "RadarCharts": [
           {
             "name": "Performance Measures",
+            "title": "",
             "config": "Default",
             "file": "RadarChartsData.csv",
             "info": "Activity centers by four performance measures.  The min/max by measure is scaled to the zone with the highest and lowest value.",
@@ -272,6 +278,7 @@
         "POIMap": [
           {
             "name": "Rail Stations",
+            "title": "Station by Boardings",
             "config": "Default",
             "file": "TransitStops.csv",
             "info": "Rail station data",
@@ -319,6 +326,7 @@
         "Chord": [
           {
             "name": "Trip ODs",
+            "title": "Trip Flows by District, Purpose, and Mode",
             "config": "Default",
             "file": "DesireLines.csv",
             "info": "Trips by purpose and mode between super districts.",
@@ -368,6 +376,7 @@
         "BarMap": [
           {
             "name": "Trip Mode",
+            "title": "Frequency of Trips by Mode by County",
             "config": "Default",
             "file": "BarChartAndMapData.csv",
             "info": "Trip mode by zone and county",
@@ -411,6 +420,7 @@
         "3DMap": [
           {
             "name": "Daytime Population",
+            "title": "Population not at Home by Time of Day",
             "config": "Default",
             "file": "3DAnimatedMapData.csv",
             "info": "People that are not in their home zone by time-of-day",
@@ -450,6 +460,7 @@
         "GroupedCharts": [
           {
             "name": "Day Patterns",
+            "title": "Person Group by Day Pattern",
             "config": "Default",
             "file": "BarChartData.csv",
             "info": "Day patterns by person groupings",
@@ -492,6 +503,7 @@
         "TimeUse": [
           {
             "name": "Time Use",
+            "title": "Activity by Time of Day",
             "config": "Default",
             "file": "TimeUseData.csv",
             "info": "Displays person out-of-home travel purpose by time of day. The vertical axis displays the sum or percent of activity and the horizontal axis displays the period of the day.",
@@ -534,6 +546,7 @@
         "Sunburst": [
           {
             "name": "Nested Mode Share",
+            "title": "Trip Mode Share",
             "config": "Default",
             "file": "TreeMapData.csv",
             "info": "Nested Trip Mode Share.  Click a ring area to drill-down into the nest.  Click the center to go back up the nest.",
@@ -576,6 +589,7 @@
         "RadarCharts": [
           {
             "name": "Performance Measures",
+            "title": "",
             "config": "Default",
             "file": "RadarChartsData.csv",
             "info": "Activity centers by four performance measures.  The min/max by measure is scaled to the zone with the highest and lowest value.",
@@ -617,6 +631,7 @@
         "Chord": [
           {
             "name": "Trip ODs",
+            "title": "Trip Flows by District, Purpose, and Mode",
             "config": "Default",
             "file": "DesireLines.csv",
             "info": "Trips by purpose and mode between super districts.",
@@ -666,6 +681,7 @@
         "BarMap": [
           {
             "name": "Trip Mode",
+            "title": "Frequency of Trips by Mode by County",
             "config": "Default",
             "file": "BarChartAndMapData.csv",
             "info": "Trip mode by zone and county",
@@ -709,6 +725,7 @@
         "3DMap": [
           {
             "name": "Daytime Population",
+            "title": "Population not at Home by Time of Day",
             "config": "Default",
             "file": "3DAnimatedMapData.csv",
             "info": "People that are not in their home zone by time-of-day",
@@ -748,6 +765,7 @@
         "GroupedCharts": [
           {
             "name": "Day Patterns",
+            "title": "Person Group by Day Pattern",
             "config": "Default",
             "file": "BarChartData.csv",
             "info": "Day patterns by person groupings",
@@ -790,6 +808,7 @@
         "TimeUse": [
           {
             "name": "Time Use",
+            "title": "Activity by Time of Day",
             "config": "Default",
             "file": "TimeUseData.csv",
             "info": "Displays person out-of-home travel purpose by time of day. The vertical axis displays the sum or percent of activity and the horizontal axis displays the period of the day.",
@@ -832,6 +851,7 @@
         "Sunburst": [
           {
             "name": "Nested Mode Share",
+            "title": "Trip Mode Share",
             "config": "Default",
             "file": "TreeMapData.csv",
             "info": "Nested Trip Mode Share.  Click a ring area to drill-down into the nest.  Click the center to go back up the nest.",
@@ -874,6 +894,7 @@
         "RadarCharts": [
           {
             "name": "Performance Measures",
+            "title": "",
             "config": "Default",
             "file": "RadarChartsData.csv",
             "info": "Activity centers by four performance measures.  The min/max by measure is scaled to the zone with the highest and lowest value.",
@@ -915,6 +936,7 @@
         "POIMap": [
           {
             "name": "Rail Stations",
+            "title": "Station by Boardings",
             "config": "Default",
             "file": "TransitStops.csv",
             "info": "Rail station data",
@@ -962,6 +984,7 @@
         "Chord": [
           {
             "name": "Trip ODs",
+            "title": "Trip Flows by District, Purpose, and Mode",
             "config": "Default",
             "file": "DesireLines.csv",
             "info": "Trips by purpose and mode between super districts.",
@@ -1011,6 +1034,7 @@
         "BarMap": [
           {
             "name": "Trip Mode",
+            "title": "Frequency of Trips by Mode by County",
             "config": "Default",
             "file": "BarChartAndMapData.csv",
             "info": "Trip mode by zone and county",
@@ -1054,6 +1078,7 @@
         "3DMap": [
           {
             "name": "Daytime Population",
+            "title": "Population not at Home by Time of Day",
             "config": "Default",
             "file": "3DAnimatedMapData.csv",
             "info": "People that are not in their home zone by time-of-day",
@@ -1093,6 +1118,7 @@
         "GroupedCharts": [
           {
             "name": "Day Patterns",
+            "title": "Person Group by Day Pattern",
             "config": "Default",
             "file": "BarChartData.csv",
             "info": "Day patterns by person groupings",
@@ -1135,6 +1161,7 @@
         "TimeUse": [
           {
             "name": "Time Use",
+            "title": "Activity by Time of Day",
             "config": "Default",
             "file": "TimeUseData.csv",
             "info": "Displays person out-of-home travel purpose by time of day. The vertical axis displays the sum or percent of activity and the horizontal axis displays the period of the day.",
@@ -1177,6 +1204,7 @@
         "Sunburst": [
           {
             "name": "Nested Mode Share",
+            "title": "Trip Mode Share",
             "config": "Default",
             "file": "TreeMapData.csv",
             "info": "Nested Trip Mode Share.  Click a ring area to drill-down into the nest.  Click the center to go back up the nest.",
@@ -1219,6 +1247,7 @@
         "RadarCharts": [
           {
             "name": "Performance Measures",
+            "title": "",
             "config": "Default",
             "file": "RadarChartsData.csv",
             "info": "Activity centers by four performance measures.  The min/max by measure is scaled to the zone with the highest and lowest value.",
@@ -1260,6 +1289,7 @@
         "POIMap": [
           {
             "name": "Rail Stations",
+            "title": "Station by Boardings",
             "config": "Default",
             "file": "TransitStops.csv",
             "info": "Rail station data",
@@ -1307,6 +1337,7 @@
         "Chord": [
           {
             "name": "Trip ODs",
+            "title": "Trip Flows by District, Purpose, and Mode",
             "config": "Default",
             "file": "DesireLines.csv",
             "info": "Trips by purpose and mode between super districts.",
@@ -1356,6 +1387,7 @@
         "BarMap": [
           {
             "name": "Trip Mode",
+            "title": "Frequency of Trips by Mode by County",
             "config": "Default",
             "file": "BarChartAndMapData.csv",
             "info": "Trip mode by zone and county",
@@ -1399,6 +1431,7 @@
         "3DMap": [
           {
             "name": "Daytime Population",
+            "title": "Population not at Home by Time of Day",
             "config": "Default",
             "file": "3DAnimatedMapData.csv",
             "info": "People that are not in their home zone by time-of-day",
@@ -1438,6 +1471,7 @@
         "GroupedCharts": [
           {
             "name": "Day Patterns",
+            "title": "Person Group by Day Pattern",
             "config": "Default",
             "file": "BarChartData.csv",
             "info": "Day patterns by person groupings",
@@ -1480,6 +1514,7 @@
         "TimeUse": [
           {
             "name": "Time Use",
+            "title": "Activity by Time of Day",
             "config": "Default",
             "file": "TimeUseData.csv",
             "info": "Displays person out-of-home travel purpose by time of day. The vertical axis displays the sum or percent of activity and the horizontal axis displays the period of the day.",
@@ -1522,6 +1557,7 @@
         "Sunburst": [
           {
             "name": "Nested Mode Share",
+            "title": "Trip Mode Share",
             "config": "Default",
             "file": "TreeMapData.csv",
             "info": "Nested Trip Mode Share.  Click a ring area to drill-down into the nest.  Click the center to go back up the nest.",
@@ -1564,6 +1600,7 @@
         "RadarCharts": [
           {
             "name": "Performance Measures",
+            "title": "",
             "config": "Default",
             "file": "RadarChartsData.csv",
             "info": "Activity centers by four performance measures.  The min/max by measure is scaled to the zone with the highest and lowest value.",
@@ -1605,6 +1642,7 @@
         "POIMap": [
           {
             "name": "Rail Stations",
+            "title": "Station by Boardings",
             "config": "Default",
             "file": "TransitStops.csv",
             "info": "Rail station data",
@@ -1652,6 +1690,7 @@
         "Chord": [
           {
             "name": "Trip ODs",
+            "title": "Trip Flows by District, Purpose, and Mode",
             "config": "Default",
             "file": "DesireLines.csv",
             "info": "Trips by purpose and mode between super districts.",
@@ -1701,6 +1740,7 @@
         "BarMap": [
           {
             "name": "Trip Mode",
+            "title": "Frequency of Trips by Mode by County",
             "config": "Default",
             "file": "BarChartAndMapData.csv",
             "info": "Trip mode by zone and county",
@@ -1744,6 +1784,7 @@
         "3DMap": [
           {
             "name": "Daytime Population",
+            "title": "Population not at Home by Time of Day",
             "config": "Default",
             "file": "3DAnimatedMapData.csv",
             "info": "People that are not in their home zone by time-of-day",
@@ -1783,6 +1824,7 @@
         "GroupedCharts": [
           {
             "name": "Day Patterns",
+            "title": "Person Group by Day Pattern",
             "config": "Default",
             "file": "BarChartData.csv",
             "info": "Day patterns by person groupings",
@@ -1825,6 +1867,7 @@
         "TimeUse": [
           {
             "name": "Time Use",
+            "title": "Activity by Time of Day",
             "config": "Default",
             "file": "TimeUseData.csv",
             "info": "Displays person out-of-home travel purpose by time of day. The vertical axis displays the sum or percent of activity and the horizontal axis displays the period of the day.",
@@ -1867,6 +1910,7 @@
         "Sunburst": [
           {
             "name": "Nested Mode Share",
+            "title": "Trip Mode Share",
             "config": "Default",
             "file": "TreeMapData.csv",
             "info": "Nested Trip Mode Share.  Click a ring area to drill-down into the nest.  Click the center to go back up the nest.",
@@ -1909,6 +1953,7 @@
         "RadarCharts": [
           {
             "name": "Performance Measures",
+            "title": "",
             "config": "Default",
             "file": "RadarChartsData.csv",
             "info": "Activity centers by four performance measures.  The min/max by measure is scaled to the zone with the highest and lowest value.",
@@ -1950,6 +1995,7 @@
         "POIMap": [
           {
             "name": "Rail Stations",
+            "title": "Station by Boardings",
             "config": "Default",
             "file": "TransitStops.csv",
             "info": "Rail station data",
@@ -1997,6 +2043,7 @@
         "Chord": [
           {
             "name": "Trip ODs",
+            "title": "Trip Flows by District, Purpose, and Mode",
             "config": "Default",
             "file": "DesireLines.csv",
             "info": "Trips by purpose and mode between super districts.",
@@ -2049,7 +2096,7 @@
             "config": "Default",
             "file": "BarChartAndMapData.csv",
             "info": "Trip mode by zone and county",
-            "title": "BarChart Map Title",
+            "title": "Frequency of Trips by Mode by County",
             "explanation": [
               {
                 "header": "Summary",
@@ -2090,6 +2137,7 @@
         "3DMap": [
           {
             "name": "Daytime Population",
+            "title": "Population not at Home by Time of Day",
             "config": "Default",
             "file": "3DAnimatedMapData.csv",
             "info": "People that are not in their home zone by time-of-day",
@@ -2132,7 +2180,7 @@
             "config": "Default",
             "file": "BarChartData.csv",
             "info": "Day patterns by person groupings",
-            "title": "day patterns",
+            "title": "Person Group by Day Pattern",
             "explanation": [
               {
                 "header": "Summary",
@@ -2172,6 +2220,7 @@
         "TimeUse": [
           {
             "name": "Time Use",
+            "title": "Activity by Time of Day",
             "config": "Default",
             "file": "TimeUseData.csv",
             "info": "Displays person out-of-home travel purpose by time of day. The vertical axis displays the sum or percent of activity and the horizontal axis displays the period of the day.",
@@ -2214,6 +2263,7 @@
         "Sunburst": [
           {
             "name": "Nested Mode Share",
+            "title": "Trip Mode Share",
             "config": "Default",
             "file": "TreeMapData.csv",
             "info": "Nested Trip Mode Share.  Click a ring area to drill-down into the nest.  Click the center to go back up the nest.",
@@ -2256,6 +2306,7 @@
         "RadarCharts": [
           {
             "name": "Performance Measures",
+            "title": "",
             "config": "Default",
             "file": "RadarChartsData.csv",
             "info": "Activity centers by four performance measures.  The min/max by measure is scaled to the zone with the highest and lowest value.",
@@ -2297,6 +2348,7 @@
         "POIMap": [
           {
             "name": "Rail Stations",
+            "title": "Station by Boardings",
             "config": "Default",
             "file": "TransitStops.csv",
             "info": "Rail station data",
@@ -2347,7 +2399,7 @@
             "config": "Default",
             "file": "DesireLines.csv",
             "info": "Trips by purpose and mode between super districts.",
-            "title":"Chord diagram test",
+            "title": "Trip Flows by District, Purpose, and Mode",
             "explanation": [
               {
                 "header": "Summary",
@@ -2394,6 +2446,7 @@
         "BarMap": [
           {
             "name": "Trip Mode",
+            "title": "Frequency of Trips by Mode by County",
             "config": "Default",
             "file": "BarChartAndMapData.csv",
             "info": "Trip mode by zone and county",
@@ -2437,6 +2490,7 @@
         "3DMap": [
           {
             "name": "Daytime Population",
+            "title": "Population not at Home by Time of Day",
             "config": "Default",
             "file": "3DAnimatedMapData.csv",
             "info": "People that are not in their home zone by time-of-day",
@@ -2476,6 +2530,7 @@
         "GroupedCharts": [
           {
             "name": "Day Patterns",
+            "title": "Person Group by Day Pattern",
             "config": "Default",
             "file": "BarChartData.csv",
             "info": "Day patterns by person groupings",
@@ -2518,6 +2573,7 @@
         "TimeUse": [
           {
             "name": "Time Use",
+            "title": "Activity by Time of Day",
             "config": "Default",
             "file": "TimeUseData.csv",
             "info": "Displays person out-of-home travel purpose by time of day. The vertical axis displays the sum or percent of activity and the horizontal axis displays the period of the day.",
@@ -2560,6 +2616,7 @@
         "Sunburst": [
           {
             "name": "Nested Mode Share",
+            "title": "Trip Mode Share",
             "config": "Default",
             "file": "TreeMapData.csv",
             "info": "Nested Trip Mode Share.  Click a ring area to drill-down into the nest.  Click the center to go back up the nest.",
@@ -2602,6 +2659,7 @@
         "RadarCharts": [
           {
             "name": "Performance Measures",
+            "title": "",
             "config": "Default",
             "file": "RadarChartsData.csv",
             "info": "Activity centers by four performance measures.  The min/max by measure is scaled to the zone with the highest and lowest value.",
@@ -2643,6 +2701,7 @@
         "POIMap": [
           {
             "name": "Rail Stations",
+            "title": "Station by Boardings",
             "config": "Default",
             "file": "TransitStops.csv",
             "info": "Rail station data",
@@ -2690,6 +2749,7 @@
         "Chord": [
           {
             "name": "Trip ODs",
+            "title": "Trip Flows by District, Purpose, and Mode",
             "config": "Default",
             "file": "DesireLines.csv",
             "info": "Trips by purpose and mode between super districts.",
@@ -2739,6 +2799,7 @@
         "BarMap": [
           {
             "name": "Trip Mode",
+            "title": "Frequency of Trips by Mode by County",
             "config": "Default",
             "file": "BarChartAndMapData.csv",
             "info": "Trip mode by zone and county",
@@ -2782,6 +2843,7 @@
         "3DMap": [
           {
             "name": "Daytime Population",
+            "title": "Population not at Home by Time of Day",
             "config": "Default",
             "file": "3DAnimatedMapData.csv",
             "info": "People that are not in their home zone by time-of-day",
@@ -2821,6 +2883,7 @@
         "GroupedCharts": [
           {
             "name": "Day Patterns",
+            "title": "Person Group by Day Pattern",
             "config": "Default",
             "file": "BarChartData.csv",
             "info": "Day patterns by person groupings",
@@ -2863,6 +2926,7 @@
         "Sunburst": [
           {
             "name": "Nested Mode Share",
+            "title": "Trip Mode Share",
             "config": "Default",
             "file": "TreeMapData.csv",
             "info": "Nested Trip Mode Share.  Click a ring area to drill-down into the nest.  Click the center to go back up the nest.",
@@ -2905,6 +2969,7 @@
         "RadarCharts": [
           {
             "name": "Performance Measures",
+            "title": "",
             "config": "Default",
             "file": "RadarChartsData.csv",
             "info": "Activity centers by four performance measures.  The min/max by measure is scaled to the zone with the highest and lowest value.",
@@ -2952,6 +3017,7 @@
         "GroupedCharts": [
           {
             "name": "Participant Age",
+            "title": "Respondent's Age Distribution",
             "config": "OnboardSurvey",
             "file": "age.csv",
             "info": "Age of respondent",
@@ -2979,7 +3045,11 @@
                 "body": [
                   {
                     "type": "unorderedList",
-                    "content": ["Hover mouse over bars to see detail.", "Select \"Show Data\" to see tabulation.", "Select/deselect bubbles to add/remove person types."]
+                    "content": [
+                      "Hover mouse over bars to see detail.",
+                      "Select \"Show Data\" to see tabulation.",
+                      "Select/deselect bubbles to add/remove person types."
+                    ]
                   }
                 ]
               }
@@ -2987,6 +3057,7 @@
           },
           {
             "name": "Household Size",
+            "title": "Household Size Distribution",
             "config": "OnboardSurvey",
             "file": "hhsize.csv",
             "info": "Including respondent, the number of members in respondent's household",
@@ -3014,7 +3085,11 @@
                 "body": [
                   {
                     "type": "unorderedList",
-                    "content": ["Hover mouse over bars to see detail.", "Select \"Show Data\" to see tabulation.", "Select/deselect bubbles to add/remove person types."]
+                    "content": [
+                      "Hover mouse over bars to see detail.",
+                      "Select \"Show Data\" to see tabulation.",
+                      "Select/deselect bubbles to add/remove person types."
+                    ]
                   }
                 ]
               }
@@ -3022,6 +3097,7 @@
           },
           {
             "name": "Employed in Household",
+            "title": "Number of people employed in Household",
             "config": "OnboardSurvey",
             "file": "employed_hh.csv",
             "info": "How many people age 15 and older in the household are employed?",
@@ -3048,7 +3124,11 @@
                 "body": [
                   {
                     "type": "unorderedList",
-                    "content": ["Hover mouse over bars to see detail.", "Select \"Show Data\" to see tabulation.", "Select/deselect bubbles to add/remove person types."]
+                    "content": [
+                      "Hover mouse over bars to see detail.",
+                      "Select \"Show Data\" to see tabulation.",
+                      "Select/deselect bubbles to add/remove person types."
+                    ]
                   }
                 ]
               }
@@ -3056,6 +3136,7 @@
           },
           {
             "name": "Household Income",
+            "title": "Househld Income Distribution",
             "config": "OnboardSurvey",
             "file": "income.csv",
             "info": "Total annual household income",
@@ -3083,7 +3164,11 @@
                 "body": [
                   {
                     "type": "unorderedList",
-                    "content": ["Hover mouse over bars to see detail.", "Select \"Show Data\" to see tabulation.", "Select/deselect bubbles to add/remove person types."]
+                    "content": [
+                      "Hover mouse over bars to see detail.",
+                      "Select \"Show Data\" to see tabulation.",
+                      "Select/deselect bubbles to add/remove person types."
+                    ]
                   }
                 ]
               }
@@ -3091,6 +3176,7 @@
           },
           {
             "name": "Participant Gender",
+            "title": "Gender Distribution",
             "config": "OnboardSurvey",
             "file": "gender.csv",
             "info": "Respondent's gender",
@@ -3117,7 +3203,11 @@
                 "body": [
                   {
                     "type": "unorderedList",
-                    "content": ["Hover mouse over bars to see detail.", "Select \"Show Data\" to see tabulation.", "Select/deselect bubbles to add/remove person types."]
+                    "content": [
+                      "Hover mouse over bars to see detail.",
+                      "Select \"Show Data\" to see tabulation.",
+                      "Select/deselect bubbles to add/remove person types."
+                    ]
                   }
                 ]
               }
@@ -3125,6 +3215,7 @@
           },
           {
             "name": "Participant Race",
+            "title": "Race Distribution",
             "config": "OnboardSurvey",
             "file": "race.csv",
             "info": "Respondent's race",
@@ -3152,7 +3243,11 @@
                 "body": [
                   {
                     "type": "unorderedList",
-                    "content": ["Hover mouse over bars to see detail.", "Select \"Show Data\" to see tabulation.", "Select/deselect bubbles to add/remove person types."]
+                    "content": [
+                      "Hover mouse over bars to see detail.",
+                      "Select \"Show Data\" to see tabulation.",
+                      "Select/deselect bubbles to add/remove person types."
+                    ]
                   }
                 ]
               }
@@ -3160,6 +3255,7 @@
           },
           {
             "name": "Number of Household Vehicles",
+            "title": "Household Vehicle Distribution",
             "config": "OnboardSurvey",
             "file": "num_veh.csv",
             "info": "Number of vehicles in respondent's household",
@@ -3186,14 +3282,19 @@
                 "body": [
                   {
                     "type": "unorderedList",
-                    "content": ["Hover mouse over bars to see detail.", "Select \"Show Data\" to see tabulation.", "Select/deselect bubbles to add/remove person types."]
+                    "content": [
+                      "Hover mouse over bars to see detail.",
+                      "Select \"Show Data\" to see tabulation.",
+                      "Select/deselect bubbles to add/remove person types."
+                    ]
                   }
                 ]
               }
             ]
           },
           {
-            "name": "Vehicle Used",
+            "name": "Vehicle Availability",
+            "title": "Distribution of Availability of Vehicles",
             "config": "OnboardSurvey",
             "file": "used_veh.csv",
             "info": "If respondent could have used one of their household vehicles for their trip",
@@ -3220,7 +3321,11 @@
                 "body": [
                   {
                     "type": "unorderedList",
-                    "content": ["Hover mouse over bars to see detail.", "Select \"Show Data\" to see tabulation.", "Select/deselect bubbles to add/remove person types."]
+                    "content": [
+                      "Hover mouse over bars to see detail.",
+                      "Select \"Show Data\" to see tabulation.",
+                      "Select/deselect bubbles to add/remove person types."
+                    ]
                   }
                 ]
               }
@@ -3228,7 +3333,8 @@
           },
           {
             "name": "Has Drivers License",
-            "config": "OnboardSurvey",
+            "title": "Frequency of Valid Drivers",
+            "config": "Frequency",
             "file": "have_dl.csv",
             "info": "If respondent indicated they have a valid driver's license",
             "datafilecolumns": {
@@ -3254,7 +3360,11 @@
                 "body": [
                   {
                     "type": "unorderedList",
-                    "content": ["Hover mouse over bars to see detail.", "Select \"Show Data\" to see tabulation.", "Select/deselect bubbles to add/remove person types."]
+                    "content": [
+                      "Hover mouse over bars to see detail.",
+                      "Select \"Show Data\" to see tabulation.",
+                      "Select/deselect bubbles to add/remove person types."
+                    ]
                   }
                 ]
               }
@@ -3262,6 +3372,7 @@
           },
           {
             "name": "Number of Transfers between OD",
+            "title": "Transfers between Origin and Destination",
             "config": "OnboardSurvey",
             "file": "transfers_od.csv",
             "info": "How many transfers respondent took from their origin to their destination",
@@ -3288,14 +3399,19 @@
                 "body": [
                   {
                     "type": "unorderedList",
-                    "content": ["Hover mouse over bars to see detail.", "Select \"Show Data\" to see tabulation.", "Select/deselect bubbles to add/remove person types."]
+                    "content": [
+                      "Hover mouse over bars to see detail.",
+                      "Select \"Show Data\" to see tabulation.",
+                      "Select/deselect bubbles to add/remove person types."
+                    ]
                   }
                 ]
               }
             ]
           },
           {
-            "name": "Origin Mode",
+            "name": "Access Mode",
+            "title": "Access Mode Distribution",
             "config": "OnboardSurvey",
             "file": "origin_transport.csv",
             "info": "Access mode respondent used from their origin",
@@ -3322,7 +3438,11 @@
                 "body": [
                   {
                     "type": "unorderedList",
-                    "content": ["Hover mouse over bars to see detail.", "Select \"Show Data\" to see tabulation.", "Select/deselect bubbles to add/remove person types."]
+                    "content": [
+                      "Hover mouse over bars to see detail.",
+                      "Select \"Show Data\" to see tabulation.",
+                      "Select/deselect bubbles to add/remove person types."
+                    ]
                   }
                 ]
               }
@@ -3330,6 +3450,7 @@
           },
           {
             "name": "Origin Placetype",
+            "title": "Frequency of Origin Placetype",
             "config": "OnboardSurvey",
             "file": "origin_place_type.csv",
             "info": "Type of place respondent is coming from now",
@@ -3356,7 +3477,11 @@
                 "body": [
                   {
                     "type": "unorderedList",
-                    "content": ["Hover mouse over bars to see detail.", "Select \"Show Data\" to see tabulation.", "Select/deselect bubbles to add/remove person types."]
+                    "content": [
+                      "Hover mouse over bars to see detail.",
+                      "Select \"Show Data\" to see tabulation.",
+                      "Select/deselect bubbles to add/remove person types."
+                    ]
                   }
                 ]
               }
@@ -3364,6 +3489,7 @@
           },
           {
             "name": "Resident or Visitor",
+            "title": "Frequency of Resident",
             "config": "OnboardSurvey",
             "file": "res_vis.csv",
             "info": "If respondent indicated they were a resident or visitor to the area",
@@ -3390,7 +3516,11 @@
                 "body": [
                   {
                     "type": "unorderedList",
-                    "content": ["Hover mouse over bars to see detail.", "Select \"Show Data\" to see tabulation.", "Select/deselect bubbles to add/remove person types."]
+                    "content": [
+                      "Hover mouse over bars to see detail.",
+                      "Select \"Show Data\" to see tabulation.",
+                      "Select/deselect bubbles to add/remove person types."
+                    ]
                   }
                 ]
               }
@@ -3398,6 +3528,7 @@
           },
           {
             "name": "Opposite Direction Trip",
+            "title": "Frequency of Trip taken in Opposite Direction",
             "config": "OnboardSurvey",
             "file": "trip_oppo.csv",
             "info": "If respondent took the same trip in the opposite direction",
@@ -3424,7 +3555,11 @@
                 "body": [
                   {
                     "type": "unorderedList",
-                    "content": ["Hover mouse over bars to see detail.", "Select \"Show Data\" to see tabulation.", "Select/deselect bubbles to add/remove person types."]
+                    "content": [
+                      "Hover mouse over bars to see detail.",
+                      "Select \"Show Data\" to see tabulation.",
+                      "Select/deselect bubbles to add/remove person types."
+                    ]
                   }
                 ]
               }
@@ -3432,6 +3567,7 @@
           },
           {
             "name": "Opposite Direction Trip Time",
+            "title": "Time of Opposite Direction Trip",
             "config": "OnboardSurvey",
             "file": "trip_oppo_time.csv",
             "info": "At what time did respondent board their return trip bus/rail",
@@ -3458,7 +3594,11 @@
                 "body": [
                   {
                     "type": "unorderedList",
-                    "content": ["Hover mouse over bars to see detail.", "Select \"Show Data\" to see tabulation.", "Select/deselect bubbles to add/remove person types."]
+                    "content": [
+                      "Hover mouse over bars to see detail.",
+                      "Select \"Show Data\" to see tabulation.",
+                      "Select/deselect bubbles to add/remove person types."
+                    ]
                   }
                 ]
               }
@@ -3466,6 +3606,7 @@
           },
           {
             "name": "Employment Status",
+            "title": "Employment Status Distribution",
             "config": "OnboardSurvey",
             "file": "emp_status.csv",
             "info": "Respondent's employment status",
@@ -3492,7 +3633,11 @@
                 "body": [
                   {
                     "type": "unorderedList",
-                    "content": ["Hover mouse over bars to see detail.", "Select \"Show Data\" to see tabulation.", "Select/deselect bubbles to add/remove person types."]
+                    "content": [
+                      "Hover mouse over bars to see detail.",
+                      "Select \"Show Data\" to see tabulation.",
+                      "Select/deselect bubbles to add/remove person types."
+                    ]
                   }
                 ]
               }
@@ -3500,6 +3645,7 @@
           },
           {
             "name": "Student Status",
+            "title": "Student Status Distribution",
             "config": "OnboardSurvey",
             "file": "student_status.csv",
             "info": "Respondent's student status",
@@ -3526,14 +3672,19 @@
                 "body": [
                   {
                     "type": "unorderedList",
-                    "content": ["Hover mouse over bars to see detail.", "Select \"Show Data\" to see tabulation.", "Select/deselect bubbles to add/remove person types."]
+                    "content": [
+                      "Hover mouse over bars to see detail.",
+                      "Select \"Show Data\" to see tabulation.",
+                      "Select/deselect bubbles to add/remove person types."
+                    ]
                   }
                 ]
               }
             ]
           },
           {
-            "name": "Home Language Other",
+            "name": "Home Language not English",
+            "title": "Whether Language other than English spoken at Home",
             "config": "OnboardSurvey",
             "file": "home_lang_other.csv",
             "info": "Does respondent speak a language other than English spoken in home",
@@ -3560,15 +3711,20 @@
                 "body": [
                   {
                     "type": "unorderedList",
-                    "content": ["Hover mouse over bars to see detail.", "Select \"Show Data\" to see tabulation.", "Select/deselect bubbles to add/remove person types."]
+                    "content": [
+                      "Hover mouse over bars to see detail.",
+                      "Select \"Show Data\" to see tabulation.",
+                      "Select/deselect bubbles to add/remove person types."
+                    ]
                   }
                 ]
               }
             ]
           },
           {
-            "name": "Home Other Language",
-            "config": "OnboardSurvey",
+            "name": "Home Other Language Spoken",
+            "title": "Languages spoken at Home other than English",
+            "config": "OnboardSurveyVertical",
             "file": "home_other_lang.csv",
             "info": "Language respondent speaks at home other than English",
             "datafilecolumns": {
@@ -3594,14 +3750,19 @@
                 "body": [
                   {
                     "type": "unorderedList",
-                    "content": ["Hover mouse over bars to see detail.", "Select \"Show Data\" to see tabulation.", "Select/deselect bubbles to add/remove person types."]
+                    "content": [
+                      "Hover mouse over bars to see detail.",
+                      "Select \"Show Data\" to see tabulation.",
+                      "Select/deselect bubbles to add/remove person types."
+                    ]
                   }
                 ]
               }
             ]
           },
           {
-            "name": "English Ability",
+            "name": "English Proficiency",
+            "title": "English Speaking Proficiency",
             "config": "OnboardSurvey",
             "file": "eng_ability.csv",
             "info": "How well did respondent speaks English",
@@ -3628,7 +3789,11 @@
                 "body": [
                   {
                     "type": "unorderedList",
-                    "content": ["Hover mouse over bars to see detail.", "Select \"Show Data\" to see tabulation.", "Select/deselect bubbles to add/remove person types."]
+                    "content": [
+                      "Hover mouse over bars to see detail.",
+                      "Select \"Show Data\" to see tabulation.",
+                      "Select/deselect bubbles to add/remove person types."
+                    ]
                   }
                 ]
               }
@@ -3636,6 +3801,7 @@
           },
           {
             "name": "Survey Language",
+            "title": "Language of Survey Taken",
             "config": "OnboardSurvey",
             "file": "survey_lang.csv",
             "info": "What language the survey was conducted in",
@@ -3662,7 +3828,11 @@
                 "body": [
                   {
                     "type": "unorderedList",
-                    "content": ["Hover mouse over bars to see detail.", "Select \"Show Data\" to see tabulation.", "Select/deselect bubbles to add/remove person types."]
+                    "content": [
+                      "Hover mouse over bars to see detail.",
+                      "Select \"Show Data\" to see tabulation.",
+                      "Select/deselect bubbles to add/remove person types."
+                    ]
                   }
                 ]
               }
@@ -3670,7 +3840,8 @@
           },
           {
             "name": "Fare Method",
-            "config": "Frequency",
+            "title": "Method of Fare Used for the Trip",
+            "config": "FrequencyVertical",
             "file": "fare_method.csv",
             "info": "Which fare method the respondent used for the trip",
             "datafilecolumns": {
@@ -3696,14 +3867,19 @@
                 "body": [
                   {
                     "type": "unorderedList",
-                    "content": ["Hover mouse over bars to see detail.", "Select \"Show Data\" to see tabulation.", "Select/deselect bubbles to add/remove person types."]
+                    "content": [
+                      "Hover mouse over bars to see detail.",
+                      "Select \"Show Data\" to see tabulation.",
+                      "Select/deselect bubbles to add/remove person types."
+                    ]
                   }
                 ]
               }
             ]
           },
           {
-            "name": "Use Service",
+            "name": "Access/Egress Service",
+            "title": "Access/Egress Services used for the Trip",
             "config": "Frequency",
             "file": "use_service.csv",
             "info": "What kind of services were used for the trip",
@@ -3730,7 +3906,11 @@
                 "body": [
                   {
                     "type": "unorderedList",
-                    "content": ["Hover mouse over bars to see detail.", "Select \"Show Data\" to see tabulation.", "Select/deselect bubbles to add/remove person types."]
+                    "content": [
+                      "Hover mouse over bars to see detail.",
+                      "Select \"Show Data\" to see tabulation.",
+                      "Select/deselect bubbles to add/remove person types."
+                    ]
                   }
                 ]
               }
@@ -3738,6 +3918,7 @@
           },
           {
             "name": "Type of Fare",
+            "title": "Type of Fare Used for the Trip",
             "config": "OnboardSurvey",
             "file": "type_fare.csv",
             "info": "What type of fare respondent used",
@@ -3764,7 +3945,11 @@
                 "body": [
                   {
                     "type": "unorderedList",
-                    "content": ["Hover mouse over bars to see detail.", "Select \"Show Data\" to see tabulation.", "Select/deselect bubbles to add/remove person types."]
+                    "content": [
+                      "Hover mouse over bars to see detail.",
+                      "Select \"Show Data\" to see tabulation.",
+                      "Select/deselect bubbles to add/remove person types."
+                    ]
                   }
                 ]
               }
@@ -3772,6 +3957,7 @@
           },
           {
             "name": "Used Breeze Card",
+            "title": "Whether used Breeze Card for the Trip",
             "config": "OnboardSurvey",
             "file": "used_breeze_card.csv",
             "info": "If respondent indicated they used a Breeze Card",
@@ -3798,14 +3984,19 @@
                 "body": [
                   {
                     "type": "unorderedList",
-                    "content": ["Hover mouse over bars to see detail.", "Select \"Show Data\" to see tabulation.", "Select/deselect bubbles to add/remove person types."]
+                    "content": [
+                      "Hover mouse over bars to see detail.",
+                      "Select \"Show Data\" to see tabulation.",
+                      "Select/deselect bubbles to add/remove person types."
+                    ]
                   }
                 ]
               }
             ]
           },
           {
-            "name": "How No Bus",
+            "name": "Mode Alternative to Transit",
+            "title": "Mode Alternatives if Bus/Rail were Not Available",
             "config": "OnboardSurvey",
             "file": "how_no_bus.csv",
             "info": "How respondent would make trip if bus/rail were not available",
@@ -3832,7 +4023,11 @@
                 "body": [
                   {
                     "type": "unorderedList",
-                    "content": ["Hover mouse over bars to see detail.", "Select \"Show Data\" to see tabulation.", "Select/deselect bubbles to add/remove person types."]
+                    "content": [
+                      "Hover mouse over bars to see detail.",
+                      "Select \"Show Data\" to see tabulation.",
+                      "Select/deselect bubbles to add/remove person types."
+                    ]
                   }
                 ]
               }
@@ -3840,6 +4035,7 @@
           },
           {
             "name": "Transit Use Frequency",
+            "title": "Distribution of Transit Use Frequency",
             "config": "OnboardSurvey",
             "file": "transit_use_freq.csv",
             "info": "On average, how many days a week respondent uses public transit",
@@ -3866,7 +4062,11 @@
                 "body": [
                   {
                     "type": "unorderedList",
-                    "content": ["Hover mouse over bars to see detail.", "Select \"Show Data\" to see tabulation.", "Select/deselect bubbles to add/remove person types."]
+                    "content": [
+                      "Hover mouse over bars to see detail.",
+                      "Select \"Show Data\" to see tabulation.",
+                      "Select/deselect bubbles to add/remove person types."
+                    ]
                   }
                 ]
               }
@@ -3874,6 +4074,7 @@
           },
           {
             "name": "Household Members on Trip",
+            "title": "Number of Household Members on the Trip",
             "config": "OnboardSurvey",
             "file": "hhpl.csv",
             "info": "Including respondent, how many household members are making the trip with respondent",
@@ -3900,7 +4101,11 @@
                 "body": [
                   {
                     "type": "unorderedList",
-                    "content": ["Hover mouse over bars to see detail.", "Select \"Show Data\" to see tabulation.", "Select/deselect bubbles to add/remove person types."]
+                    "content": [
+                      "Hover mouse over bars to see detail.",
+                      "Select \"Show Data\" to see tabulation.",
+                      "Select/deselect bubbles to add/remove person types."
+                    ]
                   }
                 ]
               }
@@ -3908,6 +4113,7 @@
           },
           {
             "name": "Did You Go To Work",
+            "title": "Travel to Work",
             "config": "OnboardSurvey",
             "file": "did_y_work.csv",
             "info": "If respondent went to work or will go to work before returning home",
@@ -3934,7 +4140,11 @@
                 "body": [
                   {
                     "type": "unorderedList",
-                    "content": ["Hover mouse over bars to see detail.", "Select \"Show Data\" to see tabulation.", "Select/deselect bubbles to add/remove person types."]
+                    "content": [
+                      "Hover mouse over bars to see detail.",
+                      "Select \"Show Data\" to see tabulation.",
+                      "Select/deselect bubbles to add/remove person types."
+                    ]
                   }
                 ]
               }
@@ -3942,6 +4152,7 @@
           },
           {
             "name": "Did You Go To School",
+            "title": "Travel to School",
             "config": "OnboardSurvey",
             "file": "did_y_school.csv",
             "info": "If respondent went to school or will go to school before returning home",
@@ -3968,7 +4179,11 @@
                 "body": [
                   {
                     "type": "unorderedList",
-                    "content": ["Hover mouse over bars to see detail.", "Select \"Show Data\" to see tabulation.", "Select/deselect bubbles to add/remove person types."]
+                    "content": [
+                      "Hover mouse over bars to see detail.",
+                      "Select \"Show Data\" to see tabulation.",
+                      "Select/deselect bubbles to add/remove person types."
+                    ]
                   }
                 ]
               }
@@ -3978,12 +4193,13 @@
       }
     },
     "TourSummary": {
-      "title": "- 2019 Regional One Day Tour Diary Survey",
+      "title": "2019 Regional One-Day Tour Diary Survey",
       "ScenarioFocus": "transit.json",
       "visualizations": {
         "GroupedCharts": [
           {
             "name": "Overall",
+            "title": "Distribution of People by Tours and Stops on the Tours",
             "config": "TourSummary",
             "file": "overall.csv",
             "info": "Overall counts of people by number tours and stops",
@@ -4006,7 +4222,11 @@
                 "body": [
                   {
                     "type": "unorderedList",
-                    "content": ["Hover mouse over bars to see detail.", "Select \"Show Data\" to see tabulation.", "Select/deselect bubbles to add/remove person types."]
+                    "content": [
+                      "Hover mouse over bars to see detail.",
+                      "Select \"Show Data\" to see tabulation.",
+                      "Select/deselect bubbles to add/remove person types."
+                    ]
                   }
                 ]
               }
@@ -4014,6 +4234,7 @@
           },
           {
             "name": "Home Based Tours",
+            "title": "Distribution of Home Based Tours",
             "config": "OnboardSurvey",
             "file": "home_based.csv",
             "info": "Home based tours",
@@ -4034,7 +4255,11 @@
                 "body": [
                   {
                     "type": "unorderedList",
-                    "content": ["Hover mouse over bars to see detail.", "Select \"Show Data\" to see tabulation.", "Select/deselect bubbles to add/remove person types."]
+                    "content": [
+                      "Hover mouse over bars to see detail.",
+                      "Select \"Show Data\" to see tabulation.",
+                      "Select/deselect bubbles to add/remove person types."
+                    ]
                   }
                 ]
               }
@@ -4042,6 +4267,7 @@
           },
           {
             "name": "Stops on Tours",
+            "title": "Distribution of Stops on Tours",
             "config": "TourSummary",
             "file": "stops.csv",
             "info": "Number of stops by tours",
@@ -4062,14 +4288,19 @@
                 "body": [
                   {
                     "type": "unorderedList",
-                    "content": ["Hover mouse over bars to see detail.", "Select \"Show Data\" to see tabulation.", "Select/deselect bubbles to add/remove person types."]
+                    "content": [
+                      "Hover mouse over bars to see detail.",
+                      "Select \"Show Data\" to see tabulation.",
+                      "Select/deselect bubbles to add/remove person types."
+                    ]
                   }
                 ]
               }
             ]
           },
           {
-            "name": "Drive To-From Transit",
+            "name": "Drive To-From Transit Tours",
+            "title": "Distribution of Tours with Drive To/From Transit",
             "config": "TourSummary",
             "file": "drive_transit.csv",
             "info": "Tours that have drive followed by transit or transit followed by drive mode",
@@ -4090,14 +4321,19 @@
                 "body": [
                   {
                     "type": "unorderedList",
-                    "content": ["Hover mouse over bars to see detail.", "Select \"Show Data\" to see tabulation.", "Select/deselect bubbles to add/remove person types."]
+                    "content": [
+                      "Hover mouse over bars to see detail.",
+                      "Select \"Show Data\" to see tabulation.",
+                      "Select/deselect bubbles to add/remove person types."
+                    ]
                   }
                 ]
               }
             ]
           },
           {
-            "name": "Walk or Transit Only",
+            "name": "Walk or Transit Only Tours",
+            "title": "Distribution of Tours with only Walk or Transit Mode",
             "config": "TourSummary",
             "file": "walk_transit.csv",
             "info": "Tours that only have walk, transit, or both",
@@ -4118,14 +4354,19 @@
                 "body": [
                   {
                     "type": "unorderedList",
-                    "content": ["Hover mouse over bars to see detail.", "Select \"Show Data\" to see tabulation.", "Select/deselect bubbles to add/remove person types."]
+                    "content": [
+                      "Hover mouse over bars to see detail.",
+                      "Select \"Show Data\" to see tabulation.",
+                      "Select/deselect bubbles to add/remove person types."
+                    ]
                   }
                 ]
               }
             ]
           },
           {
-            "name": "Not Transit",
+            "name": "No Transit Tours",
+            "title": "Distribution of Tours with no Transit",
             "config": "TourSummary",
             "file": "non_transit.csv",
             "info": "Tours that do not have a transit mode",
@@ -4146,14 +4387,19 @@
                 "body": [
                   {
                     "type": "unorderedList",
-                    "content": ["Hover mouse over bars to see detail.", "Select \"Show Data\" to see tabulation.", "Select/deselect bubbles to add/remove person types."]
+                    "content": [
+                      "Hover mouse over bars to see detail.",
+                      "Select \"Show Data\" to see tabulation.",
+                      "Select/deselect bubbles to add/remove person types."
+                    ]
                   }
                 ]
               }
             ]
           },
           {
-            "name": "Has Work",
+            "name": "Has Work Tours",
+            "title": "Distributin of Tours with Work Activity",
             "config": "TourSummary",
             "file": "has_work.csv",
             "info": "Tours that include work as an activity",
@@ -4174,14 +4420,19 @@
                 "body": [
                   {
                     "type": "unorderedList",
-                    "content": ["Hover mouse over bars to see detail.", "Select \"Show Data\" to see tabulation.", "Select/deselect bubbles to add/remove person types."]
+                    "content": [
+                      "Hover mouse over bars to see detail.",
+                      "Select \"Show Data\" to see tabulation.",
+                      "Select/deselect bubbles to add/remove person types."
+                    ]
                   }
                 ]
               }
             ]
           },
           {
-            "name": "Has School",
+            "name": "Has School Tours",
+            "title": "Distribution of Tours with School Activity",
             "config": "TourSummary",
             "file": "has_school.csv",
             "info": "Tours that include school as an activity",
@@ -4202,14 +4453,19 @@
                 "body": [
                   {
                     "type": "unorderedList",
-                    "content": ["Hover mouse over bars to see detail.", "Select \"Show Data\" to see tabulation.", "Select/deselect bubbles to add/remove person types."]
+                    "content": [
+                      "Hover mouse over bars to see detail.",
+                      "Select \"Show Data\" to see tabulation.",
+                      "Select/deselect bubbles to add/remove person types."
+                    ]
                   }
                 ]
               }
             ]
           },
           {
-            "name": "Has Work and School",
+            "name": "Has Work and School Tours",
+            "title": "Distribution of Tours with Work and School Activity",
             "config": "TourSummary",
             "file": "has_work_school.csv",
             "info": "Tours that include work and school as an activity",
@@ -4230,14 +4486,19 @@
                 "body": [
                   {
                     "type": "unorderedList",
-                    "content": ["Hover mouse over bars to see detail.", "Select \"Show Data\" to see tabulation.", "Select/deselect bubbles to add/remove person types."]
+                    "content": [
+                      "Hover mouse over bars to see detail.",
+                      "Select \"Show Data\" to see tabulation.",
+                      "Select/deselect bubbles to add/remove person types."
+                    ]
                   }
                 ]
               }
             ]
           },
           {
-            "name": "Has no work or school",
+            "name": "Has no Work or School Tours",
+            "title": "Distribution of Tours with no Work or School Activity",
             "config": "TourSummary",
             "file": "has_neither.csv",
             "info": "Tours that do not include work or school as an activity",
@@ -4258,15 +4519,20 @@
                 "body": [
                   {
                     "type": "unorderedList",
-                    "content": ["Hover mouse over bars to see detail.", "Select \"Show Data\" to see tabulation.", "Select/deselect bubbles to add/remove person types."]
+                    "content": [
+                      "Hover mouse over bars to see detail.",
+                      "Select \"Show Data\" to see tabulation.",
+                      "Select/deselect bubbles to add/remove person types."
+                    ]
                   }
                 ]
               }
             ]
           },
           {
-            "name": "Age",
-            "config": "TourSummaryFrequency",
+            "name": "Respondent Age",
+            "title": "Distribution of Tours by Age",
+            "config": "TourSummaryVertical",
             "file": "age.csv",
             "info": "Tours by age group",
             "explanation": [
@@ -4286,15 +4552,20 @@
                 "body": [
                   {
                     "type": "unorderedList",
-                    "content": ["Hover mouse over bars to see detail.", "Select \"Show Data\" to see tabulation.", "Select/deselect bubbles to add/remove person types."]
+                    "content": [
+                      "Hover mouse over bars to see detail.",
+                      "Select \"Show Data\" to see tabulation.",
+                      "Select/deselect bubbles to add/remove person types."
+                    ]
                   }
                 ]
               }
             ]
           },
           {
-            "name": "Gender",
-            "config": "TourSummaryFrequency",
+            "name": "Respondent Gender",
+            "title": "Distribution of Tours by Gender",
+            "config": "TourSummaryVertical",
             "file": "gender.csv",
             "info": "Tours by gender",
             "explanation": [
@@ -4314,7 +4585,11 @@
                 "body": [
                   {
                     "type": "unorderedList",
-                    "content": ["Hover mouse over bars to see detail.", "Select \"Show Data\" to see tabulation.", "Select/deselect bubbles to add/remove person types."]
+                    "content": [
+                      "Hover mouse over bars to see detail.",
+                      "Select \"Show Data\" to see tabulation.",
+                      "Select/deselect bubbles to add/remove person types."
+                    ]
                   }
                 ]
               }
@@ -4322,7 +4597,8 @@
           },
           {
             "name": "Household Income",
-            "config": "TourSummaryFrequency",
+            "title": "Distribution of Tours by Household Income",
+            "config": "TourSummaryVertical",
             "file": "income.csv",
             "info": "Tours by household income",
             "explanation": [
@@ -4342,7 +4618,11 @@
                 "body": [
                   {
                     "type": "unorderedList",
-                    "content": ["Hover mouse over bars to see detail.", "Select \"Show Data\" to see tabulation.", "Select/deselect bubbles to add/remove person types."]
+                    "content": [
+                      "Hover mouse over bars to see detail.",
+                      "Select \"Show Data\" to see tabulation.",
+                      "Select/deselect bubbles to add/remove person types."
+                    ]
                   }
                 ]
               }
@@ -4350,7 +4630,8 @@
           },
           {
             "name": "Household Size",
-            "config": "TourSummaryFrequency",
+            "title": "Distribution of Tours by Household Size",
+            "config": "TourSummaryVertical",
             "file": "hh_size.csv",
             "info": "Tours by household size",
             "explanation": [
@@ -4370,7 +4651,11 @@
                 "body": [
                   {
                     "type": "unorderedList",
-                    "content": ["Hover mouse over bars to see detail.", "Select \"Show Data\" to see tabulation.", "Select/deselect bubbles to add/remove person types."]
+                    "content": [
+                      "Hover mouse over bars to see detail.",
+                      "Select \"Show Data\" to see tabulation.",
+                      "Select/deselect bubbles to add/remove person types."
+                    ]
                   }
                 ]
               }
@@ -4378,7 +4663,8 @@
           },
           {
             "name": "Household Vehicles",
-            "config": "TourSummaryFrequency",
+            "title": "Distribution of Tours by Household Vehicles",
+            "config": "TourSummaryVertical",
             "file": "hh_veh.csv",
             "info": "Tours by household vehicles",
             "explanation": [
@@ -4398,7 +4684,11 @@
                 "body": [
                   {
                     "type": "unorderedList",
-                    "content": ["Hover mouse over bars to see detail.", "Select \"Show Data\" to see tabulation.", "Select/deselect bubbles to add/remove person types."]
+                    "content": [
+                      "Hover mouse over bars to see detail.",
+                      "Select \"Show Data\" to see tabulation.",
+                      "Select/deselect bubbles to add/remove person types."
+                    ]
                   }
                 ]
               }
@@ -4406,7 +4696,8 @@
           },
           {
             "name": "Household Vehicles Availability",
-            "config": "TourSummaryFrequency",
+            "title": "Distribution of Tours by availability of Household Vehicles",
+            "config": "TourSummaryVertical",
             "file": "can_use_hhveh.csv",
             "info": "Tours by available household vehilces",
             "explanation": [
@@ -4426,13 +4717,17 @@
                 "body": [
                   {
                     "type": "unorderedList",
-                    "content": ["Hover mouse over bars to see detail.", "Select \"Show Data\" to see tabulation.", "Select/deselect bubbles to add/remove person types."]
+                    "content": [
+                      "Hover mouse over bars to see detail.",
+                      "Select \"Show Data\" to see tabulation.",
+                      "Select/deselect bubbles to add/remove person types."
+                    ]
                   }
                 ]
               }
             ]
           }
-          ]
+        ]
       }
     }
   },
@@ -4468,6 +4763,14 @@
       "StackAllChartsByDefault": false,
       "ChartWidthOverride": []
     },
+    "OnboardSurveyVertical": {
+      "NumberColsGrouped": 1,
+      "SwapLegendByDefault": true,
+      "ShowAsPercentByDefault": false,
+      "ShowAsVerticalByDefault": true,
+      "StackAllChartsByDefault": false,
+      "ChartWidthOverride": []
+    },
     "Frequency": {
       "NumberColsGrouped": 1,
       "SwapLegendByDefault": false,
@@ -4476,11 +4779,27 @@
       "StackAllChartsByDefault": true,
       "ChartWidthOverride": []
     },
+    "FrequencyVertical": {
+      "NumberColsGrouped": 1,
+      "SwapLegendByDefault": false,
+      "ShowAsPercentByDefault": false,
+      "ShowAsVerticalByDefault": true,
+      "StackAllChartsByDefault": false,
+      "ChartWidthOverride": []
+    },
     "TourSummary": {
       "NumberColsGrouped": 1,
       "SwapLegendByDefault": false,
       "ShowAsPercentByDefault": false,
       "ShowAsVerticalByDefault": false,
+      "StackAllChartsByDefault": false,
+      "ChartWidthOverride": []
+    },
+    "TourSummaryVertical": {
+      "NumberColsGrouped": 1,
+      "SwapLegendByDefault": false,
+      "ShowAsPercentByDefault": false,
+      "ShowAsVerticalByDefault": true,
       "StackAllChartsByDefault": false,
       "ChartWidthOverride": []
     },

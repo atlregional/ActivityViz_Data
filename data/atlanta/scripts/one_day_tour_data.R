@@ -265,18 +265,31 @@ tour_dt[person_dt,AGE:=age_labels[i.age]]
 #          paste0("\"", abmdd_dt[item=="income",code], "\"", " = ", "\"", abmdd_dt[item=="income", value]), "\"",
 #          collapse = ",\n"), 
 #        ")"))
-income_labels = c("1" = "Below $5,000",
-                  "2" = "$5,000 - $9,999",
-                  "3" = "$10,000 - $19,999",
-                  "4" = "$20,000 - $29,999",
-                  "5" = "$30,000 - $39,999",
-                  "6" = "$40,000 - $49,999",
-                  "7" = "$50,000 - $59,999",
-                  "8" = "$60,000 - $74,999",
-                  "9" = "$75,000 - $99,999",
-                  "10" = "$100,000 - $119,999",
-                  "11" = "$120,000 - $149,999",
-                  "12" = "More than $150,000",
+# income_labels = c("1" = "Below $5,000",
+#                   "2" = "$5,000 - $9,999",
+#                   "3" = "$10,000 - $19,999",
+#                   "4" = "$20,000 - $29,999",
+#                   "5" = "$30,000 - $39,999",
+#                   "6" = "$40,000 - $49,999",
+#                   "7" = "$50,000 - $59,999",
+#                   "8" = "$60,000 - $74,999",
+#                   "9" = "$75,000 - $99,999",
+#                   "10" = "$100,000 - $119,999",
+#                   "11" = "$120,000 - $149,999",
+#                   "12" = "More than $150,000",
+#                   "98" = "No answer")
+income_labels = c("1" =  "$0 - $19,999",
+                  "2" =  "$0 - $19,999",
+                  "3" =  "$0 - $19,999",
+                  "4" =  "$20,000 - $59,999",
+                  "5" =  "$20,000 - $59,999",
+                  "6" =  "$20,000 - $59,999",
+                  "7" =  "$20,000 - $59,999",
+                  "8" =  "$60,000 - $119,999",
+                  "9" =  "$60,000 - $119,999",
+                  "10" = "$60,000 - $119,999",
+                  "11" = "More than $120,000",
+                  "12" = "More than $120,000",
                   "98" = "No answer")
 
 tour_dt[person_dt,INCOME:=income_labels[as.character(i.income)]]
@@ -287,6 +300,10 @@ output_ls[["tour_dt"]] = tour_dt
 ##################################################################################
 
 summary_ls = list()
+true_false_labels = c(
+  "FALSE" = "No",
+  "TRUE"  = "Yes"
+)
 
 # Home based Tours
 home_based_dt = tour_dt[,.(COUNT=.N,CHART="SURVEYED BY NUMBER OF TOURS"),.(NTOURS = ntours)]
@@ -304,37 +321,44 @@ summary_ls[["stops_dt"]] = stops_dt
 # Drive Transit only
 drive_transit_dt = tour_dt[,.(COUNT=.N, CHART="DRIVE TRANSIT ONLY"),.(`TOURS AND STOPS` = paste0(ntours, ", ",nstops_label), `DRIVE TRANSIT`=as.character(drive_transit))]
 setorder(drive_transit_dt, `TOURS AND STOPS`, `DRIVE TRANSIT`)
+drive_transit_dt[,`DRIVE TRANSIT`:=true_false_labels[`DRIVE TRANSIT`]]
 # drive_transit_dt = drive_transit_dt[order(match(NTOURS, ntour_labels), `DRIVE TRANSIT`)]
 summary_ls[["drive_transit_dt"]] = drive_transit_dt
 
 # Walk Transit only
 walk_transit_dt = tour_dt[,.(COUNT=.N, CHART="WALK TRANSIT ONLY"),.(`TOURS AND STOPS` = paste0(ntours, ", ",nstops_label), `WALK TRANSIT`=as.character(walk_transit_only))]
 setorder(walk_transit_dt, `TOURS AND STOPS`, `WALK TRANSIT`)
+walk_transit_dt[,`WALK TRANSIT`:=true_false_labels[`WALK TRANSIT`]]
 summary_ls[["walk_transit_dt"]] = walk_transit_dt
 
 # Non Transit only
 non_transit_dt = tour_dt[,.(COUNT=.N, CHART="NON TRANSIT"),.(`TOURS AND STOPS` = paste0(ntours, ", ",nstops_label), `NON TRANSIT`=as.character(non_transit))]
 setorder(non_transit_dt, `TOURS AND STOPS`, `NON TRANSIT`)
+non_transit_dt[,`NON TRANSIT`:=true_false_labels[`NON TRANSIT`]]
 summary_ls[["non_transit_dt"]] = non_transit_dt
 
 # Has Work
 has_work_dt = tour_dt[,.(COUNT=.N, CHART="HAS WORK"),.(`TOURS AND STOPS` = paste0(ntours, ", ",nstops_label), `HAS WORK`=as.character(has_work))]
 setorder(has_work_dt, `TOURS AND STOPS`, `HAS WORK`)
+has_work_dt[,`HAS WORK`:=true_false_labels[`HAS WORK`]]
 summary_ls[["has_work_dt"]] = has_work_dt
 
 # Has School
 has_school_dt = tour_dt[,.(COUNT=.N, CHART="HAS SCHOOL"),.(`TOURS AND STOPS` = paste0(ntours, ", ",nstops_label), `HAS SCHOOL`=as.character(has_school))]
 setorder(has_school_dt, `TOURS AND STOPS`, `HAS SCHOOL`)
+has_school_dt[,`HAS SCHOOL`:=true_false_labels[`HAS SCHOOL`]]
 summary_ls[["has_school_dt"]] = has_school_dt
 
 # Has Work and school
 has_work_school_dt = tour_dt[,.(COUNT=.N, CHART="HAS WORK AND SCHOOL"),.(`TOURS AND STOPS` = paste0(ntours, ", ",nstops_label), `HAS WORK SCHOOL`=as.character(has_work_school))]
 setorder(has_work_school_dt, `TOURS AND STOPS`, `HAS WORK SCHOOL`)
+has_work_school_dt[,`HAS WORK SCHOOL`:=true_false_labels[`HAS WORK SCHOOL`]]
 summary_ls[["has_work_school_dt"]] = has_work_school_dt
 
 # Has Neither
 has_neither_dt = tour_dt[,.(COUNT=.N, CHART="HAS NEITHER"),.(`TOURS AND STOPS` = paste0(ntours, ", ",nstops_label), `HAS NEITHER`=as.character(has_neither))]
 setorder(has_neither_dt, `TOURS AND STOPS`, `HAS NEITHER`)
+has_neither_dt[,`HAS NEITHER`:=true_false_labels[`HAS NEITHER`]]
 summary_ls[["has_neither_dt"]] = has_neither_dt
 
 # OVERALL

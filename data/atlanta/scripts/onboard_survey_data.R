@@ -159,8 +159,10 @@ output_ls[["used_veh_dt"]] = used_veh_dt
 # Check the field name
 # od_dd_dt[grepl("license", DESCRIPTION, ignore.case = TRUE), .(`FIELD NAME` , DESCRIPTION)]
 have_dl_dt = od_dt[SUBMITTAL!="Dummy",.(COUNT = .N,
-                                        CHART_TYPE = "DRIVERS LICENSE"), by = .(HAVE_DL, `HAVE_DL[Code]`)]
-setorder(have_dl_dt, "HAVE_DL[Code]")
+                                        CHART_TYPE = "DRIVERS LICENSE"), by = .(AGE, `AGE[Code]`,
+                                                                                HAVE_DL, `HAVE_DL[Code]`)]
+setorder(have_dl_dt, "AGE[Code]", "HAVE_DL[Code]")
+have_dl_dt[, `AGE[Code]`:=NULL]
 have_dl_dt[, `HAVE_DL[Code]`:=NULL]
 output_ls[["have_dl_dt"]] = have_dl_dt
 
@@ -187,7 +189,7 @@ transfers_od_dt = od_dt[SUBMITTAL!="Dummy",
                         by = .(PREV_TRANSFERS, `PREV_TRANSFERS[Code]`,
                                NEXT_TRANSFERS, `NEXT_TRANSFERS[Code]`)]
 setorder(transfers_od_dt, "PREV_TRANSFERS[Code]", "NEXT_TRANSFERS[Code]")
-transfers_od_dt[, TRANSFERS:=paste0(`PREV_TRANSFERS[Code]`, `NEXT_TRANSFERS[Code]`)]
+transfers_od_dt[, TRANSFERS:=paste0(`PREV_TRANSFERS[Code]`, " Before - ", `NEXT_TRANSFERS[Code]`, " After")]
 transfers_od_dt = transfers_od_dt[,.(TRANSFERS, COUNT, CHART_TYPE)]
 output_ls[["transfers_od_dt"]] = transfers_od_dt
 
@@ -237,8 +239,13 @@ output_ls[["trip_oppo_dt"]] = trip_oppo_dt
 # od_dd_dt[grepl("trip", DESCRIPTION, ignore.case = TRUE), .(`FIELD NAME` , DESCRIPTION)]
 trip_oppo_time_dt = od_dt[SUBMITTAL!="Dummy",
                           .(COUNT = .N,
-                            CHART_TYPE = "TRIP IN OPPO DIR TIME"), by = .(OPPO_DIR_TRIP_TIME, `OPPO_DIR_TRIP_TIME[Code]`)]
+                            CHART_TYPE = "TRIP IN OPPO DIR TIME"), by = .(TRIP_IN_OPPO_DIR, `TRIP_IN_OPPO_DIR[Code]`,
+                                                                          OPPO_DIR_TRIP_TIME, `OPPO_DIR_TRIP_TIME[Code]`)]
+trip_oppo_time_dt = trip_oppo_time_dt[OPPO_DIR_TRIP_TIME!=""]
+# trip_oppo_time_dt[OPPO_DIR_TRIP_TIME=="", OPPO_DIR_TRIP_TIME:="Bus not used"]
 setorder(trip_oppo_time_dt, "OPPO_DIR_TRIP_TIME[Code]")
+trip_oppo_time_dt[, TRIP_IN_OPPO_DIR:=NULL]
+trip_oppo_time_dt[, `TRIP_IN_OPPO_DIR[Code]`:=NULL]
 trip_oppo_time_dt[, `OPPO_DIR_TRIP_TIME[Code]`:=NULL]
 output_ls[["trip_oppo_time_dt"]] = trip_oppo_time_dt
 
@@ -388,19 +395,31 @@ output_ls[["hhpl_dt"]] = hhpl_dt
 # Did you go to work
 # Check the field name
 # od_dd_dt[grepl("work", DESCRIPTION, ignore.case = TRUE), .(`FIELD NAME` , DESCRIPTION)]
+work_map = c(
+  "Yes since left home" = "Yes, headed to work",
+  "Yes before returning home" = "Yes, headed to home",
+  "No" = "No"
+)
 did_y_work_dt = od_dt[!is.na(`DID_YOU_GO_2_WORK[Code]`) & `DID_YOU_GO_2_WORK[Code]`!= "",
                       .(COUNT = .N,
                         CHART_TYPE = "GO TO WORK"), by = .(DID_YOU_GO_2_WORK, `DID_YOU_GO_2_WORK[Code]`)]
+did_y_work_dt[,DID_YOU_GO_2_WORK:=work_map[DID_YOU_GO_2_WORK] ]
 setorder(did_y_work_dt, "DID_YOU_GO_2_WORK[Code]")
 did_y_work_dt[, `DID_YOU_GO_2_WORK[Code]`:=NULL]
 output_ls[["did_y_work_dt"]] = did_y_work_dt
 
 # Did you go to school
 # Check the field name
+school_map = c(
+  "Yes since left home" = "Yes, headed to school",
+  "Yes before returning home" = "Yes, headed to home",
+  "No" = "No"
+)
 od_dd_dt[grepl("school", DESCRIPTION, ignore.case = TRUE), .(`FIELD NAME` , DESCRIPTION)]
 did_y_school_dt = od_dt[!is.na(`DID_YOU_GO_TO_SCHOOL[Code]`) & `DID_YOU_GO_TO_SCHOOL[Code]`!= "",
                         .(COUNT = .N,
                           CHART_TYPE = "GO TO SCHOOL"), by = .(DID_YOU_GO_TO_SCHOOL, `DID_YOU_GO_TO_SCHOOL[Code]`)]
+did_y_school_dt[,DID_YOU_GO_TO_SCHOOL:=school_map[DID_YOU_GO_TO_SCHOOL] ]
 setorder(did_y_school_dt, "DID_YOU_GO_TO_SCHOOL[Code]")
 did_y_school_dt[, `DID_YOU_GO_TO_SCHOOL[Code]`:=NULL]
 output_ls[["did_y_school_dt"]] = did_y_school_dt
