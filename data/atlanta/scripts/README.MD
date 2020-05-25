@@ -15,3 +15,10 @@ To create the ARC demo data from SQL Server, do the following:
 4. Execute the script
 5. Right click in the upper left corner of the results table and select Copy with Headers
 6. Paste the result in Excel and save as a CSV file into the relevant data\scenario folder
+
+# ARC Survey Visualizer Scripts
+
+The following scripts process ARC survey data and produce outputs shown in the survey scenarios of the ARC visualizer
+
+1. `onboard_survey_data.R` - R script that processes *Onboard Survey Data* and develops outputs to the input formats expected by the tool.
+2. `one_day_tour_data.R` - R script that processes *One-Day Tour Survey Data* and develops outputs to the inputs formats expected by the tool.
