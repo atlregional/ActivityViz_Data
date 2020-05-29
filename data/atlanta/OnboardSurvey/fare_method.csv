@@ -1,79 +1,79 @@
 FARE,RESPONSE,COUNT,CHART_TYPE
-One-way Trip,No,28763,FARE METHOD
-One-way Trip,Yes,13282,FARE METHOD
-1 Day Pass,No,39174,FARE METHOD
-1 Day Pass,Yes,2871,FARE METHOD
-2 Day Pass,No,41813,FARE METHOD
-2 Day Pass,Yes,232,FARE METHOD
-3 Day Pass,No,41331,FARE METHOD
-3 Day Pass,Yes,714,FARE METHOD
-4 Day Pass,No,41463,FARE METHOD
-4 Day Pass,Yes,582,FARE METHOD
-7 Day Pass,No,29069,FARE METHOD
-7 Day Pass,Yes,12976,FARE METHOD
-30 Day Pass,Yes,7367,FARE METHOD
-30 Day Pass,No,34678,FARE METHOD
-2 Trip Pass,No,14752,FARE METHOD
-2 Trip Pass,Yes,712,FARE METHOD
-10 Trip Pass,No,15059,FARE METHOD
-10 Trip Pass,Yes,405,FARE METHOD
-20Trip Pass,No,15093,FARE METHOD
-20Trip Pass,Yes,371,FARE METHOD
-Employer Partnership Program,No,39780,FARE METHOD
-Employer Partnership Program,Yes,2265,FARE METHOD
-University Pass Program,No,40890,FARE METHOD
-University Pass Program,Yes,1155,FARE METHOD
-Student Pass Program (K-12),No,41766,FARE METHOD
-Student Pass Program (K-12),Yes,279,FARE METHOD
-Free - child under 47 inches,No,42025,FARE METHOD
-Free - child under 47 inches,Yes,20,FARE METHOD
-Local One-Way,No,25881,FARE METHOD
-Local One-Way,Yes,700,FARE METHOD
-Local 10-Ride Ticket,No,26385,FARE METHOD
-Local 10-Ride Ticket,Yes,196,FARE METHOD
-Local 31-Day Pass,No,26529,FARE METHOD
-Local 31-Day Pass,Yes,52,FARE METHOD
-Express One-Way,No,26575,FARE METHOD
-Express One-Way,Yes,6,FARE METHOD
-Express 20-Ride Ticket,No,26523,FARE METHOD
-Express 20-Ride Ticket,Yes,58,FARE METHOD
-Express 31-Day Pass,No,26565,FARE METHOD
-Express 31-Day Pass,Yes,16,FARE METHOD
-Free - Child under 42 Inches,No,26580,FARE METHOD
-Free - Child under 42 Inches,Yes,1,FARE METHOD
-Free - Paratransit Certified,No,26576,FARE METHOD
-Free - Paratransit Certified,Yes,5,FARE METHOD
-Local One-Way Cash,No,26233,FARE METHOD
-Local One-Way Cash,Yes,348,FARE METHOD
-Local Monthly Pass,No,26527,FARE METHOD
-Local Monthly Pass,Yes,54,FARE METHOD
-Express One-Way Cash,No,26549,FARE METHOD
-Express One-Way Cash,Yes,32,FARE METHOD
-Express 10-Ride Ticket,No,26514,FARE METHOD
-Express 10-Ride Ticket,Yes,67,FARE METHOD
-Express Monthly Pass,No,26515,FARE METHOD
-Express Monthly Pass,Yes,66,FARE METHOD
-Free - Child Farebox Height,No,26580,FARE METHOD
-Free - Child Farebox Height,Yes,1,FARE METHOD
-Cash,No,26563,FARE METHOD
-Cash,Yes,18,FARE METHOD
-10-Ride Pass,No,26579,FARE METHOD
-10-Ride Pass,Yes,2,FARE METHOD
-One-Way Ticket plus Transfer,No,26579,FARE METHOD
-One-Way Ticket plus Transfer,Yes,2,FARE METHOD
-Day Pass,No,26529,FARE METHOD
-Day Pass,Yes,52,FARE METHOD
-Free - Age 3 or under 42 inches,No,26579,FARE METHOD
-Free - Age 3 or under 42 inches,Yes,2,FARE METHOD
-Round Trip,No,26550,FARE METHOD
-Round Trip,Yes,31,FARE METHOD
-10-Trip,No,26410,FARE METHOD
-10-Trip,Yes,171,FARE METHOD
-31-Day,No,26411,FARE METHOD
-31-Day,Yes,170,FARE METHOD
-Monthly Pass Blue,No,26578,FARE METHOD
-Monthly Pass Blue,Yes,3,FARE METHOD
-Monthly Pass Green,No,26572,FARE METHOD
-Monthly Pass Green,Yes,9,FARE METHOD
-Free Other,No,15445,FARE METHOD
-Free Other,Yes,19,FARE METHOD
+One-way Trip,No,216999.86,FARE METHOD
+One-way Trip,Yes,94449.21,FARE METHOD
+1 Day Pass,No,290771.72,FARE METHOD
+1 Day Pass,Yes,20677.36,FARE METHOD
+2 Day Pass,No,309933.86,FARE METHOD
+2 Day Pass,Yes,1515.21,FARE METHOD
+3 Day Pass,No,306616.27,FARE METHOD
+3 Day Pass,Yes,4832.8,FARE METHOD
+4 Day Pass,No,307703.99,FARE METHOD
+4 Day Pass,Yes,3745.08,FARE METHOD
+7 Day Pass,No,217039.99,FARE METHOD
+7 Day Pass,Yes,94409.08,FARE METHOD
+30 Day Pass,Yes,56252.1,FARE METHOD
+30 Day Pass,No,255196.97,FARE METHOD
+2 Trip Pass,No,110694.36,FARE METHOD
+2 Trip Pass,Yes,4913.14,FARE METHOD
+10 Trip Pass,No,112372.08,FARE METHOD
+10 Trip Pass,Yes,3235.41,FARE METHOD
+20Trip Pass,No,112646.03,FARE METHOD
+20Trip Pass,Yes,2961.46,FARE METHOD
+Employer Partnership Program,No,292379.69,FARE METHOD
+Employer Partnership Program,Yes,19069.39,FARE METHOD
+University Pass Program,No,302238.9,FARE METHOD
+University Pass Program,Yes,9210.17,FARE METHOD
+Student Pass Program (K-12),No,309240.86,FARE METHOD
+Student Pass Program (K-12),Yes,2208.21,FARE METHOD
+Free - child under 47 inches,No,311289.14,FARE METHOD
+Free - child under 47 inches,Yes,159.94,FARE METHOD
+Local One-Way,No,188687.77,FARE METHOD
+Local One-Way,Yes,7153.81,FARE METHOD
+Local 10-Ride Ticket,No,193836.05,FARE METHOD
+Local 10-Ride Ticket,Yes,2005.53,FARE METHOD
+Local 31-Day Pass,No,195278.97,FARE METHOD
+Local 31-Day Pass,Yes,562.61,FARE METHOD
+Express One-Way,No,195804.24,FARE METHOD
+Express One-Way,Yes,37.34,FARE METHOD
+Express 20-Ride Ticket,No,195217.21,FARE METHOD
+Express 20-Ride Ticket,Yes,624.37,FARE METHOD
+Express 31-Day Pass,No,195668.47,FARE METHOD
+Express 31-Day Pass,Yes,173.11,FARE METHOD
+Free - Child under 42 Inches,No,195837.78,FARE METHOD
+Free - Child under 42 Inches,Yes,3.8,FARE METHOD
+Free - Paratransit Certified,No,195777.75,FARE METHOD
+Free - Paratransit Certified,Yes,63.83,FARE METHOD
+Local One-Way Cash,No,192588.09,FARE METHOD
+Local One-Way Cash,Yes,3253.49,FARE METHOD
+Local Monthly Pass,No,195410.79,FARE METHOD
+Local Monthly Pass,Yes,430.79,FARE METHOD
+Express One-Way Cash,No,195478.08,FARE METHOD
+Express One-Way Cash,Yes,363.5,FARE METHOD
+Express 10-Ride Ticket,No,195189.86,FARE METHOD
+Express 10-Ride Ticket,Yes,651.72,FARE METHOD
+Express Monthly Pass,No,195172.68,FARE METHOD
+Express Monthly Pass,Yes,668.9,FARE METHOD
+Free - Child Farebox Height,No,195815.73,FARE METHOD
+Free - Child Farebox Height,Yes,25.85,FARE METHOD
+Cash,No,195784.94,FARE METHOD
+Cash,Yes,56.65,FARE METHOD
+10-Ride Pass,No,195835.14,FARE METHOD
+10-Ride Pass,Yes,6.44,FARE METHOD
+One-Way Ticket plus Transfer,No,195827.38,FARE METHOD
+One-Way Ticket plus Transfer,Yes,14.2,FARE METHOD
+Day Pass,No,195539.72,FARE METHOD
+Day Pass,Yes,301.87,FARE METHOD
+Free - Age 3 or under 42 inches,No,195833.66,FARE METHOD
+Free - Age 3 or under 42 inches,Yes,7.92,FARE METHOD
+Round Trip,No,195587.08,FARE METHOD
+Round Trip,Yes,254.51,FARE METHOD
+10-Trip,No,194391.41,FARE METHOD
+10-Trip,Yes,1450.17,FARE METHOD
+31-Day,No,194417.67,FARE METHOD
+31-Day,Yes,1423.91,FARE METHOD
+Monthly Pass Blue,No,195831.66,FARE METHOD
+Monthly Pass Blue,Yes,9.92,FARE METHOD
+Monthly Pass Green,No,195792.48,FARE METHOD
+Monthly Pass Green,Yes,49.1,FARE METHOD
+Free Other,No,115453.83,FARE METHOD
+Free Other,Yes,153.66,FARE METHOD

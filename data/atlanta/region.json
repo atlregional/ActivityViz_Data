@@ -3022,7 +3022,7 @@
             "file": "age.csv",
             "info": "Age of respondent",
             "datafilecolumns": {
-              "GROUP": "Participant Response",
+              "GROUP": "Participant Response Expanded Using Unlinked Expansion Factor",
               "AGE": "<br>1=Under 6<\/br><br>2=6-15<\/br><br>3=16-17<\/br><br>4=18-24<\/br><br>5=25-34<\/br><br>6=35-44<\/br><br>7=45-54<\/br><br>8=55-64<\/br><br>9=65 and older<\/br>",
               "Count": "Count of participants",
               "CHART_TYPE": "Which grouped chart they belong too"
@@ -3035,7 +3035,9 @@
                     "type": "unorderedList",
                     "content": [
                       "Age distribution of the respondents",
-                      "Around 30% of respondents are in the 25-34 age group"
+                      "Around 30% of respondents are in the 25-34 age group",
+                      "Responses are expanded using unlinked expansion factor",
+                      "Responses are recorded in column 187 and 188"
                     ]
                   }
                 ]
@@ -3062,7 +3064,7 @@
             "file": "hhsize.csv",
             "info": "Including respondent, the number of members in respondent's household",
             "datafilecolumns": {
-              "GROUP": "Participant Response",
+              "GROUP": "Participant Response Expanded Using Unlinked Expansion Factor",
               "HH_SIZE": "Size of participating household",
               "Count": "Count of participants",
               "CHART_TYPE": "Which grouped chart they belong too"
@@ -3075,7 +3077,9 @@
                     "type": "unorderedList",
                     "content": [
                       "Household size distribution of the respondents",
-                      "Around 24% of respondents belong to household of size 2"
+                      "Around 24% of respondents belong to household of size 2",
+                      "Responses are expanded using unlinked expansion factor",
+                      "Responses are recorded in column 171 and 172"
                     ]
                   }
                 ]
@@ -3102,7 +3106,7 @@
             "file": "employed_hh.csv",
             "info": "How many people age 15 and older in the household are employed?",
             "datafilecolumns": {
-              "GROUP": "Participant Response",
+              "GROUP": "Participant Response Expanded Using Unlinked Expansion Factor",
               "EMPLOYED_IN_HH": "<br>0=None (0)<\/br><br>1=One (1)<\/br><br>2=Two (2)<\/br><br>3=Three (3)<\/br><br>4=Four (4)<\/br><br>5=Five (5)<\/br><br>6=Six (6)<\/br><br>7=Seven (7)<\/br><br>8=Eight (8)<\/br><br>9=Nine (9)<\/br><br>10=Ten or more (10+)<\/br>",
               "CHART_TYPE": "Which grouped chart they belong too"
             },
@@ -3114,7 +3118,9 @@
                     "type": "unorderedList",
                     "content": [
                       "How many people age 15 and older in the household are employed?",
-                      "Most of the respondents (40%) had two people working in the household"
+                      "Most of the respondents (40%) had two people working in the household",
+                      "Responses are expanded using unlinked expansion factor",
+                      "Responses are recorded in column 175 and 176"
                     ]
                   }
                 ]
@@ -3141,7 +3147,7 @@
             "file": "income.csv",
             "info": "Total annual household income",
             "datafilecolumns": {
-              "GROUP": "Participant Response",
+              "GROUP": "Participant Response Expanded Using Unlinked Expansion Factor",
               "INCOME": "<br>1=Below $5,000<\/br><br>2=$5,000 - $9,999<\/br><br>3=$10,000 - $19,999<\/br><br>4=$20,000 - $29,999<\/br><br>5=$30,000 - $39,999<\/br><br>6=$40,000 - $49,999<\/br><br>7=$50,000 - $59,999<\/br><br>8=$60,000 - $74,999<\/br><br>9=$75,000 - $99,999<\/br><br>10=$100,000 - $119,999<\/br><br>11=More than $120,000<\/br><br>99=REFUSED<\/br>",
               "Count": "Count of participants",
               "CHART_TYPE": "Which grouped chart they belong too"
@@ -3154,7 +3160,9 @@
                     "type": "unorderedList",
                     "content": [
                       "Household Income Distribution of the respondents",
-                      "At least 9% of respondents were below federal poverty line"
+                      "At least 9% of respondents were below federal poverty line",
+                      "Responses are expanded using unlinked expansion factor",
+                      "Responses are recorded in column 204 and 205"
                     ]
                   }
                 ]
@@ -3181,7 +3189,7 @@
             "file": "gender.csv",
             "info": "Respondent's gender",
             "datafilecolumns": {
-              "GROUP": "Participant Response",
+              "GROUP": "Participant Response Expanded Using Unlinked Expansion Factor",
               "GENDER_INFO": "<br>1=Male<\/br><br>2=Female<\/br><br>99=Other<\/br>",
               "Count": "Count of participants",
               "CHART_TYPE": "Which grouped chart they belong too"
@@ -3193,7 +3201,9 @@
                   {
                     "type": "unorderedList",
                     "content": [
-                      "Gender distribution of the respondents"
+                      "Gender distribution of the respondents",
+                      "Responses are expanded using unlinked expansion factor",
+                      "Responses are recorded in column 206, 207 and 208"
                     ]
                   }
                 ]
@@ -3220,7 +3230,7 @@
             "file": "race.csv",
             "info": "Respondent's race",
             "datafilecolumns": {
-              "GROUP": "Participant Response",
+              "GROUP": "Participant Response Expanded Using Unlinked Expansion Factor",
               "RACE": "Race category",
               "Count": "Count of participants",
               "CHART_TYPE": "Which grouped chart they belong too"
@@ -3233,7 +3243,9 @@
                     "type": "unorderedList",
                     "content": [
                       "Race distribution of the respondents",
-                      "African American respondents formed the majority in the survey"
+                      "African American respondents formed the majority in the survey",
+                      "Responses are expanded using unlinked expansion factor",
+                      "Responses are recorded in column 191-196"
                     ]
                   }
                 ]
@@ -3260,7 +3272,7 @@
             "file": "num_veh.csv",
             "info": "Number of vehicles in respondent's household",
             "datafilecolumns": {
-              "GROUP": "Participant Response",
+              "GROUP": "Participant Response Expanded Using Unlinked Expansion Factor",
               "COUNT_VH_HH": "<br>0=None (0)<\/br><br>1=One (1)<\/br><br>2=Two (2)<\/br><br>3=Three (3)<\/br><br>4=Four (4)<\/br><br>5=Five (5)<\/br><br>6=Six (6)<\/br><br>7=Seven (7)<\/br><br>8=Eight (8)<\/br><br>9=Nine (9)<\/br><br>10=Ten or more (10+)<\/br>",
               "Count": "Count of participants",
               "CHART_TYPE": "Which grouped chart they belong too"
@@ -3272,7 +3284,9 @@
                   {
                     "type": "unorderedList",
                     "content": [
-                      "Number of vehicles in respondent's household"
+                      "Number of vehicles in respondent's household",
+                      "Responses are expanded using unlinked expansion factor",
+                      "Responses are recorded in column 167 and 168"
                     ]
                   }
                 ]
@@ -3299,7 +3313,7 @@
             "file": "used_veh.csv",
             "info": "If respondent could have used one of their household vehicles for their trip",
             "datafilecolumns": {
-              "GROUP": "Participant Response",
+              "GROUP": "Participant Response Expanded Using Unlinked Expansion Factor",
               "USED_VEH_TRIP": "<br>NO=No<\/br><br>YES=Yes<\/br>",
               "Count": "Count of participants",
               "CHART_TYPE": "Which grouped chart they belong too"
@@ -3311,7 +3325,9 @@
                   {
                     "type": "unorderedList",
                     "content": [
-                      "If respondent could have used one of their household vehicles for their trip"
+                      "If respondent could have used one of their household vehicles for their trip",
+                      "Responses are expanded using unlinked expansion factor",
+                      "Responses are recorded in column 169 and 170"
                     ]
                   }
                 ]
@@ -3338,7 +3354,7 @@
             "file": "have_dl.csv",
             "info": "If respondent indicated they have a valid driver's license",
             "datafilecolumns": {
-              "GROUP": "Participant Response",
+              "AGE": "<br>1=Under 6<\/br><br>2=6-15<\/br><br>3=16-17<\/br><br>4=18-24<\/br><br>5=25-34<\/br><br>6=35-44<\/br><br>7=45-54<\/br><br>8=55-64<\/br><br>9=65 and older<\/br>",
               "HAVE_DL": "<br>1=Yes<\/br><br>2=No<\/br>",
               "Count": "Count of participants",
               "CHART_TYPE": "Which grouped chart they belong too"
@@ -3350,7 +3366,9 @@
                   {
                     "type": "unorderedList",
                     "content": [
-                      "If respondent indicated they have a valid driver's license"
+                      "If respondent indicated they have a valid driver's license",
+                      "Responses are expanded using unlinked expansion factor",
+                      "Responses are recorded in column 185 and 186"
                     ]
                   }
                 ]
@@ -3377,7 +3395,7 @@
             "file": "transfers_od.csv",
             "info": "How many transfers respondent took from their origin to their destination",
             "datafilecolumns": {
-              "GROUP": "Participant Response",
+              "GROUP": "Participant Response Expanded Using Unlinked Expansion Factor",
               "TRANSFERS": "First number is the number of transfer from their origin and second number is the number of transfers to their destination",
               "Count": "Count of participants",
               "CHART_TYPE": "Which grouped chart they belong too"
@@ -3389,7 +3407,9 @@
                   {
                     "type": "unorderedList",
                     "content": [
-                      "Distribution of number of transfers the respondent took from their origin to their destination"
+                      "Distribution of number of transfers the respondent took from their origin to their destination",
+                      "Responses are expanded using unlinked expansion factor",
+                      "Responses are recorded in column 26, 27, 49, and 50"
                     ]
                   }
                 ]
@@ -3416,7 +3436,7 @@
             "file": "origin_transport.csv",
             "info": "Access mode respondent used from their origin",
             "datafilecolumns": {
-              "GROUP": "Participant Response",
+              "GROUP": "Participant Response Expanded Using Unlinked Expansion Factor",
               "ORIGIN_TRANSPORT": "<br>1=Walk<\/br><br>2=Wheelchair / Mobility Aid<\/br><br>3=Personal Bike<\/br><br>4=Bike share (Jump, Relay, etc.)<\/br><br>5=Was dropped off by someone going someplace else<\/br><br>6=Drove alone and parked<\/br><br>7=Drove or rode with others and parked<\/br><br>8=Uber, Lyft, etc.<\/br><br>9=Car share (e.g. Zipcar, etc.)<\/br><br>10=Taxi<\/br><br>11=E-scooter (e.g. Lime, Bird, etc.)<\/br><br>12=Shuttle<\/br><br>13=School Bus / Other Bus<\/br><br>14=Skateboard<\/br>",
               "Count": "Count of participants",
               "CHART_TYPE": "Which grouped chart they belong too"
@@ -3428,7 +3448,9 @@
                   {
                     "type": "unorderedList",
                     "content": [
-                      "Access mode respondent used from their origin"
+                      "Access mode respondent used from their origin",
+                      "Responses are expanded using unlinked expansion factor",
+                      "Responses are recorded in column 40 and 41"
                     ]
                   }
                 ]
@@ -3455,7 +3477,7 @@
             "file": "origin_place_type.csv",
             "info": "Type of place respondent is coming from now",
             "datafilecolumns": {
-              "GROUP": "Participant Response",
+              "GROUP": "Participant Response Expanded Using Unlinked Expansion Factor",
               "ORIGIN_PLACE_TYPE": "<br>1=Your usual WORKPLACE<\/br><br>2=Your HOME<\/br><br>3=Your Hotel or Lodging<\/br><br>4=Another Home<\/br><br>5=Store / Retail Place<\/br><br>6=Restaurant<\/br><br>7=School (K-12) / Day Care (student only)<\/br><br>8=College or University (student only)<\/br><br>9=Airport (airline passenger only)<\/br><br>10=Hospital / Doctor<\/br><br>11=Bank, or other office / Errands<\/br><br>12=Recreation Place<\/br><br>13=Place of Worship<\/br><br>14=Personal Business<\/br>",
               "Count": "Count of participants",
               "CHART_TYPE": "Which grouped chart they belong too"
@@ -3467,7 +3489,9 @@
                   {
                     "type": "unorderedList",
                     "content": [
-                      "Type of place respondent is coming from now"
+                      "Type of place respondent is coming from now",
+                      "Responses are expanded using unlinked expansion factor",
+                      "Responses are recorded in column 19 and 20"
                     ]
                   }
                 ]
@@ -3494,7 +3518,7 @@
             "file": "res_vis.csv",
             "info": "If respondent indicated they were a resident or visitor to the area",
             "datafilecolumns": {
-              "GROUP": "Participant Response",
+              "GROUP": "Participant Response Expanded Using Unlinked Expansion Factor",
               "RESIDENT_OR_VISITOR": "<br>1=Resident<\/br><br>2=Visitor<\/br>",
               "Count": "Count of participants",
               "CHART_TYPE": "Which grouped chart they belong too"
@@ -3506,7 +3530,9 @@
                   {
                     "type": "unorderedList",
                     "content": [
-                      "If respondent indicated they were a resident or visitor to the area"
+                      "If respondent indicated they were a resident or visitor to the area",
+                      "Responses are expanded using unlinked expansion factor",
+                      "Responses are recorded in column 7 and 8"
                     ]
                   }
                 ]
@@ -3533,7 +3559,7 @@
             "file": "trip_oppo.csv",
             "info": "If respondent took the same trip in the opposite direction",
             "datafilecolumns": {
-              "GROUP": "Participant Response",
+              "GROUP": "Participant Response Expanded Using Unlinked Expansion Factor",
               "TRIP_IN_OPPO_DIR": "<br>1=Yes - and I will/did use bus / rail<\/br><br>2=No<\/br><br>3=Yes - I will/did make a return trip but will/did NOT use the bus / rail<\/br>",
               "Count": "Count of participants",
               "CHART_TYPE": "Which grouped chart they belong too"
@@ -3545,7 +3571,9 @@
                   {
                     "type": "unorderedList",
                     "content": [
-                      "If respondent took the same trip in the opposite direction"
+                      "If respondent took the same trip in the opposite direction",
+                      "Responses are expanded using unlinked expansion factor",
+                      "Responses are recorded in column 108 and 109"
                     ]
                   }
                 ]
@@ -3572,7 +3600,7 @@
             "file": "trip_oppo_time.csv",
             "info": "At what time did respondent board their return trip bus/rail",
             "datafilecolumns": {
-              "GROUP": "Participant Response",
+              "GROUP": "Participant Response Expanded Using Unlinked Expansion Factor",
               "OPPO_DIR_TRIP_TIME": "<br>AM1=Before 5:00 am<\/br><br>AM2=5:00 am - 6:00 am<\/br><br>AM3=6:00 am - 7:00 am<\/br><br>AM4=7:00 am - 8:00 am<\/br><br>AM5=8:00 am - 9:00 am<\/br><br>MID1=9:00 am - 10:00 am<\/br><br>MID2=10:00 am - 11:00 am<\/br><br>MID3=11:00 am - 12:00 noon<\/br><br>MID4=12:00 noon - 1:00 pm<\/br><br>MID5=1:00 pm - 2:00 pm<\/br><br>MID6=2:00 pm - 3:00 pm<\/br><br>PM1=3:00 pm - 4:00 pm<\/br><br>PM2=4:00 pm - 5:00 pm<\/br><br>PM3=5:00 pm - 6:00 pm<\/br><br>PM4=6:00 pm - 7:00 pm<\/br><br>PM5=7:00 pm - 8:00 pm<\/br><br>PM6=8:00 pm - 9:00 pm<\/br><br>PM7=9:00 pm - 10:00 pm<\/br><br>PM8=10:00 pm - 11:00 pm<\/br><br>PM9=11:00 pm and later<\/br>",
               "Count": "Count of participants",
               "CHART_TYPE": "Which grouped chart they belong too"
@@ -3584,7 +3612,9 @@
                   {
                     "type": "unorderedList",
                     "content": [
-                      "The time at which the respondent board their return trip bus/rail"
+                      "The time at which the respondent board their return trip bus/rail",
+                      "Responses are expanded using unlinked expansion factor",
+                      "Responses are recorded in column 110 and 111"
                     ]
                   }
                 ]
@@ -3611,7 +3641,7 @@
             "file": "emp_status.csv",
             "info": "Respondent's employment status",
             "datafilecolumns": {
-              "GROUP": "Participant Response",
+              "GROUP": "Participant Response Expanded Using Unlinked Expansion Factor",
               "EMPLOYMENT_STATUS": "<br>1=Employed full-time<\/br><br>2=Not currently employed, but seeking work<\/br><br>3=Retired<\/br><br>4=Employed part-time<\/br><br>5=Not currently employed, and not seeking work<\/br><br>6=Homemaker<\/br>",
               "Count": "Count of participants",
               "CHART_TYPE": "Which grouped chart they belong too"
@@ -3623,7 +3653,9 @@
                   {
                     "type": "unorderedList",
                     "content": [
-                      "Distribution of respondent's employment status"
+                      "Distribution of respondent's employment status",
+                      "Responses are expanded using unlinked expansion factor",
+                      "Responses are recorded in column 177 and 178"
                     ]
                   }
                 ]
@@ -3650,7 +3682,7 @@
             "file": "student_status.csv",
             "info": "Respondent's student status",
             "datafilecolumns": {
-              "GROUP": "Participant Response",
+              "GROUP": "Participant Response Expanded Using Unlinked Expansion Factor",
               "STUDENT_STATUS": "<br>1=Not a student<\/br><br>2=Yes - Full time College / University<\/br><br>3=Yes - Part time College / University<\/br><br>4=Yes - K - 12th grade<\/br><br>5=Yes - Other type of student<\/br>",
               "Count": "Count of participants",
               "CHART_TYPE": "Which grouped chart they belong too"
@@ -3662,7 +3694,9 @@
                   {
                     "type": "unorderedList",
                     "content": [
-                      "Distribution of respondent's student status"
+                      "Distribution of respondent's student status",
+                      "Responses are expanded using unlinked expansion factor",
+                      "Responses are recorded in column 181 and 182"
                     ]
                   }
                 ]
@@ -3689,7 +3723,7 @@
             "file": "home_lang_other.csv",
             "info": "Does respondent speak a language other than English spoken in home",
             "datafilecolumns": {
-              "GROUP": "Participant Response",
+              "GROUP": "Participant Response Expanded Using Unlinked Expansion Factor",
               "HOME_LANG_OTHER": "<br>1=Yes<\/br><br>2=No<\/br>",
               "Count": "Count of participants",
               "CHART_TYPE": "Which grouped chart they belong too"
@@ -3701,7 +3735,9 @@
                   {
                     "type": "unorderedList",
                     "content": [
-                      "If a respondent speak a language other than English spoken in home"
+                      "If a respondent speak a language other than English spoken in home",
+                      "Responses are expanded using unlinked expansion factor",
+                      "Responses are recorded in column 197 and 198"
                     ]
                   }
                 ]
@@ -3728,7 +3764,7 @@
             "file": "home_other_lang.csv",
             "info": "Language respondent speaks at home other than English",
             "datafilecolumns": {
-              "GROUP": "Participant Response",
+              "GROUP": "Participant Response Expanded Using Unlinked Expansion Factor",
               "HOME_OTHER_LANG": "Language respondent speaks at home other than English",
               "Count": "Count of participants",
               "CHART_TYPE": "Which grouped chart they belong too"
@@ -3740,7 +3776,9 @@
                   {
                     "type": "unorderedList",
                     "content": [
-                      "Distribution of languages spoken in home other than English"
+                      "Distribution of languages spoken in home other than English",
+                      "Responses are expanded using unlinked expansion factor",
+                      "Responses are recorded in column 199 and 200"
                     ]
                   }
                 ]
@@ -3767,7 +3805,7 @@
             "file": "eng_ability.csv",
             "info": "How well did respondent speaks English",
             "datafilecolumns": {
-              "GROUP": "Participant Response",
+              "GROUP": "Participant Response Expanded Using Unlinked Expansion Factor",
               "ENGLISH_ABILITY": "<br>A1=Very well<\/br><br>A2=Well<\/br><br>A3=Not at all<\/br><br>A4=Less than well<\/br><br>A99=Unknown<\/br>",
               "Count": "Count of participants",
               "CHART_TYPE": "Which grouped chart they belong too"
@@ -3779,7 +3817,9 @@
                   {
                     "type": "unorderedList",
                     "content": [
-                      "How well did respondent speaks English"
+                      "How well did respondent speaks English",
+                      "Responses are expanded using unlinked expansion factor",
+                      "Responses are recorded in column 202 and 203"
                     ]
                   }
                 ]
@@ -3806,7 +3846,7 @@
             "file": "survey_lang.csv",
             "info": "What language the survey was conducted in",
             "datafilecolumns": {
-              "GROUP": "Participant Response",
+              "GROUP": "Participant Response Expanded Using Unlinked Expansion Factor",
               "SURVEY_LANGUAGE": "Language the survey was conducted in",
               "Count": "Count of participants",
               "CHART_TYPE": "Which grouped chart they belong too"
@@ -3818,7 +3858,9 @@
                   {
                     "type": "unorderedList",
                     "content": [
-                      "Distribution of the language the survey was conducted in"
+                      "Distribution of the language the survey was conducted in",
+                      "Responses are expanded using unlinked expansion factor",
+                      "Responses are recorded in column 210 and 211"
                     ]
                   }
                 ]
@@ -3857,7 +3899,9 @@
                   {
                     "type": "unorderedList",
                     "content": [
-                      "Distribution of the fare method the respondent used for the trip"
+                      "Distribution of the fare method the respondent used for the trip",
+                      "Responses are expanded using unlinked expansion factor",
+                      "Responses are recorded in column 112 - 151"
                     ]
                   }
                 ]
@@ -3878,7 +3922,7 @@
             ]
           },
           {
-            "name": "Access/Egress Service",
+            "name": "Access-Egress Service",
             "title": "Access/Egress Services used for the Trip",
             "config": "Frequency",
             "file": "use_service.csv",
@@ -3896,7 +3940,9 @@
                   {
                     "type": "unorderedList",
                     "content": [
-                      "Distribution of the type of services the respondent used for the trip"
+                      "Distribution of the type of services the respondent used for the trip",
+                      "Responses are expanded using unlinked expansion factor",
+                      "Responses are recorded in column 162 - 166"
                     ]
                   }
                 ]
@@ -3923,7 +3969,7 @@
             "file": "type_fare.csv",
             "info": "What type of fare respondent used",
             "datafilecolumns": {
-              "GROUP": "Participant Response",
+              "GROUP": "Participant Response Expanded Using Unlinked Expansion Factor",
               "TYPE_OF_FARE": "<br>1=Regular Fare<\/br><br>2=Senior (65 and older)<\/br><br>3=Disabled/Medicare Discount<\/br><br>4=Regular (47in-64yo)<\/br><br>5=Youth (Under 18)<\/br><br>6=Medicare Card Holder<\/br><br>7=Child (Age 4-6)<\/br><br>8=Senior (60 and Older)<\/br><br>99=Other<\/br>",
               "Count": "Count of participants",
               "CHART_TYPE": "Which grouped chart they belong too"
@@ -3935,7 +3981,9 @@
                   {
                     "type": "unorderedList",
                     "content": [
-                      "Distribution of the type of fare used by the respondent for the trip"
+                      "Distribution of the type of fare used by the respondent for the trip",
+                      "Responses are expanded using unlinked expansion factor",
+                      "Responses are recorded in column 152 - 154"
                     ]
                   }
                 ]
@@ -3962,7 +4010,7 @@
             "file": "used_breeze_card.csv",
             "info": "If respondent indicated they used a Breeze Card",
             "datafilecolumns": {
-              "GROUP": "Participant Response",
+              "GROUP": "Participant Response Expanded Using Unlinked Expansion Factor",
               "USED_BREEZE_CARD": "<br>1=Yes plastic card<\/br><br>2=Yes paper ticket<\/br><br>3=No<\/br>",
               "Count": "Count of participants",
               "CHART_TYPE": "Which grouped chart they belong too"
@@ -3974,7 +4022,9 @@
                   {
                     "type": "unorderedList",
                     "content": [
-                      "If respondent indicated they used a Breeze Card"
+                      "If respondent indicated they used a Breeze Card",
+                      "Responses are expanded using unlinked expansion factor",
+                      "Responses are recorded in column 155 and 156"
                     ]
                   }
                 ]
@@ -4001,7 +4051,7 @@
             "file": "how_no_bus.csv",
             "info": "How respondent would make trip if bus/rail were not available",
             "datafilecolumns": {
-              "GROUP": "Participant Response",
+              "GROUP": "Participant Response Expanded Using Unlinked Expansion Factor",
               "HOW_NO_BUS": "<br>1=Walk<\/br><br>2=Drive alone<\/br><br>3=Driven by someone else<\/br><br>4=Carpool / Vanpool<\/br><br>5=Uber, Lyft, etc<\/br><br>6=Would not make trip<\/br><br>7=Taxi<\/br><br>8=Bike share<\/br><br>9=Personal bike<\/br><br>99=Other<\/br>",
               "Count": "Count of participants",
               "CHART_TYPE": "Which grouped chart they belong too"
@@ -4013,7 +4063,9 @@
                   {
                     "type": "unorderedList",
                     "content": [
-                      "Distribution of the modes the respondent would have used if bus/rail were not available"
+                      "Distribution of the modes the respondent would have used if bus/rail were not available",
+                      "Responses are expanded using unlinked expansion factor",
+                      "Responses are recorded in column 157 - 159"
                     ]
                   }
                 ]
@@ -4040,7 +4092,7 @@
             "file": "transit_use_freq.csv",
             "info": "On average, how many days a week respondent uses public transit",
             "datafilecolumns": {
-              "GROUP": "Participant Response",
+              "GROUP": "Participant Response Expanded Using Unlinked Expansion Factor",
               "TRANSIT_USE_FREQ": "<br>1=5 or more days a week<\/br><br>2=2 to 4 days a week<\/br><br>3=About once a week<\/br><br>4=2 to 3 times a month<\/br><br>5=About once a month<\/br><br>6=Several times a year<\/br><br>7=Once a year<\/br><br>8=First time<\/br>",
               "Count": "Count of participants",
               "CHART_TYPE": "Which grouped chart they belong too"
@@ -4052,7 +4104,9 @@
                   {
                     "type": "unorderedList",
                     "content": [
-                      "Distribution of the average number of days a week the respondent uses public transit"
+                      "Distribution of the average number of days a week the respondent uses public transit",
+                      "Responses are expanded using unlinked expansion factor",
+                      "Responses are recorded in column 160 and 161"
                     ]
                   }
                 ]
@@ -4079,7 +4133,7 @@
             "file": "hhpl.csv",
             "info": "Including respondent, how many household members are making the trip with respondent",
             "datafilecolumns": {
-              "GROUP": "Participant Response",
+              "GROUP": "Participant Response Expanded Using Unlinked Expansion Factor",
               "HHPPL_TRAVEL_WITHYOU": "<br>1=One (1)<\/br><br>2=Two (2)<\/br><br>3=Three (3)<\/br><br>4=Four (4)<\/br><br>5=Five (5)<\/br><br>6=Six (6)<\/br><br>7=Seven (7)<\/br><br>8=Eight (8)<\/br><br>9=Nine (9)<\/br><br>10=Ten or more (10+)<\/br>",
               "Count": "Count of participants",
               "CHART_TYPE": "Which grouped chart they belong too"
@@ -4091,7 +4145,9 @@
                   {
                     "type": "unorderedList",
                     "content": [
-                      "Distribution of the number of household members, including respondent, that were making the trip with respondent"
+                      "Distribution of the number of household members, including respondent, that were making the trip with respondent",
+                      "Responses are expanded using unlinked expansion factor",
+                      "Responses are recorded in column 173 and 174"
                     ]
                   }
                 ]
@@ -4118,7 +4174,7 @@
             "file": "did_y_work.csv",
             "info": "If respondent went to work or will go to work before returning home",
             "datafilecolumns": {
-              "GROUP": "Participant Response",
+              "GROUP": "Participant Response Expanded Using Unlinked Expansion Factor",
               "DID_YOU_GO_2_WORK": "<br>1=No<\/br><br>2=Yes since left home<\/br><br>3=Yes before returning home<\/br>",
               "Count": "Count of participants",
               "CHART_TYPE": "Which grouped chart they belong too"
@@ -4130,7 +4186,9 @@
                   {
                     "type": "unorderedList",
                     "content": [
-                      "If respondent went to work or will go to work before returning home"
+                      "If respondent went to work or will go to work before returning home",
+                      "Responses are expanded using unlinked expansion factor",
+                      "Responses are recorded in column 179 and 180"
                     ]
                   }
                 ]
@@ -4157,7 +4215,7 @@
             "file": "did_y_school.csv",
             "info": "If respondent went to school or will go to school before returning home",
             "datafilecolumns": {
-              "GROUP": "Participant Response",
+              "GROUP": "Participant Response Expanded Using Unlinked Expansion Factor",
               "DID_YOU_GO_TO_SCHOOL": "<br>1=No<\/br><br>2=Yes since left home<\/br><br>3=Yes before returning home<\/br>",
               "Count": "Count of participants",
               "CHART_TYPE": "Which grouped chart they belong too"
@@ -4169,7 +4227,9 @@
                   {
                     "type": "unorderedList",
                     "content": [
-                      "If respondent went to school or will go to school before returning home"
+                      "If respondent went to school or will go to school before returning home",
+                      "Responses are expanded using unlinked expansion factor",
+                      "Responses are recorded in column 183 and 184"
                     ]
                   }
                 ]

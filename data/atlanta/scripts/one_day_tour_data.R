@@ -33,7 +33,7 @@ data_dir   = file.path(getwd(), "data")
 person_file      = file.path(data_dir, "abm_per_arcga.csv")
 trip_file        = file.path(data_dir, "abm_trips_arcga.csv")
 per_trip_dd_file = file.path(data_dir, "abm_dd_arcga.csv")
-od_file          = file.path(data_dir, "od_20200228_arcga.csv")
+od_file          = file.path(data_dir, "od_20200228_ARCGA_DraftSubmitted_EXPANDED_05052020.csv")
 od_dd_file       = file.path(data_dir, "od_data_dictionary.csv")
 
 # Geography input files
