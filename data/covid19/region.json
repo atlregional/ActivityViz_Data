@@ -20,7 +20,7 @@
             "name": "Location During the Day",
             "title": "Location During the Day",
             "config": "Default",
-            "file": "time_use_04242020.csv",
+            "file": "time_use_05312020.csv",
             "info": "Displays activity estimates based on SafeGraph location data. The vertical axis displays the sum or percent of activity and the horizontal axis displays the period of the day.",
             "explanation": [
               {
@@ -29,7 +29,7 @@
                   {
                     "type": "unorderedList",
                     "content": [
-                      "Average time use by location (at home, at work, and other) for resident of and visitors to the New York Metropolitan in February and March 2020.",
+                      "Average time use by location (at home, at work, and other) for resident of and visitors to the New York Metropolitan from February to May 2020.",
                       "“Before” represents average behavior prior to the COVID-19 pandemic, defined as February 1st – March 9th, 2020",
                       "“Now” represents average behavior during the COVID-19 pandemic, defined as after March 16th, 2020",
                       "New York residents and visitors alike showed a marked increase in time spent at home between 10 AM and 8 PM on the weekdays, and between 10 AM and midnight on weekends."
@@ -57,7 +57,7 @@
             "name": "Stay-at-Home by Week",
             "title": "Stay-at-Home by Week",
             "config": "Default",
-            "file": "time_series_04242020.csv",
+            "file": "time_series_05202020.csv",
             "info": "The percent of time people spent at home, at work, or somewhere else, by week",
             "explanation": [
               {
@@ -88,7 +88,7 @@
         "BarMap": [
           {
             "name": "Devices at Home by County",
-            "file": "map_04242020.csv",
+            "file": "map_05202020.csv",
             "config": "Default",
             "aggregationMethod": "average",
             "barGroupSortMethod": "firstBar",
@@ -156,7 +156,9 @@
     }
   },
   "TimeUse": {
-    "Default": {}
+    "Default": {
+      "HideCountsPercentagesToggle": true
+    }
   },
   "Sunburst": {
     "Default": {}
