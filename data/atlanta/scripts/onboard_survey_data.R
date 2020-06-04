@@ -130,7 +130,7 @@ race_long_dt[variable == "RACE..Other.", RACE:="Other"]
 race_long_dt[,RACE:=ifelse(round(sum(Updated_LINKED_WGHT_FCTR),2)>1,ifelse(any(RACE=="Other"), "Other", "Mixed Race"), RACE),.(ID)]
 race_long_dt = race_long_dt[,.N,.(ID,RACE)][,N:=NULL][]
 race_long_dt = race_long_dt[race_dt[,.(ID, Updated_LINKED_WGHT_FCTR)],on=.(ID)]
-race_long_dt[!is.na(RACE), RACE:= "Not Provided"]
+race_long_dt[is.na(RACE), RACE:= "Not Provided"]
 race_dt = race_long_dt[,.(COUNT = round(sum(Updated_LINKED_WGHT_FCTR),2),
                           CHART_TYPE = "PARTICIPANT RACE"),.(RACE)]
 output_ls[["race_dt"]] = race_dt
