@@ -1,4 +1,4 @@
 GROUP,TRIP_IN_OPPO_DIR,COUNT,CHART_TYPE
-PARTICIPANT RESPONSE,Yes - and I will/did use bus / rail,23806,TRIP IN OPPO DIR
-PARTICIPANT RESPONSE,No,16381,TRIP IN OPPO DIR
-PARTICIPANT RESPONSE,Yes - I will/did make a return trip but will/did NOT use the bus / rail,1858,TRIP IN OPPO DIR
+Expanded Response,Yes - and I will/did use bus / rail,119569.51,TRIP IN OPPO DIR
+Expanded Response,No,76755.45,TRIP IN OPPO DIR
+Expanded Response,Yes - I will/did make a return trip but will/did NOT use the bus / rail,8568.87,TRIP IN OPPO DIR

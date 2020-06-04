@@ -1,7 +1,8 @@
 GROUP,STUDENT_STATUS,COUNT,CHART_TYPE
-PARTICIPANT RESPONSE,Not a student,36192,STUDENT STATUS
-PARTICIPANT RESPONSE,Yes - Full time College / University,3025,STUDENT STATUS
-PARTICIPANT RESPONSE,Yes - Part time College / University,1550,STUDENT STATUS
-PARTICIPANT RESPONSE,Yes - K - 12th grade,675,STUDENT STATUS
-PARTICIPANT RESPONSE,Yes - Other type of student,403,STUDENT STATUS
-PARTICIPANT RESPONSE,Not Provided,195,STUDENT STATUS
+Expanded Response,Missing,28.02,STUDENT STATUS
+Expanded Response,Not a student,175017.17,STUDENT STATUS
+Expanded Response,Yes - Full time College / University,16499.22,STUDENT STATUS
+Expanded Response,Yes - Part time College / University,7225.49,STUDENT STATUS
+Expanded Response,Yes - K - 12th grade,3231.44,STUDENT STATUS
+Expanded Response,Yes - Other type of student,1984.23,STUDENT STATUS
+Expanded Response,Not Provided,908.25,STUDENT STATUS

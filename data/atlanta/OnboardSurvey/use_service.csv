@@ -1,9 +1,9 @@
 SERVICE,RESPONSE,COUNT,CHART_TYPE
-"Uber, Lyft, etc.",Yes,30911,USE SERVICES
-"Uber, Lyft, etc.",No,11134,USE SERVICES
-"Car share (e.g. Zipcar, etc.)",No,40981,USE SERVICES
-"Car share (e.g. Zipcar, etc.)",Yes,1064,USE SERVICES
-"E-scooter (Bird, Lime, etc.)",No,39708,USE SERVICES
-"E-scooter (Bird, Lime, etc.)",Yes,2337,USE SERVICES
-None,No,31500,USE SERVICES
-None,Yes,10545,USE SERVICES
+"Uber, Lyft, etc.",Yes,145799.92,USE SERVICES
+"Uber, Lyft, etc.",No,59093.91,USE SERVICES
+"Car share (e.g. Zipcar, etc.)",No,199982.82,USE SERVICES
+"Car share (e.g. Zipcar, etc.)",Yes,4911,USE SERVICES
+"E-scooter (Bird, Lime, etc.)",No,193111.09,USE SERVICES
+"E-scooter (Bird, Lime, etc.)",Yes,11782.73,USE SERVICES
+None,No,148697.54,USE SERVICES
+None,Yes,56196.28,USE SERVICES

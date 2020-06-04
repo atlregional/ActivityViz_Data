@@ -1,4 +1,4 @@
 GROUP,DID_YOU_GO_TO_SCHOOL,COUNT,CHART_TYPE
-PARTICIPANT RESPONSE,No,2186,GO TO SCHOOL
-PARTICIPANT RESPONSE,Yes since left home,2186,GO TO SCHOOL
-PARTICIPANT RESPONSE,Yes before returning home,1278,GO TO SCHOOL
+Expanded Response,No,10857.56,GO TO SCHOOL
+Expanded Response,"Yes, headed to school",10836.71,GO TO SCHOOL
+Expanded Response,"Yes, headed to home",7241.57,GO TO SCHOOL

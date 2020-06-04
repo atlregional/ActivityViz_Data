@@ -1,9 +1,9 @@
 GROUP,TYPE_OF_FARE,COUNT,CHART_TYPE
-PARTICIPANT RESPONSE,Regular Fare,37241,TYPE OF FARE
-PARTICIPANT RESPONSE,Senior (65 and older),1219,TYPE OF FARE
-PARTICIPANT RESPONSE,Disabled/Medicare Discount,1323,TYPE OF FARE
-PARTICIPANT RESPONSE,Youth (Under 18),4,TYPE OF FARE
-PARTICIPANT RESPONSE,Medicare Card Holder,5,TYPE OF FARE
-PARTICIPANT RESPONSE,Senior (60 and Older),6,TYPE OF FARE
-PARTICIPANT RESPONSE,Other,551,TYPE OF FARE
-PARTICIPANT RESPONSE,Not Providded,2,TYPE OF FARE
+Expanded Response,Regular Fare,178089.64,TYPE OF FARE
+Expanded Response,Senior (65 and older),6062.3,TYPE OF FARE
+Expanded Response,Disabled/Medicare Discount,5807.6,TYPE OF FARE
+Expanded Response,Youth (Under 18),28.79,TYPE OF FARE
+Expanded Response,Medicare Card Holder,45.88,TYPE OF FARE
+Expanded Response,Senior (60 and Older),32.96,TYPE OF FARE
+Expanded Response,Other,3139.51,TYPE OF FARE
+Expanded Response,Not Providded,14.11,TYPE OF FARE

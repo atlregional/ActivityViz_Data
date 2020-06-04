@@ -1,0 +1,51 @@
+TOURS AND STOPS,INCOME,COUNT,CHART
+"No Tours, No Stops","$0 - $19,999",83,INCOME
+"No Tours, No Stops","$20,000 - $59,999",84,INCOME
+"No Tours, No Stops","$60,000 - $119,999",36,INCOME
+"No Tours, No Stops","More than $120,000",13,INCOME
+"No Tours, No Stops",No answer,9,INCOME
+"1 Tour, No Stops","$0 - $19,999",76,INCOME
+"1 Tour, No Stops","$20,000 - $59,999",162,INCOME
+"1 Tour, No Stops","$60,000 - $119,999",73,INCOME
+"1 Tour, No Stops","More than $120,000",36,INCOME
+"1 Tour, No Stops",No answer,26,INCOME
+"1 Tour, 1 Stop","$0 - $19,999",79,INCOME
+"1 Tour, 1 Stop","$20,000 - $59,999",85,INCOME
+"1 Tour, 1 Stop","$60,000 - $119,999",34,INCOME
+"1 Tour, 1 Stop","More than $120,000",21,INCOME
+"1 Tour, 1 Stop",No answer,15,INCOME
+"1 Tour, 2 Stops","$0 - $19,999",28,INCOME
+"1 Tour, 2 Stops","$20,000 - $59,999",18,INCOME
+"1 Tour, 2 Stops","$60,000 - $119,999",12,INCOME
+"1 Tour, 2 Stops","More than $120,000",8,INCOME
+"1 Tour, 2 Stops",No answer,2,INCOME
+"1 Tour, 3 Stops","$0 - $19,999",6,INCOME
+"1 Tour, 3 Stops","$20,000 - $59,999",11,INCOME
+"1 Tour, 3 Stops","$60,000 - $119,999",5,INCOME
+"1 Tour, 3 Stops","More than $120,000",4,INCOME
+"1 Tour, 4+ Stops","$0 - $19,999",2,INCOME
+"1 Tour, 4+ Stops","$20,000 - $59,999",13,INCOME
+"1 Tour, 4+ Stops","$60,000 - $119,999",1,INCOME
+"1 Tour, 4+ Stops","More than $120,000",2,INCOME
+"1 Tour, 4+ Stops",No answer,2,INCOME
+"2 Tours, No Stops","$0 - $19,999",2,INCOME
+"2 Tours, No Stops","$20,000 - $59,999",1,INCOME
+"2 Tours, No Stops","$60,000 - $119,999",4,INCOME
+"2 Tours, No Stops","More than $120,000",1,INCOME
+"2 Tours, No Stops",No answer,1,INCOME
+"2 Tours, 1 Stop","$0 - $19,999",7,INCOME
+"2 Tours, 1 Stop","$20,000 - $59,999",5,INCOME
+"2 Tours, 1 Stop","$60,000 - $119,999",1,INCOME
+"2 Tours, 2 Stops","$0 - $19,999",10,INCOME
+"2 Tours, 2 Stops","$60,000 - $119,999",1,INCOME
+"2 Tours, 2 Stops","More than $120,000",2,INCOME
+"2 Tours, 3 Stops","$0 - $19,999",1,INCOME
+"2 Tours, 3 Stops","$20,000 - $59,999",4,INCOME
+"2 Tours, 3 Stops","$60,000 - $119,999",3,INCOME
+"2 Tours, 3 Stops","More than $120,000",1,INCOME
+"2 Tours, 3 Stops",No answer,1,INCOME
+"2 Tours, 4+ Stops","$20,000 - $59,999",4,INCOME
+"2 Tours, 4+ Stops","$60,000 - $119,999",1,INCOME
+"3 Tours, 1 Stop","$60,000 - $119,999",1,INCOME
+"3 Tours, 2 Stops",No answer,2,INCOME
+"4+ Tours, 4+ Stops","$20,000 - $59,999",1,INCOME

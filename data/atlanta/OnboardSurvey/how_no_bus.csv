@@ -1,11 +1,11 @@
 GROUP,HOW_NO_BUS,COUNT,CHART_TYPE
-PARTICIPANT RESPONSE,Walk,2180,HOW NO BUS
-PARTICIPANT RESPONSE,Drive alone,7820,HOW NO BUS
-PARTICIPANT RESPONSE,Driven by someone else,9154,HOW NO BUS
-PARTICIPANT RESPONSE,Carpool / Vanpool,971,HOW NO BUS
-PARTICIPANT RESPONSE,"Uber, Lyft, etc",14526,HOW NO BUS
-PARTICIPANT RESPONSE,Would not make trip,5278,HOW NO BUS
-PARTICIPANT RESPONSE,Taxi,747,HOW NO BUS
-PARTICIPANT RESPONSE,Bike share,34,HOW NO BUS
-PARTICIPANT RESPONSE,Personal bike,330,HOW NO BUS
-PARTICIPANT RESPONSE,Other,1005,HOW NO BUS
+Expanded Response,Walk,11894.58,HOW NO BUS
+Expanded Response,Drive alone,52220.95,HOW NO BUS
+Expanded Response,Driven by someone else,41203.33,HOW NO BUS
+Expanded Response,Carpool / Vanpool,4240.07,HOW NO BUS
+Expanded Response,"Uber, Lyft, etc",63403.58,HOW NO BUS
+Expanded Response,Would not make trip,21984.12,HOW NO BUS
+Expanded Response,Taxi,3429.3,HOW NO BUS
+Expanded Response,Bike share,173.93,HOW NO BUS
+Expanded Response,Personal bike,1748.62,HOW NO BUS
+Expanded Response,Other,4595.34,HOW NO BUS

@@ -1,8 +1,8 @@
 GROUP,EMPLOYMENT_STATUS,COUNT,CHART_TYPE
-PARTICIPANT RESPONSE,Employed full-time,29706,EMPLOYMENT STATUS
-PARTICIPANT RESPONSE,"Not currently employed, but seeking work",888,EMPLOYMENT STATUS
-PARTICIPANT RESPONSE,Retired,1102,EMPLOYMENT STATUS
-PARTICIPANT RESPONSE,Employed part-time,6770,EMPLOYMENT STATUS
-PARTICIPANT RESPONSE,"Not currently employed, and not seeking work",3299,EMPLOYMENT STATUS
-PARTICIPANT RESPONSE,Homemaker,167,EMPLOYMENT STATUS
-PARTICIPANT RESPONSE,Not Provided,113,EMPLOYMENT STATUS
+Expanded Response,Employed full-time,147104.24,EMPLOYMENT STATUS
+Expanded Response,"Not currently employed, but seeking work",4287.13,EMPLOYMENT STATUS
+Expanded Response,Retired,5738.66,EMPLOYMENT STATUS
+Expanded Response,Employed part-time,29908.43,EMPLOYMENT STATUS
+Expanded Response,"Not currently employed, and not seeking work",16370.26,EMPLOYMENT STATUS
+Expanded Response,Homemaker,923.33,EMPLOYMENT STATUS
+Expanded Response,Not Provided,561.78,EMPLOYMENT STATUS

@@ -1,4 +1,4 @@
 GROUP,DID_YOU_GO_2_WORK,COUNT,CHART_TYPE
-PARTICIPANT RESPONSE,No,8785,GO TO WORK
-PARTICIPANT RESPONSE,Yes since left home,14843,GO TO WORK
-PARTICIPANT RESPONSE,Yes before returning home,12848,GO TO WORK
+Expanded Response,No,43183.29,GO TO WORK
+Expanded Response,"Yes, headed to work",72320.1,GO TO WORK
+Expanded Response,"Yes, headed to home",61509.28,GO TO WORK
