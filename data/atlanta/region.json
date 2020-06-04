@@ -3714,7 +3714,7 @@
             ]
           },
           {
-            "name": "Language not English",
+            "name": "Language Not English",
             "title": "Language other than English spoken at Home",
             "config": "OnboardSurvey",
             "file": "home_lang_other.csv",
@@ -4554,7 +4554,7 @@
             ]
           },
           {
-            "name": "Has no Work or School Tours",
+            "name": "Has No Work or School Tours",
             "title": "Distribution of Tours with No Work or School Activity",
             "config": "TourSummary",
             "file": "has_neither.csv",
