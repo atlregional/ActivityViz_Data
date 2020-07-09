@@ -8,9 +8,6 @@
 # 2. Define Constants
 # 3. Load required databases
 # 4. Create output data
-# 4a. Executive Summary Scenario
-# 4b. Passive Data Scenario
-# 4c. Travel Survey Scenario
 # 5. Write output data
 
 
@@ -37,11 +34,6 @@ od_file          = file.path(data_dir, "od_20200228_ARCGA_DraftSubmitted_EXPANDE
 od_dd_file       = file.path(data_dir, "od_data_dictionary.csv")
 superdistricts_file = file.path(getwd(), "superdistricts.json")
 zone_file = file.path(getwd(), "ZoneShape.GeoJSON")
-
-# Geography input files
-# taz_file       = file.path(getwd(), "tampa2020.json")
-# county_file    = file.path(getwd(), "counties.json")
-# agg_file       = file.path(getwd(), "tampa.csv")
 
 # Output files
 ts_output_dir = file.path(getwd(), "TourSummary")
