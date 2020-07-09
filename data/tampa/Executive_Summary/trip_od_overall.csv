@@ -1,225 +1,225 @@
 FROM,TO,PASSIVE,SURVEY
-Citrus,Citrus,270691.76,482334.08
-Citrus,Clearwater,50.18,32.84
-Citrus,External,13465.62,14368.06
-Citrus,Hernando Other,4298.04,3320.82
-Citrus,Hillsborough Other,270.7,149.75
-Citrus,Manatee Spur,3.91,0
-Citrus,New Port Richey,75.81,0
-Citrus,Pasco Other,1587.63,3308.37
-Citrus,Pinellas Beaches,29.89,0
-Citrus,Pinellas Other,218.04,513.08
-Citrus,Plant City,7.83,0
-Citrus,Spring Hill,1781.93,2923.47
-Citrus,St Petersburg,75.91,0
-Citrus,Tampa,167.18,93.29
-Citrus,USF  Hosp  Busch,27.17,4145.51
-Clearwater,Citrus,50.18,513.08
-Clearwater,Clearwater,226012.97,496991.42
-Clearwater,External,1624.67,2172.17
-Clearwater,Hernando Other,271.17,182.29
-Clearwater,Hillsborough Other,10474.43,8046.95
-Clearwater,Manatee Spur,57.51,0
-Clearwater,New Port Richey,613.4,484.64
-Clearwater,Pasco Other,7278.26,9774.08
-Clearwater,Pinellas Beaches,10260.29,2127.61
-Clearwater,Pinellas Other,155810.44,235611.64
-Clearwater,Plant City,105.97,0
-Clearwater,Spring Hill,310.28,199.71
-Clearwater,St Petersburg,12588.35,21242.9
-Clearwater,Tampa,7256.26,14081.07
-Clearwater,USF  Hosp  Busch,415.24,4891.79
-External,Citrus,13465.62,10511.93
-External,Clearwater,1624.67,1568.4
-External,Hernando Other,2747.05,310.07
-External,Hillsborough Other,36679.23,26235.85
-External,Manatee Spur,6996.13,0
-External,New Port Richey,280.97,0
-External,Pasco Other,9482.2,3792.46
-External,Pinellas Beaches,745.94,644.37
-External,Pinellas Other,6821.38,8501.59
-External,Plant City,9033.78,4089.73
-External,Spring Hill,1343.3,2449.21
-External,St Petersburg,5391.09,8508.66
-External,Tampa,9507.14,28777.58
-External,USF  Hosp  Busch,859.4,148.16
-Hernando Other,Citrus,4279.25,2419.19
-Hernando Other,Clearwater,271.17,223.56
-Hernando Other,External,2747.05,575.4
-Hernando Other,Hernando Other,123580.72,143997.05
-Hernando Other,Hillsborough Other,3084.11,5633.83
-Hernando Other,Manatee Spur,6.29,0
-Hernando Other,New Port Richey,416.36,0
-Hernando Other,Pasco Other,19400.62,25970.5
-Hernando Other,Pinellas Beaches,83.72,0
-Hernando Other,Pinellas Other,874.65,308.54
-Hernando Other,Plant City,117.24,0
-Hernando Other,Spring Hill,46022.56,50146.65
-Hernando Other,St Petersburg,213.56,0
-Hernando Other,Tampa,1598.33,310.48
-Hernando Other,USF  Hosp  Busch,262.16,0
-Hillsborough Other,Citrus,270.7,42.12
-Hillsborough Other,Clearwater,10474.07,28273.16
-Hillsborough Other,External,36679.23,30814.92
-Hillsborough Other,Hernando Other,3088.38,5824.93
-Hillsborough Other,Hillsborough Other,1986436.05,3132130.98
-Hillsborough Other,Manatee Spur,2126.49,379.95
-Hillsborough Other,New Port Richey,1342.38,375.55
-Hillsborough Other,Pasco Other,74753.78,86451.75
-Hillsborough Other,Pinellas Beaches,3082.06,7868.98
-Hillsborough Other,Pinellas Other,41091.43,71736.41
-Hillsborough Other,Plant City,42552.52,23342.98
-Hillsborough Other,Spring Hill,3752.03,1745.35
-Hillsborough Other,St Petersburg,19737.41,22798.36
-Hillsborough Other,Tampa,340869.56,425630.07
-Hillsborough Other,USF  Hosp  Busch,50988.16,76172.83
-Manatee Spur,Citrus,3.91,0
-Manatee Spur,Clearwater,58.36,0
-Manatee Spur,External,6996.13,0
-Manatee Spur,Hernando Other,6.29,0
-Manatee Spur,Hillsborough Other,2096.55,520.74
-Manatee Spur,Manatee Spur,4231.91,306.3
-Manatee Spur,New Port Richey,3.87,0
-Manatee Spur,Pasco Other,98.12,0
-Manatee Spur,Pinellas Beaches,37.8,0
-Manatee Spur,Pinellas Other,690.33,0
-Manatee Spur,Plant City,53.11,0
-Manatee Spur,Spring Hill,4.83,0
-Manatee Spur,St Petersburg,992.1,0
-Manatee Spur,Tampa,382.86,153.15
-Manatee Spur,USF  Hosp  Busch,63.16,0
-New Port Richey,Citrus,75.81,0
-New Port Richey,Clearwater,615.73,484.64
-New Port Richey,External,280.97,0
-New Port Richey,Hernando Other,412.4,0
-New Port Richey,Hillsborough Other,1338.99,1008.08
-New Port Richey,Manatee Spur,3.87,0
-New Port Richey,New Port Richey,24381.14,21512.05
-New Port Richey,Pasco Other,38564.49,42313.72
-New Port Richey,Pinellas Beaches,121.78,0
-New Port Richey,Pinellas Other,3307.2,18010.5
-New Port Richey,Plant City,8.09,0
-New Port Richey,Spring Hill,900.16,39.53
-New Port Richey,St Petersburg,321.16,0
-New Port Richey,Tampa,482.39,1960.31
-New Port Richey,USF  Hosp  Busch,206.76,1824.43
-Pasco Other,Citrus,1587.22,2455.25
-Pasco Other,Clearwater,7262.51,18800.01
-Pasco Other,External,9482.2,5970.97
-Pasco Other,Hernando Other,19394.89,17924.59
-Pasco Other,Hillsborough Other,74873.53,93797.91
-Pasco Other,Manatee Spur,98.12,0
-Pasco Other,New Port Richey,38554.04,39009.22
-Pasco Other,Pasco Other,935984.34,1478330.55
-Pasco Other,Pinellas Beaches,1573.33,4043.71
-Pasco Other,Pinellas Other,43815.99,63520.85
-Pasco Other,Plant City,1555.91,3458.14
-Pasco Other,Spring Hill,23522.37,24045.62
-Pasco Other,St Petersburg,6213.77,1083.51
-Pasco Other,Tampa,43303.28,76272.53
-Pasco Other,USF  Hosp  Busch,7910.59,7297.46
-Pinellas Beaches,Citrus,29.89,0
-Pinellas Beaches,Clearwater,10053.03,1804.23
-Pinellas Beaches,External,745.94,511.82
-Pinellas Beaches,Hernando Other,86.29,0
-Pinellas Beaches,Hillsborough Other,3103.5,7227.22
-Pinellas Beaches,Manatee Spur,35.74,546.64
-Pinellas Beaches,New Port Richey,123.48,0
-Pinellas Beaches,Pasco Other,1570.29,2349.04
-Pinellas Beaches,Pinellas Beaches,37402.5,22513.2
-Pinellas Beaches,Pinellas Other,45183.58,35197.32
-Pinellas Beaches,Plant City,103.93,0
-Pinellas Beaches,Spring Hill,120.76,0
-Pinellas Beaches,St Petersburg,15507.95,7148.23
-Pinellas Beaches,Tampa,2601.23,3042.63
-Pinellas Beaches,USF  Hosp  Busch,106.4,0
-Pinellas Other,Citrus,218.04,0
-Pinellas Other,Clearwater,155775.69,201201.12
-Pinellas Other,External,6821.38,16206.98
-Pinellas Other,Hernando Other,874.65,216.77
-Pinellas Other,Hillsborough Other,41044.58,93185.61
-Pinellas Other,Manatee Spur,683.76,0
-Pinellas Other,New Port Richey,3327.09,8313.93
-Pinellas Other,Pasco Other,43862.82,77763.78
-Pinellas Other,Pinellas Beaches,45206.85,37143.01
-Pinellas Other,Pinellas Other,1101386.01,1515385.37
-Pinellas Other,Plant City,518.34,8.17
-Pinellas Other,Spring Hill,1512.71,189.72
-Pinellas Other,St Petersburg,175662.16,196751.11
-Pinellas Other,Tampa,25834.86,33294.42
-Pinellas Other,USF  Hosp  Busch,1593.57,6257.08
-Plant City,Citrus,7.83,0
-Plant City,Clearwater,106.97,0
-Plant City,External,9033.78,5493.47
-Plant City,Hernando Other,117.24,0
-Plant City,Hillsborough Other,42659.34,23427.16
-Plant City,Manatee Spur,53.11,0
-Plant City,New Port Richey,8.09,0
-Plant City,Pasco Other,1562.79,2422.22
-Plant City,Pinellas Beaches,112.18,0
-Plant City,Pinellas Other,518.34,8.17
-Plant City,Plant City,112113.02,134557.29
-Plant City,Spring Hill,112.07,0
-Plant City,St Petersburg,411.63,64.89
-Plant City,Tampa,3834.8,5323.52
-Plant City,USF  Hosp  Busch,258.18,0
-Spring Hill,Citrus,1779.3,3551.87
-Spring Hill,Clearwater,310.28,123.8
-Spring Hill,External,1343.3,1098.02
-Spring Hill,Hernando Other,45946.26,55893.7
-Spring Hill,Hillsborough Other,3753.55,2195.34
-Spring Hill,Manatee Spur,4.83,0
-Spring Hill,New Port Richey,902.23,1285.85
-Spring Hill,Pasco Other,23472.35,14493.04
-Spring Hill,Pinellas Beaches,123.74,0
-Spring Hill,Pinellas Other,1510.56,773.07
-Spring Hill,Plant City,112.07,0
-Spring Hill,Spring Hill,136447.91,143048.4
-Spring Hill,St Petersburg,372.62,1275.98
-Spring Hill,Tampa,2636.84,2290.37
-Spring Hill,USF  Hosp  Busch,470.95,32.51
-St Petersburg,Citrus,75.91,0
-St Petersburg,Clearwater,12588.98,28995.62
-St Petersburg,External,5391.09,6406.57
-St Petersburg,Hernando Other,213.56,0
-St Petersburg,Hillsborough Other,19769.21,21254.54
-St Petersburg,Manatee Spur,986.64,0
-St Petersburg,New Port Richey,321.16,0
-St Petersburg,Pasco Other,6221.29,729.9
-St Petersburg,Pinellas Beaches,15604.95,6770.26
-St Petersburg,Pinellas Other,175771.52,171982.6
-St Petersburg,Plant City,411.63,0
-St Petersburg,Spring Hill,372.62,902.8
-St Petersburg,St Petersburg,622477.22,557897.71
-St Petersburg,Tampa,24156.66,23730.48
-St Petersburg,USF  Hosp  Busch,1155.54,9661.97
-Tampa,Citrus,167.83,37.83
-Tampa,Clearwater,7283.02,15445.77
-Tampa,External,9507.14,34102.85
-Tampa,Hernando Other,1615.67,1067.33
-Tampa,Hillsborough Other,340847.2,398067.76
-Tampa,Manatee Spur,384.55,292.5
-Tampa,New Port Richey,481.89,1415.3
-Tampa,Pasco Other,43360.7,69833.18
-Tampa,Pinellas Beaches,2686.84,3574.23
-Tampa,Pinellas Other,26024.61,36366.94
-Tampa,Plant City,3826.84,1682.38
-Tampa,Spring Hill,2626.85,64.23
-Tampa,St Petersburg,24222.57,27310.63
-Tampa,Tampa,1094044.12,1235027.79
-Tampa,USF  Hosp  Busch,29417.8,69656.22
-USF  Hosp  Busch,Citrus,25.71,3508.02
-USF  Hosp  Busch,Clearwater,412.87,397.65
-USF  Hosp  Busch,External,859.4,151
-USF  Hosp  Busch,Hernando Other,264.07,0
-USF  Hosp  Busch,Hillsborough Other,50769.09,61041.74
-USF  Hosp  Busch,Manatee Spur,63.16,0
-USF  Hosp  Busch,New Port Richey,206.67,0
-USF  Hosp  Busch,Pasco Other,7908.72,5100.9
-USF  Hosp  Busch,Pinellas Beaches,101.34,0
-USF  Hosp  Busch,Pinellas Other,1591.34,6512.02
-USF  Hosp  Busch,Plant City,266.25,0
-USF  Hosp  Busch,Spring Hill,470.4,23
-USF  Hosp  Busch,St Petersburg,1152.26,2624.71
-USF  Hosp  Busch,Tampa,29321.61,88059.52
-USF  Hosp  Busch,USF  Hosp  Busch,47542.86,153537.85
+Citrus,Citrus,270692,482334
+Citrus,Clearwater,50,33
+Citrus,External,13466,14368
+Citrus,Hernando Other,4298,3321
+Citrus,Hillsborough Other,271,150
+Citrus,Manatee Spur,4,0
+Citrus,New Port Richey,76,0
+Citrus,Pasco Other,1588,3308
+Citrus,Pinellas Beaches,30,0
+Citrus,Pinellas Other,218,513
+Citrus,Plant City,8,0
+Citrus,Spring Hill,1782,2923
+Citrus,St Petersburg,76,0
+Citrus,Tampa,167,93
+Citrus,USF  Hosp  Busch,27,4146
+Clearwater,Citrus,50,513
+Clearwater,Clearwater,226013,496991
+Clearwater,External,1625,2172
+Clearwater,Hernando Other,271,182
+Clearwater,Hillsborough Other,10474,8047
+Clearwater,Manatee Spur,58,0
+Clearwater,New Port Richey,613,485
+Clearwater,Pasco Other,7278,9774
+Clearwater,Pinellas Beaches,10260,2128
+Clearwater,Pinellas Other,155810,235612
+Clearwater,Plant City,106,0
+Clearwater,Spring Hill,310,200
+Clearwater,St Petersburg,12588,21243
+Clearwater,Tampa,7256,14081
+Clearwater,USF  Hosp  Busch,415,4892
+External,Citrus,13466,10512
+External,Clearwater,1625,1568
+External,Hernando Other,2747,310
+External,Hillsborough Other,36679,26236
+External,Manatee Spur,6996,0
+External,New Port Richey,281,0
+External,Pasco Other,9482,3792
+External,Pinellas Beaches,746,644
+External,Pinellas Other,6821,8502
+External,Plant City,9034,4090
+External,Spring Hill,1343,2449
+External,St Petersburg,5391,8509
+External,Tampa,9507,28778
+External,USF  Hosp  Busch,859,148
+Hernando Other,Citrus,4279,2419
+Hernando Other,Clearwater,271,224
+Hernando Other,External,2747,575
+Hernando Other,Hernando Other,123581,143997
+Hernando Other,Hillsborough Other,3084,5634
+Hernando Other,Manatee Spur,6,0
+Hernando Other,New Port Richey,416,0
+Hernando Other,Pasco Other,19401,25970
+Hernando Other,Pinellas Beaches,84,0
+Hernando Other,Pinellas Other,875,309
+Hernando Other,Plant City,117,0
+Hernando Other,Spring Hill,46023,50147
+Hernando Other,St Petersburg,214,0
+Hernando Other,Tampa,1598,310
+Hernando Other,USF  Hosp  Busch,262,0
+Hillsborough Other,Citrus,271,42
+Hillsborough Other,Clearwater,10474,28273
+Hillsborough Other,External,36679,30815
+Hillsborough Other,Hernando Other,3088,5825
+Hillsborough Other,Hillsborough Other,1986436,3132131
+Hillsborough Other,Manatee Spur,2126,380
+Hillsborough Other,New Port Richey,1342,376
+Hillsborough Other,Pasco Other,74754,86452
+Hillsborough Other,Pinellas Beaches,3082,7869
+Hillsborough Other,Pinellas Other,41091,71736
+Hillsborough Other,Plant City,42553,23343
+Hillsborough Other,Spring Hill,3752,1745
+Hillsborough Other,St Petersburg,19737,22798
+Hillsborough Other,Tampa,340870,425630
+Hillsborough Other,USF  Hosp  Busch,50988,76173
+Manatee Spur,Citrus,4,0
+Manatee Spur,Clearwater,58,0
+Manatee Spur,External,6996,0
+Manatee Spur,Hernando Other,6,0
+Manatee Spur,Hillsborough Other,2097,521
+Manatee Spur,Manatee Spur,4232,306
+Manatee Spur,New Port Richey,4,0
+Manatee Spur,Pasco Other,98,0
+Manatee Spur,Pinellas Beaches,38,0
+Manatee Spur,Pinellas Other,690,0
+Manatee Spur,Plant City,53,0
+Manatee Spur,Spring Hill,5,0
+Manatee Spur,St Petersburg,992,0
+Manatee Spur,Tampa,383,153
+Manatee Spur,USF  Hosp  Busch,63,0
+New Port Richey,Citrus,76,0
+New Port Richey,Clearwater,616,485
+New Port Richey,External,281,0
+New Port Richey,Hernando Other,412,0
+New Port Richey,Hillsborough Other,1339,1008
+New Port Richey,Manatee Spur,4,0
+New Port Richey,New Port Richey,24381,21512
+New Port Richey,Pasco Other,38564,42314
+New Port Richey,Pinellas Beaches,122,0
+New Port Richey,Pinellas Other,3307,18011
+New Port Richey,Plant City,8,0
+New Port Richey,Spring Hill,900,40
+New Port Richey,St Petersburg,321,0
+New Port Richey,Tampa,482,1960
+New Port Richey,USF  Hosp  Busch,207,1824
+Pasco Other,Citrus,1587,2455
+Pasco Other,Clearwater,7263,18800
+Pasco Other,External,9482,5971
+Pasco Other,Hernando Other,19395,17925
+Pasco Other,Hillsborough Other,74874,93798
+Pasco Other,Manatee Spur,98,0
+Pasco Other,New Port Richey,38554,39009
+Pasco Other,Pasco Other,935984,1478331
+Pasco Other,Pinellas Beaches,1573,4044
+Pasco Other,Pinellas Other,43816,63521
+Pasco Other,Plant City,1556,3458
+Pasco Other,Spring Hill,23522,24046
+Pasco Other,St Petersburg,6214,1084
+Pasco Other,Tampa,43303,76273
+Pasco Other,USF  Hosp  Busch,7911,7297
+Pinellas Beaches,Citrus,30,0
+Pinellas Beaches,Clearwater,10053,1804
+Pinellas Beaches,External,746,512
+Pinellas Beaches,Hernando Other,86,0
+Pinellas Beaches,Hillsborough Other,3103,7227
+Pinellas Beaches,Manatee Spur,36,547
+Pinellas Beaches,New Port Richey,123,0
+Pinellas Beaches,Pasco Other,1570,2349
+Pinellas Beaches,Pinellas Beaches,37403,22513
+Pinellas Beaches,Pinellas Other,45184,35197
+Pinellas Beaches,Plant City,104,0
+Pinellas Beaches,Spring Hill,121,0
+Pinellas Beaches,St Petersburg,15508,7148
+Pinellas Beaches,Tampa,2601,3043
+Pinellas Beaches,USF  Hosp  Busch,106,0
+Pinellas Other,Citrus,218,0
+Pinellas Other,Clearwater,155776,201201
+Pinellas Other,External,6821,16207
+Pinellas Other,Hernando Other,875,217
+Pinellas Other,Hillsborough Other,41045,93186
+Pinellas Other,Manatee Spur,684,0
+Pinellas Other,New Port Richey,3327,8314
+Pinellas Other,Pasco Other,43863,77764
+Pinellas Other,Pinellas Beaches,45207,37143
+Pinellas Other,Pinellas Other,1101386,1515385
+Pinellas Other,Plant City,518,8
+Pinellas Other,Spring Hill,1513,190
+Pinellas Other,St Petersburg,175662,196751
+Pinellas Other,Tampa,25835,33294
+Pinellas Other,USF  Hosp  Busch,1594,6257
+Plant City,Citrus,8,0
+Plant City,Clearwater,107,0
+Plant City,External,9034,5493
+Plant City,Hernando Other,117,0
+Plant City,Hillsborough Other,42659,23427
+Plant City,Manatee Spur,53,0
+Plant City,New Port Richey,8,0
+Plant City,Pasco Other,1563,2422
+Plant City,Pinellas Beaches,112,0
+Plant City,Pinellas Other,518,8
+Plant City,Plant City,112113,134557
+Plant City,Spring Hill,112,0
+Plant City,St Petersburg,412,65
+Plant City,Tampa,3835,5324
+Plant City,USF  Hosp  Busch,258,0
+Spring Hill,Citrus,1779,3552
+Spring Hill,Clearwater,310,124
+Spring Hill,External,1343,1098
+Spring Hill,Hernando Other,45946,55894
+Spring Hill,Hillsborough Other,3754,2195
+Spring Hill,Manatee Spur,5,0
+Spring Hill,New Port Richey,902,1286
+Spring Hill,Pasco Other,23472,14493
+Spring Hill,Pinellas Beaches,124,0
+Spring Hill,Pinellas Other,1511,773
+Spring Hill,Plant City,112,0
+Spring Hill,Spring Hill,136448,143048
+Spring Hill,St Petersburg,373,1276
+Spring Hill,Tampa,2637,2290
+Spring Hill,USF  Hosp  Busch,471,33
+St Petersburg,Citrus,76,0
+St Petersburg,Clearwater,12589,28996
+St Petersburg,External,5391,6407
+St Petersburg,Hernando Other,214,0
+St Petersburg,Hillsborough Other,19769,21255
+St Petersburg,Manatee Spur,987,0
+St Petersburg,New Port Richey,321,0
+St Petersburg,Pasco Other,6221,730
+St Petersburg,Pinellas Beaches,15605,6770
+St Petersburg,Pinellas Other,175772,171983
+St Petersburg,Plant City,412,0
+St Petersburg,Spring Hill,373,903
+St Petersburg,St Petersburg,622477,557898
+St Petersburg,Tampa,24157,23730
+St Petersburg,USF  Hosp  Busch,1156,9662
+Tampa,Citrus,168,38
+Tampa,Clearwater,7283,15446
+Tampa,External,9507,34103
+Tampa,Hernando Other,1616,1067
+Tampa,Hillsborough Other,340847,398068
+Tampa,Manatee Spur,385,293
+Tampa,New Port Richey,482,1415
+Tampa,Pasco Other,43361,69833
+Tampa,Pinellas Beaches,2687,3574
+Tampa,Pinellas Other,26025,36367
+Tampa,Plant City,3827,1682
+Tampa,Spring Hill,2627,64
+Tampa,St Petersburg,24223,27311
+Tampa,Tampa,1094044,1235028
+Tampa,USF  Hosp  Busch,29418,69656
+USF  Hosp  Busch,Citrus,26,3508
+USF  Hosp  Busch,Clearwater,413,398
+USF  Hosp  Busch,External,859,151
+USF  Hosp  Busch,Hernando Other,264,0
+USF  Hosp  Busch,Hillsborough Other,50769,61042
+USF  Hosp  Busch,Manatee Spur,63,0
+USF  Hosp  Busch,New Port Richey,207,0
+USF  Hosp  Busch,Pasco Other,7909,5101
+USF  Hosp  Busch,Pinellas Beaches,101,0
+USF  Hosp  Busch,Pinellas Other,1591,6512
+USF  Hosp  Busch,Plant City,266,0
+USF  Hosp  Busch,Spring Hill,470,23
+USF  Hosp  Busch,St Petersburg,1152,2625
+USF  Hosp  Busch,Tampa,29322,88060
+USF  Hosp  Busch,USF  Hosp  Busch,47543,153538
