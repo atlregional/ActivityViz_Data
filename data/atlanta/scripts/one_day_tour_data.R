@@ -35,6 +35,8 @@ trip_file        = file.path(data_dir, "abm_trips_arcga.csv")
 per_trip_dd_file = file.path(data_dir, "abm_dd_arcga.csv")
 od_file          = file.path(data_dir, "od_20200228_ARCGA_DraftSubmitted_EXPANDED_05052020.csv")
 od_dd_file       = file.path(data_dir, "od_data_dictionary.csv")
+superdistricts_file = file.path(getwd(), "superdistricts.json")
+zone_file = file.path(getwd(), "ZoneShape.GeoJSON")
 
 # Geography input files
 # taz_file       = file.path(getwd(), "tampa2020.json")
@@ -61,49 +63,24 @@ if(!file.exists("../atlanta/abmod.RData")){
   load("../atlanta/abmod.RData")
 }
 
-# taz_ls = fromJSON(taz_file)
-# county_ls = fromJSON(county_file)
-# taz_sf = geojson_sf(taz_file)
-# taz_dt = data.table(taz_sf)
-# agg_dt = fread(agg_file)
-# agg_dt[,HILLSBOROUGH_LBL_3:=gsub("\\&|\\/","",HILLSBOROUGH_LBL_3)]
-# agg_dt[,HILLSBOROUGH_LBL_3:=gsub("\\s+","_",HILLSBOROUGH_LBL_3)]
-# agg_dt[,PINELLAS_LBL:=gsub("\\&|\\/","",PINELLAS_LBL)]
-# agg_dt[,PINELLAS_LBL:=gsub("\\s+","_",PINELLAS_LBL)]
-# agg_dt[,PASCO_LBL:=gsub("\\&|\\/","",PASCO_LBL)]
-# agg_dt[,PASCO_LBL:=gsub("\\s+","_",PASCO_LBL)]
-# agg_dt[,HERNANDO_CITRUS_LBL_2:=gsub("\\&|\\/","",HERNANDO_CITRUS_LBL_2)]
-# agg_dt[,HERNANDO_CITRUS_LBL_2:=gsub("\\s+","_",HERNANDO_CITRUS_LBL_2)]
-# agg_sf = st_as_sf(merge(as.data.frame(agg_dt), taz_sf, by.x="TAZ", by.y="id",all.x = TRUE))
-# 
+superdistricts_sf = geojson_sf(superdistricts_file)
+zone_json = fromJSON(zone_file)
+zone_json$features$geometry$coordinates = lapply(zone_json$features$geometry$coordinates,
+                                                 function(x) {class(x)="numeric";x})
+zone_json_str = toJSON(zone_json)
+zone_json_str = sub("\"type\":\\[\"FeatureCollection\"\\],", "\"type\":\"FeatureCollection\",", zone_json_str)
+zone_sf = geojson_sf(zone_json_str)
 
-
+# Create taz to superdistrict crosswalk for Fulton and DeKalb county
+zone_sd_sf = st_join(zone_sf, superdistricts_sf, suffix=c("_TAZ", "_SD"))
+zone_sd_dt = data.table(zone_sd_sf)
+zone_sd_dt = zone_sd_dt[county %in% c("Fulton", "DeKalb")]
+zone_sd_dt = zone_sd_dt[zone_sd_dt[,.I[1],.(id_TAZ)][,V1]]
 ### Create output data ###########################################################
 ##################################################################################
 
-# Create districts.json file for OD chord chart
-# # Overall
-# overall_sf = dplyr::summarise(dplyr::group_by(agg_sf, D7_ALL_LBL))
-# names(overall_sf) = c("NAME", "geometry")
-# 
-# # Hillsborough
-# hillsborough_sf = dplyr::summarise(dplyr::group_by(agg_sf, HILLSBOROUGH_LBL_3))
-# names(hillsborough_sf) = c("NAME", "geometry")
-# 
-# # Pinellas
-# pinellas_sf = dplyr::summarise(dplyr::group_by(agg_sf, PINELLAS_LBL))
-# names(pinellas_sf) = c("NAME", "geometry")
-# 
-# # Pasco
-# pasco_sf = dplyr::summarise(dplyr::group_by(agg_sf, PASCO_LBL))
-# names(pasco_sf) = c("NAME", "geometry")
-# 
-# # Hernando/Citrus
-# hernando_citrus_sf = dplyr::summarise(dplyr::group_by(agg_sf, HERNANDO_CITRUS_LBL_2))
-# names(hernando_citrus_sf) = c("NAME", "geometry")
 
-
-### Onboard Survey ###############################################################
+### One Day Tour Survey ##########################################################
 ##################################################################################
 
 output_ls = list()
@@ -146,6 +123,63 @@ setkey(anchor_code_dt, per_id)
 setkey(tour_dt, per_id)
 tour_dt[anchor_code_dt,activity_code:=i.activity_code]
 tour_dt[anchor_code_dt,home_based:=i.home_based]
+
+# Code origin and destination TAZ, County
+trip_dt[, destination_taz:=location_mtaz20]
+trip_dt[, origin_taz:=shift(location_mtaz20),.(per_id)]
+
+trip_dt[, destination_county:=location_county]
+trip_dt[, origin_county:=shift(location_county),.(per_id)]
+
+# Trip OD Bar Chart
+trip_origin_bar_dt = trip_dt[trip_number > 0 & start_end_home==TRUE, .(ODTYPE = "ORIGIN",
+                                                                       COUNT=.N), .(ZONE = origin_taz)]
+trip_destination_bar_dt = trip_dt[trip_number > 0 & start_end_home==TRUE, .(ODTYPE = "DESTINATION",
+                                                                       COUNT=.N), .(ZONE = destination_taz)]
+trip_od_bar_dt = rbindlist(list(trip_origin_bar_dt, trip_destination_bar_dt),
+                           use.names = TRUE)
+trip_od_bar_dt[,ZONE:=as.integer(ZONE)]
+trip_od_bar_dt = trip_od_bar_dt[!is.na(ZONE)]
+trip_od_bar_dt[zone_sd_dt,DISTRICT:=i.NAME,on=.(ZONE=id_TAZ)]
+trip_od_bar_dt = trip_od_bar_dt[!is.na(DISTRICT)]
+setcolorder(trip_od_bar_dt, c("ZONE", "DISTRICT", "ODTYPE", "COUNT"))
+setkey(trip_od_bar_dt, ZONE, DISTRICT, ODTYPE)
+output_ls[["trip_od_bar_dt"]] = trip_od_bar_dt
+
+# Trip flows for chord diagram
+# final_agency should be Marta
+trip_flow_dt = trip_dt[grepl("MARTA", final_agency, ignore.case = TRUE) & start_end_home==TRUE & 
+                         trip_number > 0,
+                     .(Trips=.N),
+                     by = .(FROM = as.integer(origin_taz), TO = as.integer(destination_taz))]
+trip_flow_dt = trip_flow_dt[!(is.na(FROM)|is.na(TO))]
+trip_flow_dt = merge(trip_flow_dt,zone_sd_dt[,.(FROM=id_TAZ, NAME)], by="FROM")
+trip_flow_dt[,FROM:=NAME]
+trip_flow_dt[,c("NAME"):=NULL]
+trip_flow_dt = merge(trip_flow_dt,zone_sd_dt[,.(TO=id_TAZ, NAME)], by="TO")
+trip_flow_dt[,TO:=NAME]
+trip_flow_dt[,c("NAME"):=NULL]
+trip_flow_dt = trip_flow_dt[,.(Trips=sum(Trips)),.(FROM,TO)]
+setkey(trip_flow_dt, FROM, TO)
+trip_flow_dt = trip_flow_dt[CJ(FROM, TO, unique = TRUE)]
+trip_flow_dt[is.na(Trips), Trips:=0]
+output_ls[["trip_flow_dt"]] = trip_flow_dt
+
+# Trip flows for chord diagram by County
+trip_flow_county_dt = trip_dt[grepl("MARTA", final_agency, ignore.case = TRUE) & start_end_home==TRUE & 
+                                trip_number > 0,
+                            .(Trips=.N),
+                            by = .(FROM = origin_county, TO = destination_county)]
+
+setkey(trip_flow_county_dt, FROM, TO)
+# trip_flow_county_dt = trip_flow_county_dt[CJ(FROM,TO, unique = TRUE)]
+# trip_flow_county_dt[is.na(Trips), Trips:=0]
+trip_flow_county_dt[,FROM:=gsub(" County", "", FROM)]
+trip_flow_county_dt[,TO:=gsub(" County", "", TO)]
+county_filter = c("Harris", "Monroe", "Polk")
+trip_flow_county_dt = trip_flow_county_dt[!(FROM %in% county_filter | TO %in% county_filter)]
+output_ls[["trip_flow_county_dt"]] = trip_flow_county_dt
+
 
 # Code mode
 mode_codes_dt = abmdd_dt[item=="travel_mode", .(code, value)]
@@ -459,4 +493,10 @@ lapply(names(summary_ls), function(x){
   invisible(TRUE)
 })
 
+for(table_name in setdiff(names(output_ls), "tour_dt")){
+  filename = file.path(ts_output_dir, paste0(gsub("_dt", "", table_name), ".csv"))
+  fwrite(output_ls[[table_name]],
+         file = filename)
+  cat(basename(filename), "\n")
+}
 

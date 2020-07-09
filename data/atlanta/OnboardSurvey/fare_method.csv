@@ -13,12 +13,12 @@ One-way Trip,Yes,63289.54,FARE METHOD
 7 Day Pass,Yes,56485.64,FARE METHOD
 30 Day Pass,Yes,38877.57,FARE METHOD
 30 Day Pass,No,166016.25,FARE METHOD
-2 Trip Pass,No,73243.44,FARE METHOD
-2 Trip Pass,Yes,3303.5,FARE METHOD
-10 Trip Pass,No,74499.99,FARE METHOD
-10 Trip Pass,Yes,2046.95,FARE METHOD
-20Trip Pass,No,74410.41,FARE METHOD
-20Trip Pass,Yes,2136.53,FARE METHOD
+2 Trip Pass [Spring],No,73243.44,FARE METHOD
+2 Trip Pass [Spring],Yes,3303.5,FARE METHOD
+10 Trip Pass [Spring],No,74499.99,FARE METHOD
+10 Trip Pass [Spring],Yes,2046.95,FARE METHOD
+20 Trip Pass [Spring],No,74410.41,FARE METHOD
+20 Trip Pass [Spring],Yes,2136.53,FARE METHOD
 Employer Partnership Program,No,190455.12,FARE METHOD
 Employer Partnership Program,Yes,14438.7,FARE METHOD
 University Pass Program,No,198219.21,FARE METHOD
@@ -31,16 +31,16 @@ Local One-Way,No,124202.32,FARE METHOD
 Local One-Way,Yes,4144.57,FARE METHOD
 Local 10-Ride Ticket,No,126965.01,FARE METHOD
 Local 10-Ride Ticket,Yes,1381.88,FARE METHOD
-Local 31-Day Pass,No,127962.26,FARE METHOD
-Local 31-Day Pass,Yes,384.63,FARE METHOD
+Local 31-Day Pass inches,No,127962.26,FARE METHOD
+Local 31-Day Pass inches,Yes,384.63,FARE METHOD
 Express One-Way,No,128313.41,FARE METHOD
 Express One-Way,Yes,33.48,FARE METHOD
 Express 20-Ride Ticket,No,127854.65,FARE METHOD
 Express 20-Ride Ticket,Yes,492.24,FARE METHOD
 Express 31-Day Pass,No,128191.33,FARE METHOD
 Express 31-Day Pass,Yes,155.56,FARE METHOD
-Free - Child under 42 Inches,No,128345.62,FARE METHOD
-Free - Child under 42 Inches,Yes,1.27,FARE METHOD
+Free - Child under 42 inches,No,128345.62,FARE METHOD
+Free - Child under 42 inches,Yes,1.27,FARE METHOD
 Free - Paratransit Certified,No,128297.01,FARE METHOD
 Free - Paratransit Certified,Yes,49.88,FARE METHOD
 Local One-Way Cash,No,126583.24,FARE METHOD
@@ -75,5 +75,5 @@ Monthly Pass Blue,No,128336.97,FARE METHOD
 Monthly Pass Blue,Yes,9.92,FARE METHOD
 Monthly Pass Green,No,128310.46,FARE METHOD
 Monthly Pass Green,Yes,36.42,FARE METHOD
-Free Other,No,76438.24,FARE METHOD
-Free Other,Yes,108.7,FARE METHOD
+Free Other [Spring],No,76438.24,FARE METHOD
+Free Other [Spring],Yes,108.7,FARE METHOD

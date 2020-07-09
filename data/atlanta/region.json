@@ -3241,7 +3241,7 @@
                     "type": "unorderedList",
                     "content": [
                       "Race distribution of the respondents",
-                      "African American respondents formed the majority in the survey",
+                      "Black/African American formed the majority participants",
                       "Responses are expanded using linked expansion factor",
                       "Responses are recorded in column 191-196"
                     ]
@@ -4246,6 +4246,135 @@
               }
             ]
           }
+        ],
+        "BarMap": [
+          {
+            "name": "Trip ODs",
+            "title": "Trip Origins and Destinations in MARTA Service Area",
+            "config": "Default",
+            "file": "trip_od_bar.csv",
+            "info": "Frequency of Trips by origin or destination by super districts",
+            "explanation": [
+              {
+                "header": "Summary",
+                "body": [
+                  {
+                    "type": "unorderedList",
+                    "content": [
+                      "Frequency of trips by origin or destination by super districts."
+                    ]
+                  }
+                ]
+              },
+              {
+                "header": "Instructions",
+                "body": [
+                  {
+                    "type": "unorderedList",
+                    "content": [
+                      "For the left graph: Select/deselect bubbles to add/remove modes.",
+                      "For the left graph: Hover mouse over graph to see detail.",
+                      "For the map: Use the zone drop-down selection to view different trip modes as county colors.",
+                      "For the map: Turn on bubbles under layers and use the bubbles drop-down selection to view different trip modes by county.",
+                      "Select \"Show Data\" to see tabulation."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "datafilecolumns": {
+              "ZONE": "Zone ID",
+              "SUPERDISTRICT": "Super District Label",
+              "ODTYPE": "Trip origin or destination",
+              "COUNT": "Number of trips"
+            }
+          }
+        ],
+        "Chord": [
+          {
+            "name": "Trip Flows",
+            "title": "Trip Origins and Destinations in MARTA Service Area",
+            "config": "Default",
+            "file": "trip_flow.csv",
+            "info": "Trip origins and destinations in MARTA service area.",
+            "explanation": [
+              {
+                "header": "Summary",
+                "body": [
+                  {
+                    "type": "unorderedList",
+                    "content": [
+                      [
+                        "Origins and destinations of daily trips by district in Fulton and DeKalb county."
+                      ]
+                    ]
+                  }
+                ]
+              },
+              {
+                "header": "Instructions",
+                "body": [
+                  {
+                    "type": "unorderedList",
+                    "content": [
+                      "Hover mouse over graph to see detail.",
+                      "Toggle trip types and modes to see trips on chord diagram",
+                      "The connections between districts depict bi-directional flows.",
+                      "Turn on desire lines in the map layers to see district-to-district trip flow lines",
+                      "Select \"Show Data\" to see tabulation."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "datafilecolumns": {
+              "FROM": "Origin district of trip",
+              "TO": "Destination district of trip",
+              "Trips": "Number of trips"
+            }
+          },
+          {
+            "name": "Trip Flows County",
+            "title": "Trip Origins and Destinations in MARTA Service Area by County",
+            "config": "OSCounty",
+            "file": "trip_flow_county.csv",
+            "info": "Trip origins and destinations in MARTA service area by county.",
+            "explanation": [
+              {
+                "header": "Summary",
+                "body": [
+                  {
+                    "type": "unorderedList",
+                    "content": [
+                      [
+                        "Origins and destinations of daily trips serviced by MARTA by county."
+                      ]
+                    ]
+                  }
+                ]
+              },
+              {
+                "header": "Instructions",
+                "body": [
+                  {
+                    "type": "unorderedList",
+                    "content": [
+                      "Hover mouse over graph to see detail.",
+                      "Toggle trip types and modes to see trips on chord diagram",
+                      "The connections between districts depict bi-directional flows.",
+                      "Turn on desire lines in the map layers to see district-to-district trip flow lines",
+                      "Select \"Show Data\" to see tabulation."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "datafilecolumns": {
+              "FROM": "Origin county of trip",
+              "TO": "Destination county of trip",
+              "Trips": "Number of trips"
+            }
+          }
         ]
       }
     },
@@ -4784,6 +4913,135 @@
               }
             ]
           }
+        ],
+        "BarMap": [
+          {
+            "name": "Trip ODs",
+            "title": "Trip Origins and Destinations in MARTA Service Area",
+            "config": "Default",
+            "file": "trip_od_bar.csv",
+            "info": "Frequency of Trips by origin or destination by super districts",
+            "explanation": [
+              {
+                "header": "Summary",
+                "body": [
+                  {
+                    "type": "unorderedList",
+                    "content": [
+                      "Frequency of trips by origin or destination by super districts."
+                    ]
+                  }
+                ]
+              },
+              {
+                "header": "Instructions",
+                "body": [
+                  {
+                    "type": "unorderedList",
+                    "content": [
+                      "For the left graph: Select/deselect bubbles to add/remove modes.",
+                      "For the left graph: Hover mouse over graph to see detail.",
+                      "For the map: Use the zone drop-down selection to view different trip modes as county colors.",
+                      "For the map: Turn on bubbles under layers and use the bubbles drop-down selection to view different trip modes by county.",
+                      "Select \"Show Data\" to see tabulation."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "datafilecolumns": {
+              "ZONE": "Zone ID",
+              "SUPERDISTRICT": "Super District Label",
+              "ODTYPE": "Trip origin or destination",
+              "COUNT": "Number of trips"
+            }
+          }
+        ],
+        "Chord": [
+          {
+            "name": "Trip Flows",
+            "title": "Trip Origins and Destinations in MARTA Service Area",
+            "config": "Default",
+            "file": "trip_flow.csv",
+            "info": "Trip origins and destinations in MARTA service area.",
+            "explanation": [
+              {
+                "header": "Summary",
+                "body": [
+                  {
+                    "type": "unorderedList",
+                    "content": [
+                      [
+                        "Origins and destinations of daily trips by district in Fulton and DeKalb county."
+                      ]
+                    ]
+                  }
+                ]
+              },
+              {
+                "header": "Instructions",
+                "body": [
+                  {
+                    "type": "unorderedList",
+                    "content": [
+                      "Hover mouse over graph to see detail.",
+                      "Toggle trip types and modes to see trips on chord diagram",
+                      "The connections between districts depict bi-directional flows.",
+                      "Turn on desire lines in the map layers to see district-to-district trip flow lines",
+                      "Select \"Show Data\" to see tabulation."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "datafilecolumns": {
+              "FROM": "Origin district of trip",
+              "TO": "Destination district of trip",
+              "Trips": "Number of trips"
+            }
+          },
+          {
+            "name": "Trip Flows County",
+            "title": "Trip Origins and Destinations in MARTA Service Area by County",
+            "config": "OSCounty",
+            "file": "trip_flow_county.csv",
+            "info": "Trip origins and destinations in MARTA service area by county.",
+            "explanation": [
+              {
+                "header": "Summary",
+                "body": [
+                  {
+                    "type": "unorderedList",
+                    "content": [
+                      [
+                        "Origins and destinations of daily trips serviced by MARTA by county."
+                      ]
+                    ]
+                  }
+                ]
+              },
+              {
+                "header": "Instructions",
+                "body": [
+                  {
+                    "type": "unorderedList",
+                    "content": [
+                      "Hover mouse over graph to see detail.",
+                      "Toggle trip types and modes to see trips on chord diagram",
+                      "The connections between districts depict bi-directional flows.",
+                      "Turn on desire lines in the map layers to see district-to-district trip flow lines",
+                      "Select \"Show Data\" to see tabulation."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "datafilecolumns": {
+              "FROM": "Origin county of trip",
+              "TO": "Destination county of trip",
+              "Trips": "Number of trips"
+            }
+          }
         ]
       }
     }
@@ -4874,6 +5132,11 @@
       "ZoneFilterFile": "superdistricts.csv",
       "ZoneFile": "superdistricts.json",
       "DesireLines": "desirelines.geojson",
+      "LegendText": "Flows",
+      "ExcludeSameOD": "true"
+    },
+    "OSCounty": {
+      "ZoneFile": "cb_2015_us_county_500k_GEORGIA.json",
       "LegendText": "Flows",
       "ExcludeSameOD": "true"
     }

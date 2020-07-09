@@ -32,8 +32,10 @@ data_dir   = file.path(getwd(), "data")
 person_file      = file.path(data_dir, "abm_per_arcga.csv")
 trip_file        = file.path(data_dir, "abm_trips_arcga.csv")
 per_trip_dd_file = file.path(data_dir, "abm_dd_arcga.csv")
-od_file          = file.path(data_dir, "od_20200228_ARCGA_DraftSubmitted_EXPANDED_05052020.csv")
+od_file          = file.path(data_dir, "od_20200228_ARCGA_DraftSubmitted_EXPANDED_20200615.csv")
 od_dd_file       = file.path(data_dir, "od_data_dictionary.csv")
+superdistricts_file = file.path(getwd(), "superdistricts.json")
+zone_file = file.path(getwd(), "ZoneShape.GeoJSON")
 
 # Output files
 os_output_dir = file.path(getwd(), "OnboardSurvey")
@@ -49,11 +51,22 @@ if(!file.exists("../abmod.RData")){
   abmdd_dt     = fread(per_trip_dd_file)
   od_dt        = fread(od_file)
   od_dd_dt     = fread(od_dd_file)
+  superdistricts_sf = geojson_sf(superdistricts_file)
+  zone_json = fromJSON(zone_file)
+  zone_json$features$geometry$coordinates = lapply(zone_json$features$geometry$coordinates,
+                                                   function(x) {class(x)="numeric";x})
+  zone_json_str = toJSON(zone_json)
+  zone_json_str = sub("\"type\":\\[\"FeatureCollection\"\\],", "\"type\":\"FeatureCollection\",", zone_json_str)
+  zone_sf = geojson_sf(zone_json_str)
   save(person_dt, trip_dt, abmdd_dt, od_dt, od_dd_dt,
        file = "abmod.RData")
 } else {
   load("../abmod.RData")
 }
+
+# Create taz to superdistrict crosswalk for Fulton and DeKalb county
+zone_sd_sf = st_join(zone_sf, superdistricts_sf, suffix=c("_TAZ", "_SD"))
+
 
 ### Create output data ###########################################################
 ##################################################################################
@@ -67,6 +80,7 @@ output_ls = list()
 # Age
 # Check the field name
 # od_dd_dt[grepl("Age", DESCRIPTION, ignore.case = TRUE)]
+od_dt[AGE=="43997", AGE:="6-15"]
 age_dt = od_dt[SUBMITTAL!="Dummy",.(COUNT = round(sum(Updated_LINKED_WGHT_FCTR),2),
                                     CHART_TYPE = "PARTICIPANT AGE"), by = .(AGE, AGE.Code.)]
 setorder(age_dt, "AGE.Code.")
@@ -116,9 +130,10 @@ output_ls[["gender_dt"]] = gender_dt
 # Check the field name
 # od_dd_dt[grepl("race", `FIELD NAME`, ignore.case = TRUE), .(`FIELD NAME` , DESCRIPTION)]
 race_dt = od_dt[SUBMITTAL!="Dummy",.SD,.SDcols=c("ID", "Updated_LINKED_WGHT_FCTR",
-                                                 gsub("\\s|\\[|\\]","\\.",
+                                                 setdiff(gsub("\\s|\\[|\\]","\\.",
                                                    od_dd_dt[grepl("race", `FIELD NAME`, ignore.case = TRUE),
-                                                          `FIELD NAME`]))]
+                                                          `FIELD NAME`]),
+                                                   "Race_Combined"))]
 race_long_dt = melt.data.table(race_dt, id.vars = c("ID", "Updated_LINKED_WGHT_FCTR"))
 race_long_dt =  race_long_dt[!value %in% c("", "No")]
 race_long_dt[variable == "RACE..1.",     RACE:="American Indian / Alaska Native"]
@@ -466,8 +481,78 @@ route_period_dt = route_period_dt[,.(COUNT=sum(COUNT), CHART_TYPE=unique(CHART_T
 setorder(route_period_dt, -COUNT)
 output_ls[["route_period_dt"]] = route_period_dt
 
+# Trip OD for barchartmap
+# ROUTECode for Marta service area starts with "MRT"
+zone_sd_dt = data.table(zone_sd_sf)
+zone_sd_dt = zone_sd_dt[county %in% c("Fulton", "DeKalb")]
+zone_sd_dt[,Prop:=1/.N,.(id_TAZ)]
+zone_sd_dt = zone_sd_dt[zone_sd_dt[,.I[1],.(id_TAZ)][,V1]]
+
+trip_origin_bar_dt = od_dt[SUBMITTAL!="Dummy" & grepl("MRT", ROUTECode) #& DESTIN_COUNTY %in% c("DeKalb County",
+                                                                        #                       "Fulton County"),
+                       ,.(ODTYPE = "ORIGIN", 
+                         COUNT=round(sum(Updated_LINKED_WGHT_FCTR), 2)),
+                       by = .(ZONE = ORIGIN_ADDRESS..MTAZ20., COUNTY = ORIGIN_COUNTY)]
+
+
+trip_destination_bar_dt = od_dt[SUBMITTAL!="Dummy" & grepl("MRT", ROUTECode) #& ORIGIN_COUNTY %in% c("DeKalb County",
+                                                                             #                       "Fulton County"),
+                           ,.(ODTYPE = "DESTINATION", 
+                             COUNT=round(sum(Updated_LINKED_WGHT_FCTR), 2)),
+                           by = .(ZONE = DESTIN_ADDRESS..MTAZ20., COUNTY = DESTIN_COUNTY)]
+
+trip_od_bar_dt = rbindlist(list(trip_origin_bar_dt, trip_destination_bar_dt), use.names = TRUE)
+trip_od_bar_dt[,COUNTY:=gsub(" County", "", COUNTY)]
+trip_od_bar_dt = trip_od_bar_dt[COUNTY %in% c("DeKalb", "Fulton")]
+trip_od_bar_dt[,ZONE:=as.integer(ZONE)]
+trip_od_bar_dt = merge(trip_od_bar_dt,zone_sd_dt[,.(ZONE=id_TAZ, id_SD, NAME, Prop)], by="ZONE", 
+                       allow.cartesian = TRUE)
+# trip_od_bar_dt[,COUNT:=Prop*COUNT]
+trip_od_bar_dt = trip_od_bar_dt[,.(ZONE, DISTRICT=NAME, ODTYPE, COUNT)]
+setorder(trip_od_bar_dt, ZONE, DISTRICT, ODTYPE)
+
+output_ls[["trip_od_bar_dt"]] = trip_od_bar_dt
+
+# Trip flows for chord diagram
+# ROUTECode for Marta service area starts with "MRT"
+trip_flow_dt = od_dt[SUBMITTAL!="Dummy" & grepl("MRT", ROUTECode),
+                     .(Trips=round(sum(Updated_LINKED_WGHT_FCTR), 2)),
+                     by = .(FROM = as.integer(ORIGIN_ADDRESS..MTAZ20.), TO = as.integer(DESTIN_ADDRESS..MTAZ20.))]
+trip_flow_dt = trip_flow_dt[!(is.na(FROM)|is.na(TO))]
+trip_flow_dt = merge(trip_flow_dt,zone_sd_dt[,.(FROM=id_TAZ, NAME, Prop)], by="FROM", 
+                     allow.cartesian = TRUE)
+# trip_flow_dt[,Trips:=Trips*Prop]
+trip_flow_dt[,FROM:=NAME]
+trip_flow_dt[,c("NAME","Prop"):=NULL]
+trip_flow_dt = merge(trip_flow_dt,zone_sd_dt[,.(TO=id_TAZ, NAME, Prop)], by="TO", 
+                     allow.cartesian = TRUE)
+# trip_flow_dt[,Trips:=Trips*Prop]
+trip_flow_dt[,TO:=NAME]
+trip_flow_dt[,c("NAME","Prop"):=NULL]
+trip_flow_dt = trip_flow_dt[,.(Trips=round(sum(Trips),2)),.(FROM,TO)]
+setkey(trip_flow_dt, FROM, TO)
+# trip_flow_dt = trip_flow_dt[CJ(FROM, TO, unique = TRUE)]
+trip_flow_dt[is.na(Trips), Trips:=0]
+output_ls[["trip_flow_dt"]] = trip_flow_dt
+
+# Trip flows for chord diagram by County
+trip_flow_county_dt = od_dt[SUBMITTAL!="Dummy" & grepl("MRT", ROUTECode),
+                     .(Trips=round(sum(Updated_LINKED_WGHT_FCTR), 2)),
+                     by = .(FROM = ORIGIN_COUNTY, TO = DESTIN_COUNTY)]
+setcolorder(trip_flow_county_dt, c("FROM", "TO", "Trips"))
+trip_flow_county_dt[,FROM:=gsub(" County", "", FROM)]
+trip_flow_county_dt[,TO:=gsub(" County", "", TO)]
+county_filter = c("Harris", "Monroe", "Polk", "Clarke", "Dawson", "Muscogee")
+trip_flow_county_dt = trip_flow_county_dt[!(FROM %in% county_filter | TO %in% county_filter)]
+# The chart does not properly display if the first county from ordered list is not in FROM column
+setkey(trip_flow_county_dt, FROM, TO)
+trip_flow_county_dt = trip_flow_county_dt[CJ(TO,FROM, unique = TRUE)]
+trip_flow_county_dt[1,Trips:=ifelse(is.na(Trips), 1e-2, Trips)]
+trip_flow_county_dt = trip_flow_county_dt[!is.na(Trips)]
+output_ls[["trip_flow_county_dt"]] = trip_flow_county_dt
+
 lapply(output_ls, function(x) {
-  if(ncol(x) == 3) {
+  if(ncol(x) == 3 & !any(names(x) %in% c("FROM", "TO"))) {
     x[,GROUP:="Expanded Response"]
     setcolorder(x, c("GROUP"))
   }

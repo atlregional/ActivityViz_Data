@@ -9,7 +9,7 @@ TOURS AND STOPS,AGE,COUNT,CHART
 "No Tours, No Stops",76 AND OLDER,1,AGE
 "1 Tour, No Stops",16-17,3,AGE
 "1 Tour, No Stops",18-24,69,AGE
-"1 Tour, No Stops",25-34,103,AGE
+"1 Tour, No Stops",25-34,104,AGE
 "1 Tour, No Stops",35-44,85,AGE
 "1 Tour, No Stops",45-54,67,AGE
 "1 Tour, No Stops",55-64,38,AGE
@@ -24,7 +24,7 @@ TOURS AND STOPS,AGE,COUNT,CHART
 "1 Tour, 1 Stop",76 AND OLDER,2,AGE
 "1 Tour, 2 Stops",18-24,7,AGE
 "1 Tour, 2 Stops",25-34,13,AGE
-"1 Tour, 2 Stops",35-44,15,AGE
+"1 Tour, 2 Stops",35-44,16,AGE
 "1 Tour, 2 Stops",45-54,13,AGE
 "1 Tour, 2 Stops",55-64,14,AGE
 "1 Tour, 2 Stops",65-75,6,AGE
@@ -39,17 +39,17 @@ TOURS AND STOPS,AGE,COUNT,CHART
 "1 Tour, 4+ Stops",35-44,8,AGE
 "1 Tour, 4+ Stops",45-54,6,AGE
 "2 Tours, No Stops",18-24,3,AGE
-"2 Tours, No Stops",25-34,4,AGE
+"2 Tours, No Stops",25-34,3,AGE
 "2 Tours, No Stops",35-44,1,AGE
 "2 Tours, No Stops",55-64,1,AGE
 "2 Tours, 1 Stop",18-24,3,AGE
-"2 Tours, 1 Stop",25-34,8,AGE
+"2 Tours, 1 Stop",25-34,9,AGE
 "2 Tours, 1 Stop",35-44,1,AGE
 "2 Tours, 1 Stop",76 AND OLDER,1,AGE
 "2 Tours, 2 Stops",18-24,1,AGE
-"2 Tours, 2 Stops",25-34,2,AGE
-"2 Tours, 2 Stops",35-44,4,AGE
-"2 Tours, 2 Stops",45-54,2,AGE
+"2 Tours, 2 Stops",25-34,3,AGE
+"2 Tours, 2 Stops",35-44,3,AGE
+"2 Tours, 2 Stops",45-54,3,AGE
 "2 Tours, 2 Stops",55-64,2,AGE
 "2 Tours, 2 Stops",65-75,2,AGE
 "2 Tours, 3 Stops",18-24,2,AGE
@@ -59,7 +59,4 @@ TOURS AND STOPS,AGE,COUNT,CHART
 "2 Tours, 3 Stops",55-64,4,AGE
 "2 Tours, 4+ Stops",25-34,4,AGE
 "2 Tours, 4+ Stops",45-54,1,AGE
-"3 Tours, 1 Stop",25-34,1,AGE
-"3 Tours, 2 Stops",25-34,1,AGE
-"3 Tours, 2 Stops",45-54,1,AGE
 "4+ Tours, 4+ Stops",18-24,1,AGE
