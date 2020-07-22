@@ -30,10 +30,11 @@ data_dir   = file.path(getwd(), "data")
 person_file      = file.path(data_dir, "abm_per_arcga.csv")
 trip_file        = file.path(data_dir, "abm_trips_arcga.csv")
 per_trip_dd_file = file.path(data_dir, "abm_dd_arcga.csv")
-od_file          = file.path(data_dir, "od_20200228_ARCGA_DraftSubmitted_EXPANDED_05052020.csv")
+od_file          = file.path(data_dir, "od_20200228_ARCGA_DraftSubmitted_EXPANDED_20200615.csv")
 od_dd_file       = file.path(data_dir, "od_data_dictionary.csv")
 superdistricts_file = file.path(getwd(), "superdistricts.json")
 zone_file = file.path(getwd(), "ZoneShape.GeoJSON")
+county_file = file.path(getwd(), "cb_2015_us_county_500k_GEORGIA.json")
 
 # Output files
 ts_output_dir = file.path(getwd(), "TourSummary")
@@ -43,17 +44,17 @@ ts_output_dir = file.path(getwd(), "TourSummary")
 ### Load required datasets #######################################################
 ##################################################################################
 
-if(!file.exists("../atlanta/abmod.RData")){
+# if(!file.exists("../atlanta/abmod.RData")){
   person_dt    = fread(person_file)
   trip_dt      = fread(trip_file)
   abmdd_dt     = fread(per_trip_dd_file)
   od_dt        = fread(od_file)
   od_dd_dt     = fread(od_dd_file)
-  save(person_dt, trip_dt, abmdd_dt, od_dt, od_dd_dt,
-       file = "abmod.RData")
-} else {
-  load("../atlanta/abmod.RData")
-}
+  # save(person_dt, trip_dt, abmdd_dt, od_dt, od_dd_dt,
+  #      file = "abmod.RData")
+# } else {
+#   load("../atlanta/abmod.RData")
+# }
 
 superdistricts_sf = geojson_sf(superdistricts_file)
 zone_json = fromJSON(zone_file)
@@ -68,6 +69,9 @@ zone_sd_sf = st_join(zone_sf, superdistricts_sf, suffix=c("_TAZ", "_SD"))
 zone_sd_dt = data.table(zone_sd_sf)
 zone_sd_dt = zone_sd_dt[county %in% c("Fulton", "DeKalb")]
 zone_sd_dt = zone_sd_dt[zone_sd_dt[,.I[1],.(id_TAZ)][,V1]]
+
+# Read the county file to filter out counties that are not part of the geography
+county_sf = geojson_sf(county_file)
 ### Create output data ###########################################################
 ##################################################################################
 
@@ -135,7 +139,9 @@ trip_od_bar_dt = trip_od_bar_dt[!is.na(ZONE)]
 trip_od_bar_dt[zone_sd_dt,DISTRICT:=i.NAME,on=.(ZONE=id_TAZ)]
 trip_od_bar_dt = trip_od_bar_dt[!is.na(DISTRICT)]
 setcolorder(trip_od_bar_dt, c("ZONE", "DISTRICT", "ODTYPE", "COUNT"))
-setkey(trip_od_bar_dt, ZONE, DISTRICT, ODTYPE)
+trip_od_bar_dt = trip_od_bar_dt[, .(QUANTITY=sum(COUNT), CHART_TYPE="TRIP ORIGIN OR DESTINATION"),
+                                .(DISTRICT, ODTYPE)]
+setorder(trip_od_bar_dt, DISTRICT, -ODTYPE)
 output_ls[["trip_od_bar_dt"]] = trip_od_bar_dt
 
 # Trip flows for chord diagram
@@ -162,16 +168,65 @@ trip_flow_county_dt = trip_dt[grepl("MARTA", final_agency, ignore.case = TRUE) &
                                 trip_number > 0,
                             .(Trips=.N),
                             by = .(FROM = origin_county, TO = destination_county)]
-
+trip_flow_county_dt = trip_flow_county_dt[FROM %in% county_sf$NAME & TO %in% county_sf$NAME]
+setkey(trip_flow_county_dt, FROM, TO)
+sel_county = sort(unique(c(trip_flow_county_dt$FROM, trip_flow_county_dt$TO)))
+trip_flow_county_dt = trip_flow_county_dt[CJ(FROM=sel_county, TO=sel_county, unique = TRUE)]
 setkey(trip_flow_county_dt, FROM, TO)
 # trip_flow_county_dt = trip_flow_county_dt[CJ(FROM,TO, unique = TRUE)]
-# trip_flow_county_dt[is.na(Trips), Trips:=0]
+trip_flow_county_dt[is.na(Trips), Trips:=0]
 trip_flow_county_dt[,FROM:=gsub(" County", "", FROM)]
 trip_flow_county_dt[,TO:=gsub(" County", "", TO)]
-county_filter = c("Harris", "Monroe", "Polk")
-trip_flow_county_dt = trip_flow_county_dt[!(FROM %in% county_filter | TO %in% county_filter)]
 output_ls[["trip_flow_county_dt"]] = trip_flow_county_dt
 
+# # Create zone filter files
+# sd_filter_dt = zone_sd_dt[,.(.N, value=1),.(id=id_SD,NAME,NAME2=NAME)]
+# sd_dt = data.table(superdistricts_sf)[NAME %in% trip_flow_dt$FROM,.(id,NAME)]
+# sd_dt[,NAME2:=NAME]
+# sd_dt[,value:=0]
+# sd_dt[sd_filter_dt, value:=i.value,on=.(NAME, NAME2)]
+# superdistricts_dt = dcast(sd_dt, id+NAME~NAME2, value.var = "value", fill = 0)
+# output_ls[["superdistricts_dt"]] = superdistricts_dt
+# 
+# # Create desirelines
+# desirelines_sf = superdistricts_sf[superdistricts_sf$id %in% zone_sd_dt$id_SD, ]
+# desirelines_sf = st_centroid(desirelines_sf)
+# linecomb = expand.grid(id=seq_len(nrow(desirelines_sf)),id2=seq_len(nrow(desirelines_sf)))
+# linecomb = linecomb[linecomb$id!=linecomb$id2,]
+# all_lines_sf_sf = suppressWarnings(suppressMessages(t(mapply(function(id1, id2) {st_cast(
+#   st_union(desirelines_sf[id1,], desirelines_sf[id2,]),
+#   "LINESTRING")}, linecomb$id, linecomb$id2))))
+# all_lines_sf_df = data.frame(all_lines_sf_sf)
+# all_lines_sf_df$geometry = unlist(all_lines_sf_df$geometry, recursive = FALSE)
+# all_lines_sf_df = st_as_sf(all_lines_sf_df)
+# all_lines_sf_df$o = as.integer(unlist(all_lines_sf_df$id))
+# all_lines_sf_df$d = as.integer(unlist(all_lines_sf_df$id.1))
+# newdesirelines_sf = all_lines_sf_df[,c("o", "d", "geometry")]
+# st_write(newdesirelines_sf, "odts_desirelines.GeoJSON", driver = "GeoJSON", delete_dsn = TRUE)
+
+
+
+
+# Create desirelines counties
+desirelines_sf = county_sf[county_sf$NAME %in% trip_flow_county_dt$FROM,]
+desirelines_sf = st_centroid(desirelines_sf)
+desirelines_sf$id = as.integer(paste0(desirelines_sf$STATEFP, desirelines_sf$COUNTYFP))
+linecomb = expand.grid(ind=seq_len(nrow(desirelines_sf)),ind2=seq_len(nrow(desirelines_sf)))
+linecomb = linecomb[linecomb$ind!=linecomb$ind2,]
+all_lines_sf_sf = suppressWarnings(suppressMessages(t(mapply(function(ind1, ind2) {st_cast(
+  st_union(desirelines_sf[ind1,], desirelines_sf[ind2,]),
+  "LINESTRING")}, linecomb$ind, linecomb$ind2))))
+all_lines_sf_df = data.frame(all_lines_sf_sf)
+all_lines_sf_df$geometry = unlist(all_lines_sf_df$geometry, recursive = FALSE)
+all_lines_sf_df = st_as_sf(all_lines_sf_df)
+all_lines_sf_df$o = as.integer(unlist(all_lines_sf_df$id))
+all_lines_sf_df$d = as.integer(unlist(all_lines_sf_df$id.1))
+newdesirelines_sf = all_lines_sf_df[,c("o", "d", "geometry")]
+st_write(newdesirelines_sf, "odts_county_desirelines.GeoJSON", driver = "GeoJSON", delete_dsn = TRUE)
+
+county_sf$id = as.integer(paste0(county_sf$STATEFP, county_sf$COUNTYFP))
+st_write(county_sf[county_sf$id %in% newdesirelines_sf$o,c("id", "NAME", "geometry")],
+         "odts_county.GeoJSON", driver = "GeoJSON", delete_dsn = TRUE)
 
 # Code mode
 mode_codes_dt = abmdd_dt[item=="travel_mode", .(code, value)]

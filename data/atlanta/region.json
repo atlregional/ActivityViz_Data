@@ -4245,13 +4245,11 @@
                 ]
               }
             ]
-          }
-        ],
-        "BarMap": [
+          },
           {
-            "name": "Trip ODs",
-            "title": "Trip Origins and Destinations in MARTA Service Area",
-            "config": "Default",
+            "name": "Trip Os or Ds",
+            "title": "Trip Origins or Destinations in MARTA Service Area",
+            "config": "DistrictChart",
             "file": "trip_od_bar.csv",
             "info": "Frequency of Trips by origin or destination by super districts",
             "explanation": [
@@ -4283,20 +4281,20 @@
               }
             ],
             "datafilecolumns": {
-              "ZONE": "Zone ID",
-              "SUPERDISTRICT": "Super District Label",
+              "DISTRICT": "Super district in Fulton and DeKalb County",
               "ODTYPE": "Trip origin or destination",
-              "COUNT": "Number of trips"
+              "QUANTITY": "Number of trips",
+              "CHART_TYPE": "Name ofthe chart"
             }
           }
         ],
         "Chord": [
           {
             "name": "Trip Flows",
-            "title": "Trip Origins and Destinations in MARTA Service Area",
-            "config": "Default",
+            "title": "Trip Origins or Destinations in MARTA Service Area",
+            "config": "OBSDefault",
             "file": "trip_flow.csv",
-            "info": "Trip origins and destinations in MARTA service area.",
+            "info": "Trip Origins or Destinations in MARTA Service Area.",
             "explanation": [
               {
                 "header": "Summary",
@@ -4335,10 +4333,10 @@
           },
           {
             "name": "Trip Flows County",
-            "title": "Trip Origins and Destinations in MARTA Service Area by County",
-            "config": "OSCounty",
+            "title": "Trip Origins or Destinations in MARTA Service Area by County",
+            "config": "OBSCounty",
             "file": "trip_flow_county.csv",
-            "info": "Trip origins and destinations in MARTA service area by county.",
+            "info": "Trip Origins or Destinations in MARTA Service Area by county.",
             "explanation": [
               {
                 "header": "Summary",
@@ -4912,13 +4910,11 @@
                 ]
               }
             ]
-          }
-        ],
-        "BarMap": [
+          },
           {
-            "name": "Trip ODs",
-            "title": "Trip Origins and Destinations in MARTA Service Area",
-            "config": "Default",
+            "name": "Trip Os or Ds",
+            "title": "Trip Origins or Destinations in MARTA Service Area",
+            "config": "DistrictChart",
             "file": "trip_od_bar.csv",
             "info": "Frequency of Trips by origin or destination by super districts",
             "explanation": [
@@ -4948,22 +4944,16 @@
                   }
                 ]
               }
-            ],
-            "datafilecolumns": {
-              "ZONE": "Zone ID",
-              "SUPERDISTRICT": "Super District Label",
-              "ODTYPE": "Trip origin or destination",
-              "COUNT": "Number of trips"
-            }
+            ]
           }
         ],
         "Chord": [
           {
             "name": "Trip Flows",
-            "title": "Trip Origins and Destinations in MARTA Service Area",
-            "config": "Default",
+            "title": "Trip Origins or Destinations in MARTA Service Area",
+            "config": "ODTSDefault",
             "file": "trip_flow.csv",
-            "info": "Trip origins and destinations in MARTA service area.",
+            "info": "Trip Origins or Destinations in MARTA Service Area.",
             "explanation": [
               {
                 "header": "Summary",
@@ -4993,19 +4983,14 @@
                   }
                 ]
               }
-            ],
-            "datafilecolumns": {
-              "FROM": "Origin district of trip",
-              "TO": "Destination district of trip",
-              "Trips": "Number of trips"
-            }
+            ]
           },
           {
             "name": "Trip Flows County",
-            "title": "Trip Origins and Destinations in MARTA Service Area by County",
-            "config": "OSCounty",
+            "title": "Trip Origins or Destinations in MARTA Service Area by County",
+            "config": "ODTSCounty",
             "file": "trip_flow_county.csv",
-            "info": "Trip origins and destinations in MARTA service area by county.",
+            "info": "Trip Origins or Destinations in MARTA Service Area by county.",
             "explanation": [
               {
                 "header": "Summary",
@@ -5035,12 +5020,7 @@
                   }
                 ]
               }
-            ],
-            "datafilecolumns": {
-              "FROM": "Origin county of trip",
-              "TO": "Destination county of trip",
-              "Trips": "Number of trips"
-            }
+            ]
           }
         ]
       }
@@ -5125,6 +5105,14 @@
       "ShowAsVerticalByDefault": false,
       "StackAllChartsByDefault": true,
       "ChartWidthOverride": []
+    },
+    "DistrictChart": {
+      "NumberColsGrouped": 1,
+      "SwapLegendByDefault": false,
+      "ShowAsPercentByDefault": false,
+      "ShowAsVerticalByDefault": false,
+      "StackAllChartsByDefault": true,
+      "ChartWidthOverride": []
     }
   },
   "Chord": {
@@ -5135,8 +5123,29 @@
       "LegendText": "Flows",
       "ExcludeSameOD": "true"
     },
-    "OSCounty": {
-      "ZoneFile": "cb_2015_us_county_500k_GEORGIA.json",
+    "OBSDefault": {
+      "ZoneFilterFile": "superdistricts.csv",
+      "ZoneFile": "superdistricts.GeoJSON",
+      "DesireLines": "obs_desirelines.GeoJSON",
+      "LegendText": "Flows",
+      "ExcludeSameOD": "true"
+    },
+    "ODTSDefault": {
+      "ZoneFilterFile": "superdistricts.csv",
+      "ZoneFile": "superdistricts.GeoJSON",
+      "DesireLines": "odts_desirelines.GeoJSON",
+      "LegendText": "Flows",
+      "ExcludeSameOD": "true"
+    },
+    "ODTSCounty": {
+      "ZoneFile": "odts_county.GeoJSON",
+      "DesireLines": "odts_county_desirelines.GeoJSON",
+      "LegendText": "Flows",
+      "ExcludeSameOD": "true"
+    },
+    "OBSCounty": {
+      "ZoneFile": "obs_county.GeoJSON",
+      "DesireLines": "obs_county_desirelines.GeoJSON",
       "LegendText": "Flows",
       "ExcludeSameOD": "true"
     }
