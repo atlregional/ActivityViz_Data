@@ -159,14 +159,14 @@ trip_dt[, dep_time:=as.POSIXct(departure_time, format = "%Y-%m-%d %H:%M:%S", tz 
 trip_dt[, hour := hour(dep_time)]
 
 trip_start_dt = trip_dt[,.(TYPE = "TRIP START",
-                           TRIPS = round(sum(trip_weight_household), 2)),
+                           TRIPS = round(sum(trip_weight_household), 0)),
                         by = .(HOUR = hour)]
 trip_dt[, arr_time:=as.POSIXct(arrival_time, format = "%Y-%m-%d %H:%M:%S", tz = "EST")]
 trip_dt[, hour := hour(arr_time)]
 
 # Trips end by period 
 trip_end_dt = trip_dt[,.(TYPE = "TRIP END",
-                         TRIPS = round(sum(trip_weight_household), 2)),
+                         TRIPS = round(sum(trip_weight_household), 0)),
                       by = .(HOUR = hour)]
 
 trip_period_dt = rbindlist(list(trip_start_dt, trip_end_dt), use.names = TRUE)
@@ -203,7 +203,7 @@ trip_dt[,destination_labels:=names(destination_labels_ar)[match(d_purpose_catego
                                                                 destination_labels_ar)]]
 
 trip_destination_dt = trip_dt[!d_purpose_category_imputed %in% c(-9998, 11, 12),
-                              .(TRIPS = round(sum(trip_weight_household), 2)),
+                              .(TRIPS = round(sum(trip_weight_household), 0)),
                               by = .(`DESTINATION ACTIVITY` = destination_labels)]
 setorder(trip_destination_dt, -TRIPS)
 trip_destination_dt[,CHART:="TRIP DESTINATION"]
@@ -233,7 +233,7 @@ work_mode_labels_ar = c(
 person_dt[,work_mode_labels:=names(work_mode_labels_ar)[match(work_mode,
                                                               work_mode_labels_ar)]]
 
-work_mode_dt = person_dt[!work_mode %in% c(-9998, 995),.(PERSON = round(sum(weight_household), 2)),
+work_mode_dt = person_dt[!work_mode %in% c(-9998, 995),.(PERSON = round(sum(weight_household), 0)),
                          by = .(MODE = work_mode_labels)]
 
 setorder(work_mode_dt, -PERSON)
@@ -281,7 +281,7 @@ telecommute_total = data.table() #person_dt[!telework_freq %in% c(995) &
                               #             PERSON = sum(weight_household)),
                               # by = .(FREQUENCY = telework_labels)]
 telecommute_freq_dt = rbindlist(list(telecommute_freq_dt, telecommute_total), use.names = TRUE)
-telecommute_freq_dt[,PERSON:=round(PERSON, 2)]
+telecommute_freq_dt[,PERSON:=round(PERSON, 0)]
 
 # setorder(telecommute_freq_dt, AGE_GROUP, -PERSON)
 telecommute_freq_dt = telecommute_freq_dt[order(`AGE GROUP`, 
@@ -323,7 +323,7 @@ bike_total = data.table() #person_dt[!bike_freq %in% c(995, -9998) &
                               #             PERSON = sum(weight_household)),
                               # by = .(FREQUENCY = bike_labels)]
 bike_freq_dt = rbindlist(list(bike_freq_dt, bike_total), use.names = TRUE)
-bike_freq_dt[,PERSON:=round(PERSON, 2)]
+bike_freq_dt[,PERSON:=round(PERSON, 0)]
 
 # setorder(bike_freq_dt, AGE_GROUP, -PERSON)
 bike_freq_dt = bike_freq_dt[order(`AGE GROUP`,
@@ -361,7 +361,7 @@ age_group_dt = person_dt[, .(PERSON=sum(weight_household)),
 age_group_dt = age_group_dt[order(match(`AGE GROUP`, age_labels_order))]
 age_group_dt[,CHART:="AGE DISTRIBUTION"]
 age_group_dt[,RESPONSE:="AGE GROUP"]
-age_group_dt[,PERSON:=round(PERSON, 2)]
+age_group_dt[,PERSON:=round(PERSON, 0)]
 setcolorder(age_group_dt, c("RESPONSE"))
 
 
@@ -377,7 +377,7 @@ person_dt[,gender_label:=names(gender_labels_ar)[match(gender,
                                                        gender_labels_ar)]]
 gender_dt = person_dt[gender %in% c(1,2,3), .(PERSON=sum(weight_household)),
                       by=.(GENDER=gender_label)]
-gender_dt[,PERSON:=round(PERSON, 2)]
+gender_dt[,PERSON:=round(PERSON, 0)]
 setorder(gender_dt, GENDER)
 
 ### Passive Data Scenario ########################################################
@@ -405,7 +405,7 @@ setkey(overall_trip_dt, FROM, TO)
 overall_trip_dt = overall_trip_dt[CJ(c(agg_dt$D7_ALL_LBL,"External"), 
                                      c(agg_dt$D7_ALL_LBL,"External"), unique = TRUE)]
 overall_trip_dt[is.na(TRIPS), TRIPS := 0]
-overall_trip_dt[, TRIPS:= round(TRIPS, 2)]
+overall_trip_dt[, TRIPS:= round(TRIPS, 0)]
 
 # Hillsborough
 hillsborough_trip_dt    = trip_est_dt[grepl("Hillsborough", COUNTY_NAME_O)|
@@ -420,7 +420,7 @@ hillsborough_trip_dt = hillsborough_trip_dt[CJ(c(HILLSBOROUGH_LBL_3),
                                                c(HILLSBOROUGH_LBL_3),
                                                unique = TRUE)]
 hillsborough_trip_dt[is.na(TRIPS), TRIPS := 0]
-hillsborough_trip_dt[, TRIPS:= round(TRIPS, 2)]
+hillsborough_trip_dt[, TRIPS:= round(TRIPS, 0)]
 
 # Pinellas
 pinellas_trip_dt        = trip_est_dt[grepl("Pinellas", COUNTY_NAME_O)|
@@ -435,7 +435,7 @@ pinellas_trip_dt = pinellas_trip_dt[CJ(c(PINELLAS_LBL),
                                        c(PINELLAS_LBL),
                                        unique = TRUE)]
 pinellas_trip_dt[is.na(TRIPS), TRIPS := 0]
-pinellas_trip_dt[, TRIPS:= round(TRIPS, 2)]
+pinellas_trip_dt[, TRIPS:= round(TRIPS, 0)]
 # Pasco
 pasco_trip_dt           = trip_est_dt[grepl("Pasco", COUNTY_NAME_O)|
                                         grepl("Pasco", COUNTY_NAME_D),
@@ -449,7 +449,7 @@ pasco_trip_dt = pasco_trip_dt[CJ(c(PASCO_LBL),
                                  c(PASCO_LBL),
                                  unique = TRUE)]
 pasco_trip_dt[is.na(TRIPS), TRIPS := 0]
-pasco_trip_dt[, TRIPS:= round(TRIPS, 2)]
+pasco_trip_dt[, TRIPS:= round(TRIPS, 0)]
 
 # Hernando/Citrus
 hernando_citrus_trip_dt = trip_est_dt[grepl("Hernando", COUNTY_NAME_O)|
@@ -466,7 +466,7 @@ hernando_citrus_trip_dt = hernando_citrus_trip_dt[CJ(c(HERNANDO_CITRUS_LBL_2),
                                                      c(HERNANDO_CITRUS_LBL_2),
                                                      unique = TRUE)]
 hernando_citrus_trip_dt[is.na(TRIPS), TRIPS := 0]
-hernando_citrus_trip_dt[, TRIPS:= round(TRIPS, 2)]
+hernando_citrus_trip_dt[, TRIPS:= round(TRIPS, 0)]
 
 ### Travel Survey Scenario #######################################################
 ##################################################################################
@@ -529,7 +529,7 @@ trip_total = data.table() #trips_mode[,.(TRIPS=sum(TRIPS), MODE = "ALL_MODES"),.
 trips_mode = rbindlist(list(trips_mode, trip_total), use.names = TRUE)
 trips_mode = trips_mode[order(ZONE, COUNTY, MODE)]
 trips_mode = trips_mode[TRIPS!=0]
-trips_mode[, TRIPS:=round(TRIPS, 2)]
+trips_mode[, TRIPS:=round(TRIPS, 0)]
 
 # Trip mode by zone
 # trip_zone = trip_dt[
@@ -546,7 +546,7 @@ trip_zone[,MODE:=gsub("_", " ", MODE)]
 trip_zone[is.na(TRIPS), TRIPS:=0]
 trip_zone = trip_zone[order(ZONE, MODE)]
 trip_zone = trip_zone[TRIPS!=0]
-trip_zone[, TRIPS:=round(TRIPS, 2)]
+trip_zone[, TRIPS:=round(TRIPS, 0)]
 
 
 # Seasonal household
@@ -573,7 +573,7 @@ trip_total = data.table() #seasonal_trips_mode[,.(TRIPS=sum(TRIPS), MODE = "ALL_
 seasonal_trips_mode = rbindlist(list(seasonal_trips_mode, trip_total), use.names = TRUE)
 seasonal_trips_mode = seasonal_trips_mode[order(ZONE, COUNTY, MODE)]
 seasonal_trips_mode = seasonal_trips_mode[TRIPS!=0]
-seasonal_trips_mode[, TRIPS:=round(TRIPS, 2)]
+seasonal_trips_mode[, TRIPS:=round(TRIPS, 0)]
 
 # University student
 trip_dt[,uni_student:=0L]
@@ -599,7 +599,7 @@ trip_total = data.table() #uni_trips_mode[,.(TRIPS=sum(TRIPS), MODE = "ALL_MODES
 uni_trips_mode = rbindlist(list(uni_trips_mode, trip_total), use.names = TRUE)
 uni_trips_mode = uni_trips_mode[order(ZONE, COUNTY, MODE)]
 uni_trips_mode = uni_trips_mode[TRIPS!=0]
-uni_trips_mode[, TRIPS:=round(TRIPS, 2)]
+uni_trips_mode[, TRIPS:=round(TRIPS, 0)]
 
 # Day Pattern
 # Get person, household, and day data
@@ -687,7 +687,7 @@ person_group_order = c("ALL", "CHILD AGE 0 TO 4", "CHILD AGE 5 TO 15", "CHILD AG
 day_activity_order = c("Home All Day", "Work and/or School Travel", "Other Travel", "Other (Missing)")
 day_pattern_dt = day_pattern_dt[order(match(`PERSON GROUP`, person_group_order),
                                       match(`DAY ACTIVITY`, day_activity_order))]
-day_pattern_dt[, `PERSON DAYS`:=round(`PERSON DAYS`, 2)]
+day_pattern_dt[, `PERSON DAYS`:=round(`PERSON DAYS`, 0)]
 day_pattern_dt = day_pattern_dt[`PERSON GROUP`!="ALL"]
 
 # Time Use
@@ -904,7 +904,7 @@ time_use_dt[is.na(`TIME USE`), `TIME USE`:=0]
 time_use_dt = time_use_dt[order(match(`PERSON TYPE`, person_group_order),
                                 PER,
                                 match(`ORIG PURPOSE`, purpose_labels))]
-time_use_dt[,`TIME USE`:=round(`TIME USE`, 2)]
+time_use_dt[,`TIME USE`:=round(`TIME USE`, 0)]
 ### Write output data ############################################################
 ##################################################################################
 
