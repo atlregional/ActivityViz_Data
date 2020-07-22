@@ -8,9 +8,6 @@
 # 2. Define Constants
 # 3. Load required databases
 # 4. Create output data
-# 4a. Executive Summary Scenario
-# 4b. Passive Data Scenario
-# 4c. Travel Survey Scenario
 # 5. Write output data
 
 
@@ -33,13 +30,11 @@ data_dir   = file.path(getwd(), "data")
 person_file      = file.path(data_dir, "abm_per_arcga.csv")
 trip_file        = file.path(data_dir, "abm_trips_arcga.csv")
 per_trip_dd_file = file.path(data_dir, "abm_dd_arcga.csv")
-od_file          = file.path(data_dir, "od_20200228_ARCGA_DraftSubmitted_EXPANDED_05052020.csv")
+od_file          = file.path(data_dir, "od_20200228_ARCGA_DraftSubmitted_EXPANDED_20200615.csv")
 od_dd_file       = file.path(data_dir, "od_data_dictionary.csv")
-
-# Geography input files
-# taz_file       = file.path(getwd(), "tampa2020.json")
-# county_file    = file.path(getwd(), "counties.json")
-# agg_file       = file.path(getwd(), "tampa.csv")
+superdistricts_file = file.path(getwd(), "superdistricts.json")
+zone_file = file.path(getwd(), "ZoneShape.GeoJSON")
+county_file = file.path(getwd(), "cb_2015_us_county_500k_GEORGIA.json")
 
 # Output files
 ts_output_dir = file.path(getwd(), "TourSummary")
@@ -49,61 +44,39 @@ ts_output_dir = file.path(getwd(), "TourSummary")
 ### Load required datasets #######################################################
 ##################################################################################
 
-if(!file.exists("../atlanta/abmod.RData")){
+# if(!file.exists("../atlanta/abmod.RData")){
   person_dt    = fread(person_file)
   trip_dt      = fread(trip_file)
   abmdd_dt     = fread(per_trip_dd_file)
   od_dt        = fread(od_file)
   od_dd_dt     = fread(od_dd_file)
-  save(person_dt, trip_dt, abmdd_dt, od_dt, od_dd_dt,
-       file = "abmod.RData")
-} else {
-  load("../atlanta/abmod.RData")
-}
+  # save(person_dt, trip_dt, abmdd_dt, od_dt, od_dd_dt,
+  #      file = "abmod.RData")
+# } else {
+#   load("../atlanta/abmod.RData")
+# }
 
-# taz_ls = fromJSON(taz_file)
-# county_ls = fromJSON(county_file)
-# taz_sf = geojson_sf(taz_file)
-# taz_dt = data.table(taz_sf)
-# agg_dt = fread(agg_file)
-# agg_dt[,HILLSBOROUGH_LBL_3:=gsub("\\&|\\/","",HILLSBOROUGH_LBL_3)]
-# agg_dt[,HILLSBOROUGH_LBL_3:=gsub("\\s+","_",HILLSBOROUGH_LBL_3)]
-# agg_dt[,PINELLAS_LBL:=gsub("\\&|\\/","",PINELLAS_LBL)]
-# agg_dt[,PINELLAS_LBL:=gsub("\\s+","_",PINELLAS_LBL)]
-# agg_dt[,PASCO_LBL:=gsub("\\&|\\/","",PASCO_LBL)]
-# agg_dt[,PASCO_LBL:=gsub("\\s+","_",PASCO_LBL)]
-# agg_dt[,HERNANDO_CITRUS_LBL_2:=gsub("\\&|\\/","",HERNANDO_CITRUS_LBL_2)]
-# agg_dt[,HERNANDO_CITRUS_LBL_2:=gsub("\\s+","_",HERNANDO_CITRUS_LBL_2)]
-# agg_sf = st_as_sf(merge(as.data.frame(agg_dt), taz_sf, by.x="TAZ", by.y="id",all.x = TRUE))
-# 
+superdistricts_sf = geojson_sf(superdistricts_file)
+zone_json = fromJSON(zone_file)
+zone_json$features$geometry$coordinates = lapply(zone_json$features$geometry$coordinates,
+                                                 function(x) {class(x)="numeric";x})
+zone_json_str = toJSON(zone_json)
+zone_json_str = sub("\"type\":\\[\"FeatureCollection\"\\],", "\"type\":\"FeatureCollection\",", zone_json_str)
+zone_sf = geojson_sf(zone_json_str)
 
+# Create taz to superdistrict crosswalk for Fulton and DeKalb county
+zone_sd_sf = st_join(zone_sf, superdistricts_sf, suffix=c("_TAZ", "_SD"))
+zone_sd_dt = data.table(zone_sd_sf)
+zone_sd_dt = zone_sd_dt[county %in% c("Fulton", "DeKalb")]
+zone_sd_dt = zone_sd_dt[zone_sd_dt[,.I[1],.(id_TAZ)][,V1]]
 
+# Read the county file to filter out counties that are not part of the geography
+county_sf = geojson_sf(county_file)
 ### Create output data ###########################################################
 ##################################################################################
 
-# Create districts.json file for OD chord chart
-# # Overall
-# overall_sf = dplyr::summarise(dplyr::group_by(agg_sf, D7_ALL_LBL))
-# names(overall_sf) = c("NAME", "geometry")
-# 
-# # Hillsborough
-# hillsborough_sf = dplyr::summarise(dplyr::group_by(agg_sf, HILLSBOROUGH_LBL_3))
-# names(hillsborough_sf) = c("NAME", "geometry")
-# 
-# # Pinellas
-# pinellas_sf = dplyr::summarise(dplyr::group_by(agg_sf, PINELLAS_LBL))
-# names(pinellas_sf) = c("NAME", "geometry")
-# 
-# # Pasco
-# pasco_sf = dplyr::summarise(dplyr::group_by(agg_sf, PASCO_LBL))
-# names(pasco_sf) = c("NAME", "geometry")
-# 
-# # Hernando/Citrus
-# hernando_citrus_sf = dplyr::summarise(dplyr::group_by(agg_sf, HERNANDO_CITRUS_LBL_2))
-# names(hernando_citrus_sf) = c("NAME", "geometry")
 
-
-### Onboard Survey ###############################################################
+### One Day Tour Survey ##########################################################
 ##################################################################################
 
 output_ls = list()
@@ -146,6 +119,114 @@ setkey(anchor_code_dt, per_id)
 setkey(tour_dt, per_id)
 tour_dt[anchor_code_dt,activity_code:=i.activity_code]
 tour_dt[anchor_code_dt,home_based:=i.home_based]
+
+# Code origin and destination TAZ, County
+trip_dt[, destination_taz:=location_mtaz20]
+trip_dt[, origin_taz:=shift(location_mtaz20),.(per_id)]
+
+trip_dt[, destination_county:=location_county]
+trip_dt[, origin_county:=shift(location_county),.(per_id)]
+
+# Trip OD Bar Chart
+trip_origin_bar_dt = trip_dt[trip_number > 0 & start_end_home==TRUE, .(ODTYPE = "ORIGIN",
+                                                                       COUNT=.N), .(ZONE = origin_taz)]
+trip_destination_bar_dt = trip_dt[trip_number > 0 & start_end_home==TRUE, .(ODTYPE = "DESTINATION",
+                                                                       COUNT=.N), .(ZONE = destination_taz)]
+trip_od_bar_dt = rbindlist(list(trip_origin_bar_dt, trip_destination_bar_dt),
+                           use.names = TRUE)
+trip_od_bar_dt[,ZONE:=as.integer(ZONE)]
+trip_od_bar_dt = trip_od_bar_dt[!is.na(ZONE)]
+trip_od_bar_dt[zone_sd_dt,DISTRICT:=i.NAME,on=.(ZONE=id_TAZ)]
+trip_od_bar_dt = trip_od_bar_dt[!is.na(DISTRICT)]
+setcolorder(trip_od_bar_dt, c("ZONE", "DISTRICT", "ODTYPE", "COUNT"))
+trip_od_bar_dt = trip_od_bar_dt[, .(QUANTITY=sum(COUNT), CHART_TYPE="TRIP ORIGIN OR DESTINATION"),
+                                .(DISTRICT, ODTYPE)]
+setorder(trip_od_bar_dt, DISTRICT, -ODTYPE)
+output_ls[["trip_od_bar_dt"]] = trip_od_bar_dt
+
+# Trip flows for chord diagram
+# final_agency should be Marta
+trip_flow_dt = trip_dt[grepl("MARTA", final_agency, ignore.case = TRUE) & start_end_home==TRUE & 
+                         trip_number > 0,
+                     .(Trips=.N),
+                     by = .(FROM = as.integer(origin_taz), TO = as.integer(destination_taz))]
+trip_flow_dt = trip_flow_dt[!(is.na(FROM)|is.na(TO))]
+trip_flow_dt = merge(trip_flow_dt,zone_sd_dt[,.(FROM=id_TAZ, NAME)], by="FROM")
+trip_flow_dt[,FROM:=NAME]
+trip_flow_dt[,c("NAME"):=NULL]
+trip_flow_dt = merge(trip_flow_dt,zone_sd_dt[,.(TO=id_TAZ, NAME)], by="TO")
+trip_flow_dt[,TO:=NAME]
+trip_flow_dt[,c("NAME"):=NULL]
+trip_flow_dt = trip_flow_dt[,.(Trips=sum(Trips)),.(FROM,TO)]
+setkey(trip_flow_dt, FROM, TO)
+trip_flow_dt = trip_flow_dt[CJ(FROM, TO, unique = TRUE)]
+trip_flow_dt[is.na(Trips), Trips:=0]
+output_ls[["trip_flow_dt"]] = trip_flow_dt
+
+# Trip flows for chord diagram by County
+trip_flow_county_dt = trip_dt[grepl("MARTA", final_agency, ignore.case = TRUE) & start_end_home==TRUE & 
+                                trip_number > 0,
+                            .(Trips=.N),
+                            by = .(FROM = origin_county, TO = destination_county)]
+trip_flow_county_dt = trip_flow_county_dt[FROM %in% county_sf$NAME & TO %in% county_sf$NAME]
+setkey(trip_flow_county_dt, FROM, TO)
+sel_county = sort(unique(c(trip_flow_county_dt$FROM, trip_flow_county_dt$TO)))
+trip_flow_county_dt = trip_flow_county_dt[CJ(FROM=sel_county, TO=sel_county, unique = TRUE)]
+setkey(trip_flow_county_dt, FROM, TO)
+# trip_flow_county_dt = trip_flow_county_dt[CJ(FROM,TO, unique = TRUE)]
+trip_flow_county_dt[is.na(Trips), Trips:=0]
+trip_flow_county_dt[,FROM:=gsub(" County", "", FROM)]
+trip_flow_county_dt[,TO:=gsub(" County", "", TO)]
+output_ls[["trip_flow_county_dt"]] = trip_flow_county_dt
+
+# # Create zone filter files
+# sd_filter_dt = zone_sd_dt[,.(.N, value=1),.(id=id_SD,NAME,NAME2=NAME)]
+# sd_dt = data.table(superdistricts_sf)[NAME %in% trip_flow_dt$FROM,.(id,NAME)]
+# sd_dt[,NAME2:=NAME]
+# sd_dt[,value:=0]
+# sd_dt[sd_filter_dt, value:=i.value,on=.(NAME, NAME2)]
+# superdistricts_dt = dcast(sd_dt, id+NAME~NAME2, value.var = "value", fill = 0)
+# output_ls[["superdistricts_dt"]] = superdistricts_dt
+# 
+# # Create desirelines
+# desirelines_sf = superdistricts_sf[superdistricts_sf$id %in% zone_sd_dt$id_SD, ]
+# desirelines_sf = st_centroid(desirelines_sf)
+# linecomb = expand.grid(id=seq_len(nrow(desirelines_sf)),id2=seq_len(nrow(desirelines_sf)))
+# linecomb = linecomb[linecomb$id!=linecomb$id2,]
+# all_lines_sf_sf = suppressWarnings(suppressMessages(t(mapply(function(id1, id2) {st_cast(
+#   st_union(desirelines_sf[id1,], desirelines_sf[id2,]),
+#   "LINESTRING")}, linecomb$id, linecomb$id2))))
+# all_lines_sf_df = data.frame(all_lines_sf_sf)
+# all_lines_sf_df$geometry = unlist(all_lines_sf_df$geometry, recursive = FALSE)
+# all_lines_sf_df = st_as_sf(all_lines_sf_df)
+# all_lines_sf_df$o = as.integer(unlist(all_lines_sf_df$id))
+# all_lines_sf_df$d = as.integer(unlist(all_lines_sf_df$id.1))
+# newdesirelines_sf = all_lines_sf_df[,c("o", "d", "geometry")]
+# st_write(newdesirelines_sf, "odts_desirelines.GeoJSON", driver = "GeoJSON", delete_dsn = TRUE)
+
+
+
+
+# Create desirelines counties
+desirelines_sf = county_sf[county_sf$NAME %in% trip_flow_county_dt$FROM,]
+desirelines_sf = st_centroid(desirelines_sf)
+desirelines_sf$id = as.integer(paste0(desirelines_sf$STATEFP, desirelines_sf$COUNTYFP))
+linecomb = expand.grid(ind=seq_len(nrow(desirelines_sf)),ind2=seq_len(nrow(desirelines_sf)))
+linecomb = linecomb[linecomb$ind!=linecomb$ind2,]
+all_lines_sf_sf = suppressWarnings(suppressMessages(t(mapply(function(ind1, ind2) {st_cast(
+  st_union(desirelines_sf[ind1,], desirelines_sf[ind2,]),
+  "LINESTRING")}, linecomb$ind, linecomb$ind2))))
+all_lines_sf_df = data.frame(all_lines_sf_sf)
+all_lines_sf_df$geometry = unlist(all_lines_sf_df$geometry, recursive = FALSE)
+all_lines_sf_df = st_as_sf(all_lines_sf_df)
+all_lines_sf_df$o = as.integer(unlist(all_lines_sf_df$id))
+all_lines_sf_df$d = as.integer(unlist(all_lines_sf_df$id.1))
+newdesirelines_sf = all_lines_sf_df[,c("o", "d", "geometry")]
+st_write(newdesirelines_sf, "odts_county_desirelines.GeoJSON", driver = "GeoJSON", delete_dsn = TRUE)
+
+county_sf$id = as.integer(paste0(county_sf$STATEFP, county_sf$COUNTYFP))
+st_write(county_sf[county_sf$id %in% newdesirelines_sf$o,c("id", "NAME", "geometry")],
+         "odts_county.GeoJSON", driver = "GeoJSON", delete_dsn = TRUE)
 
 # Code mode
 mode_codes_dt = abmdd_dt[item=="travel_mode", .(code, value)]
@@ -459,4 +540,10 @@ lapply(names(summary_ls), function(x){
   invisible(TRUE)
 })
 
+for(table_name in setdiff(names(output_ls), "tour_dt")){
+  filename = file.path(ts_output_dir, paste0(gsub("_dt", "", table_name), ".csv"))
+  fwrite(output_ls[[table_name]],
+         file = filename)
+  cat(basename(filename), "\n")
+}
 
