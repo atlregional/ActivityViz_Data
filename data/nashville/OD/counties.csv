@@ -1,8 +1,0 @@
-ID,COUNTY,Rutherford,Sumner,Williamson,Robertson,Wilson,Davidson,Maury
-1,Rutherford,1,0,0,0,0,0,0
-2,Sumner,0,1,0,0,0,0,0
-3,Williamson,0,0,1,0,0,0,0
-4,Robertson,0,0,0,1,0,0,0
-5,Wilson,0,0,0,0,1,0,0
-6,Davidson,0,0,0,0,0,1,0
-7,Maury,0,0,0,0,0,0,1
